@@ -1,0 +1,3028 @@
+﻿/******************************************************************************************************/
+/***** PROJECT NAME		: NEXACRO DEFAULT THEME	********/
+/***** CREATION DATES		: 2016.12.16		********/
+/***** DRAFTER 			: TOBESOFT DESIGN TEAM	********/
+/***** DISTRIBUTION DATE 	: 2016.12.20		********/
+/******************************************************************************************************/
+
+/***** Work Frame 영역 Start *****/
+/* sta_WF_location */
+Static.sta_WF_location, Static.sta_WF_location:mouseover
+{
+	background		: URL('theme://images/ico_sta_home.png') left bottom;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #aaaaaaff;
+	align			: left bottom;
+	padding			: 0 0 0 16;
+}
+
+/* sta_WF_message */
+Static.sta_WF_message, Static.sta_WF_message:mouseover
+{
+	background		: URL('theme://images/img_WF_Message.png') left middle;
+	border			: 0 none #dddddd;
+	bordertype		: normal 0 0;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	color			: #69717aff;
+	align			: left middle;
+	padding			: 1 0 0 24;
+}
+
+/* sta_WF_Title */
+Static.sta_WF_MainTitle, Static.sta_WF_MainTitle:mouseover
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	font			: bold antialias 11 malgun gothic, Tahoma, Arial;
+	color			: #333333ff;
+	align			: left middle;
+	padding			: 0 0 0 0;
+}
+Static.sta_WF_Title, Static.sta_WF_Title:mouseover
+{
+	background		: URL('theme://images/img_PWF_bulet.png') left middle;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	color			: #313131ff;
+	align			: left middle;
+	padding			: -1 0 -1 16;
+}
+
+/* sta_WF_subtitle */
+Static.sta_WF_subtitle, Static.sta_WF_subtitle:mouseover
+{
+	background		: transparent URL('theme://images/sta_WF_subtitle.png') left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	color			: #4c4c4cff;
+	align			: left middle;	
+	padding			: 0 0 -1 16;
+}
+
+/* sta_WF_sub2title */
+Static.sta_WF_sub2title, Static.sta_WF_sub2title:mouseover
+{
+	background		: transparent URL('theme://images/sta_WF_sub2title.png') left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 1 0 0 8;
+	color			: #40454f;
+}
+
+/* sta_WF_Title */
+Static.sta_WFGC_tatal, Static.sta_WFGC_tatal:mouseover
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #555555ff;
+	align			: left middle;
+	padding			: 0 0 0 0;
+}
+
+
+/* info & comment */
+
+Static.sta_WF_DiscInfo, Static.sta_WF_DiscInfo:mouseover
+{
+	background 		: transparent URL('theme://images/ico_WF_msg_info.png') left top;
+	align			: left top;
+	font 			: antialias 9 malgun gothic, Tahoma, Arial;
+	color			: #516c7f;
+	padding			: 0 0 0 19;
+	linespace		: 4;
+}
+Static.sta_WF_DiscInfoN, Static.sta_WF_DiscInfoN:mouseover
+{
+	background 		: transparent;
+	align			: left top;
+	font 			: antialias 9 malgun gothic, Tahoma, Arial;
+	color			: #516c7f;
+	padding			: 0 0 0 0;
+	linespace		: 4;
+}
+
+Static.sta_WF_DiscPoint, Static.sta_WF_DiscPoint:mouseover
+{
+	background 		: transparent URL('theme://images/ico_WF_msg_point.png') left top;
+	align			: left top;
+	font 			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #da510f;
+	padding			: 0 0 0 19;
+	linespace		: 4;
+}
+Static.sta_WF_DiscPointN, Static.sta_WF_DiscPointN:mouseover
+{
+	background 		: transparent;
+	align			: left top;
+	font 			: antialias 9 malgun gothic, Tahoma, Arial;
+	color			: #da510f;
+	padding			: 0 0 0 0;
+	linespace		: 4;
+}
+Static.sta_WF_DescGuide, Static.sta_WF_DescGuide:mouseover
+{
+	background 		: transparent URL('theme://images/ico_WF_dash_desc.png') left middle;
+	align			: left middle;
+	font 			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #333333;
+	padding			: 0 0 0 12;
+	linespace		: 4;
+}
+
+/* sta_WF_explain_blue */
+Static.sta_WF_explain_blue, Static.sta_WF_explain_blue:mouseover
+{
+	align			: left top;
+	linespace		: 9;
+	color			: #216eb2ff;
+}
+/* sta_WF_explain_red */
+Static.sta_WF_explain_red, Static.sta_WF_explain_red:mouseover
+{
+	align			: left top;
+	linespace		: 9;
+	color			: #ff3c00ff;
+}
+/* sta_WF_explain_green */
+Static.sta_WF_explain_green, Static.sta_WF_explain_green:mouseover
+{
+	align			: left top;
+	linespace		: 9;
+	color			: #89bc00ff;
+}
+/* sta_WF_explain_gray */
+Static.sta_WF_explain_gray, Static.sta_WF_explain_gray:mouseover
+{
+	align			: left top;
+	linespace		: 9;
+	color			: #808080ff;
+}
+/* sta_WF_explain_gold */
+Static.sta_WF_explain_gold, Static.sta_WF_explain_gold:mouseover
+{
+	align			: left top;
+	linespace		: 9;
+	color			: #ddab32ff;
+}
+
+/* sta_WF_local */
+Static.sta_WF_local, Static.sta_WF_local:mouseover
+{
+	background		: transparent URL('theme://images/sta_WF_sub2title.png') left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 1 0 0 8;
+	color			: #40454f;
+}
+
+/* sta_WF_circle */
+Static.sta_WF_circle_blue, Static.sta_WF_circle_blue:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_blue.png') center middle;
+}
+Static.sta_WF_circle_green, Static.sta_WF_circle_green:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_green.png') center middle;
+}
+Static.sta_WF_circle_pink, Static.sta_WF_circle_pink:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_white.png') center middle;
+}
+Static.sta_WF_circle_gray, Static.sta_WF_circle_gray:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_gray.png') center middle;
+}
+Static.sta_WF_circle_violet, Static.sta_WF_circle_violet:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_violet.png') center middle;
+}
+Static.sta_WF_circle_red, Static.sta_WF_circle_red:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_red.png') center middle;
+}
+Static.sta_WF_circle_red2, Static.sta_WF_circle_red2:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_red2.png') center middle;
+}
+Static.sta_WF_circle_orange, Static.sta_WF_circle_orange:mouseover
+{
+	background		: transparent URL('theme://images/ico_circle_orange.png') center middle;
+}
+Static.sta_WF_circle_line, Static.sta_WF_circle_line:mouseover
+{
+	background		: #ccccccff;
+}
+Static.sta_WF_circle_title, Static.sta_WF_circle_title:mouseover
+{
+	align			: center middle;
+	font			: bold antialias 8 malgun gothic, Tahoma, Arial;
+	linespace		: -2;
+}
+Static.sta_WF_circle_data, Static.sta_WF_circle_data:mouseover
+{
+	align			: center middle;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+}
+Static.sta_WF_circle_dataB, Static.sta_WF_circle_dataB:mouseover
+{
+	align			: center middle;
+	font			: bold antialias 8 malgun gothic, Tahoma, Arial;
+}
+Static.sta_WF_circle_data_small, Static.sta_WF_circle_data_small:mouseover
+{
+	align			: center middle;
+	font			: antialias 7 malgun gothic, Tahoma, Arial;
+}
+Static.sta_WF_circle_data_smallB, Static.sta_WF_circle_data_smallB:mouseover
+{
+	align			: center middle;
+	font			: bold antialias 7 malgun gothic, Tahoma, Arial;
+}
+/* sta_WF_arrow */
+Static.sta_WF_arrow_green, Static.sta_WF_arrow_green:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_green.png') stretch 13,5 left middle;
+	color			: #004ba7ff;
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 2 8;
+}
+Static.sta_WF_arrow_blue, Static.sta_WF_arrow_blue:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_blue.png') stretch 13,5 left middle;
+	color			: #ffffff;
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 2 8;
+}
+Static.sta_WF_arrow_red, Static.sta_WF_arrow_red:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_red.png') stretch 13,5 left middle;
+	color			: #333333ff;
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 2 8;
+}
+Static.sta_WF_arrow_gray, Static.sta_WF_arrow_gray:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_gray.png') stretch 13,5 left middle;
+	color			: #333333ff;
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 2 8;
+}
+
+Static.sta_WF_arrow_greenpink, Static.sta_WF_arrow_greenpink:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_greenpink.png') stretch 13,5 left middle;
+	color			: #333333;
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;	
+	padding			: 0 0 2 8;
+}
+
+Static.sta_WF_arrow_whitepink, Static.sta_WF_arrow_whitepink:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_whitepink.png') stretch 13,5 left middle;
+	color			: #333333;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_WF_arrow_whiteblue, Static.sta_WF_arrow_whiteblue:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_whiteblue.png') stretch 13,5 left middle;
+	color			: #333333;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_WF_arrow_bluewhite, Static.sta_WF_arrow_bluewhite:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_blue.png') stretch 13,5 left middle;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+/* sta_WF_rec */
+Static.sta_WF_rec_gray, Static.sta_WF_rec_gray:mouseover
+{
+	background		: #ffffff;
+	border			: 2 solid #c2c5ccff;
+	color			: #333333ff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_WF_rec_green, Static.sta_WF_rec_green:mouseover
+{
+	background		: #bde1aaff;
+	border			: 2 solid #9ec58bff;
+	color			: #333333ff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_WF_rec_blue, Static.sta_WF_rec_blue:mouseover
+{
+	background		: #295e9fff;
+	border			: 2 solid #295e9fff;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_WF_rec_red, Static.sta_WF_rec_red:mouseover
+{
+	background		: #ffffff;
+	border			: 2 solid #e80f0f;
+	color			: #333333ff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+	
+}
+Static.sta_WF_recround_gray, Static.sta_WF_recround_gray:mouseover
+{
+	background		: #f0f6ffff;
+	border			: 2 solid #c2c5ccff;
+	bordertype		: round 14 14;
+	color			: #333333ff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_WF_Dash_tit, Static.sta_WF_Dash_tit:mouseover
+{
+	background		: #295e9fff;
+	border			: 0 none;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 2 8;
+}
+Static.sta_WF_Dash_subtit, Static.sta_WF_Dash_subtit:mouseover
+{
+	background		: #f1f2f5ff;
+	border			: 0 none #808080ff,1 solid #cececeff,0 none #808080ff,0 none #808080ff;
+	color			: #333333;
+	align			: center middle;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 2 8;
+}
+Static.sta_WF_Dash_result, Static.sta_WF_Dash_result:mouseover
+{
+	background		: #dbdbdbff;
+	border			: 0 none;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 2 8;
+}
+Static.sta_WF_Dash_result_tit, Static.sta_WF_Dash_result_tit:mouseover
+{
+	background		: transparent;
+	border			: 0 none;
+	color			: #333333;
+	align			: left middle;
+	font			: bold antialias 12 malgun gothic, Tahoma, Arial
+	padding			: 0 8 2 8;
+}
+Static.sta_WF_Dash_result_data, Static.sta_WF_Dash_result_data:mouseover
+{
+	background		: transparent;
+	border			: 0 none;
+	color			: #333333;
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial
+	padding			: 0 8 2 8;
+}
+Div.div_WF_rec_arrow_bg, Div.div_WF_rec_arrow_bg:mouseover
+{
+	background		: transparent URL('theme://images/ico_arrow_right.png') right middle;;
+}
+
+Div.div_WF_Dash_status_bg, Div.div_WF_Dash_status_bg:mouseover
+{
+	background		: #f0f6ffff;
+	border			: 1 solid #cececeff;
+}
+
+/***** Left Menu Button *****/
+
+/* btn_WF_LFclose */
+Button.btn_WF_LFclose, Button.btn_WF_LFclose:selected, Button.btn_WF_LFclose:focused, Button.btn_WF_LFclose:disabled
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade, 0 none #d8dade;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	gradation		: linear 0,0 #ffffff 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_LFcloseN.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_LFclose:mouseover
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade, 0 none #d8dade;
+	bordertype		: normal 0 0;
+	color			: #216eb2ff;
+	gradation		: linear 0,0 #fdfefe 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_LFcloseO.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_LFclose:pushed
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade, 0 none #d8dade;
+	bordertype		: normal 0 0;
+	color			: #0c2d4e;
+	gradation		: linear 0,0 #d3d3d3 0,100 #fcfcfc [15% #fcfcfc];
+	image			: URL('theme://images/btn_WF_LFcloseP.png');
+	imagealign		: center middle;
+	padding			: 1 0 -1 0;
+}
+Button.btn_WF_LFclose:disabled
+{
+	opacity			: 60;
+}
+
+/* btn_WF_LFopen */
+Button.btn_WF_LFopen, Button.btn_WF_LFopen:selected, Button.btn_WF_LFopen:focused, Button.btn_WF_LFopen:disabled
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade, 0 none #d8dade;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	gradation		: linear 0,0 #ffffff 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_LFopenN.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_LFopen:mouseover
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade, 0 none #d8dade;
+	bordertype		: normal 0 0;
+	color			: #216eb2ff;
+	gradation		: linear 0,0 #fdfefe 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_LFopenO.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_LFopen:pushed
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade, 0 none #d8dade;
+	bordertype		: normal 0 0;
+	color			: #0c2d4e;
+	gradation		: linear 0,0 #d3d3d3 0,100 #fcfcfc [15% #fcfcfc];
+	image			: URL('theme://images/btn_WF_LFopenP.png');
+	imagealign		: center middle;
+	padding			: 1 0 -1 0;
+}
+Button.btn_WF_LFopen:disabled
+{
+	opacity			: 60;
+}
+
+
+/***** Top Menu Button *****/
+
+/* btn_WF_TFclose */
+Button.btn_WF_TFclose, Button.btn_WF_TFclose:selected, Button.btn_WF_TFclose:focused, Button.btn_WF_TFclose:disabled
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	gradation		: linear 0,0 #ffffff 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_TFcloseN.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_TFclose:mouseover
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #216eb2ff;
+	gradation		: linear 0,0 #fdfefe 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_TFcloseO.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_TFclose:pushed
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #0c2d4e;
+	gradation		: linear 0,0 #d3d3d3 0,100 #fcfcfc [15% #fcfcfc];
+	image			: URL('theme://images/btn_WF_TFcloseP.png');
+	imagealign		: center middle;
+	padding			: 1 0 -1 0;
+}
+Button.btn_WF_TFclose:disabled
+{
+	opacity			: 60;
+}
+
+/* btn_WF_TFopen */
+Button.btn_WF_TFopen, Button.btn_WF_TFopen:selected, Button.btn_WF_TFopen:focused, Button.btn_WF_TFopen:disabled
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	gradation		: linear 0,0 #ffffff 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_TFopenN.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_TFopen:mouseover
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #216eb2ff;
+	gradation		: linear 0,0 #fdfefe 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_TFopenO.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_TFopen:pushed
+{
+	align			: center middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #0c2d4e;
+	gradation		: linear 0,0 #d3d3d3 0,100 #fcfcfc [15% #fcfcfc];
+	image			: URL('theme://images/btn_WF_TFopenP.png');
+	imagealign		: center middle;
+	padding			: 1 0 -1 0;
+}
+Button.btn_WF_TFopen:disabled
+{
+	opacity			: 60;
+}
+
+/* btn_WF_help */
+Button.btn_WF_help, Button.btn_WF_help:selected, Button.btn_WF_help:focused, Button.btn_WF_help:disabled
+{
+	align			: left middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	gradation		: linear 0,0 #ffffff 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_helpN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 8 0 8;
+}
+Button.btn_WF_help:mouseover
+{
+	align			: left middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #216eb2ff;
+	gradation		: linear 0,0 #fdfefe 0,100 #f5f5f5;
+	image			: URL('theme://images/btn_WF_helpO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 8 0 8;
+}
+Button.btn_WF_help:pushed
+{
+	align			: left middle;
+	background		: @gradation;
+	border			: 0 none #d8dade, 0 none #d8dade, 1 solid #d8dade, 1 solid #d8dade;
+	bordertype		: normal 0 0;
+	color			: #0c2d4e;
+	gradation		: linear 0,0 #d3d3d3 0,100 #fcfcfc [15% #fcfcfc];
+	image			: URL('theme://images/btn_WF_helpP.png');
+	imagealign		: lefttext middle;
+	padding			: 1 8 -1 8;
+}
+Button.btn_WF_help:disabled
+{
+	opacity			: 60;
+}
+
+
+
+/*************** CRUD Button ***************/
+
+
+
+/* btn_WF_Custom */
+Button.btn_WF_Custom, Button.btn_WF_Custom:selected, Button.btn_WF_Custom:focused,
+Button.btn_WF_Custom:mouseover, Button.btn_WF_Custom:pushed, Button.btn_WF_Custom:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_etcN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;
+}
+Button.btn_WF_Custom:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_etcO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+
+
+/* btn_WF_Custom */
+Button.btn_WF_Custom_fix:pushed
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_etcN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;
+}
+Button.btn_WF_Custom_fix, Button.btn_WF_Custom_fix:mouseover, Button.btn_WF_Custom_fix:disabled,Button.btn_WF_Custom_fix:selected, Button.btn_WF_Custom_fix:focused
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_etcO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+Button.btn_WF_Custom:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_etcO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+
+/* btn_WF_Search */
+Button.btn_WF_Search, Button.btn_WF_Search:selected, Button.btn_WF_Search:focused,
+Button.btn_WF_Search:mouseover, Button.btn_WF_Search:pushed, Button.btn_WF_Search:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_search_bkN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;
+}
+Button.btn_WF_Search:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_search_bkO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+/* btn_WF_Save */
+Button.btn_WF_Save, Button.btn_WF_Save:selected, Button.btn_WF_Save:focused,
+Button.btn_WF_Save:mouseover, Button.btn_WF_Save:pushed, Button.btn_WF_Save:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_saveN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+
+}
+Button.btn_WF_Save:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_saveO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;
+}
+
+/* btn_WF_Delete */
+Button.btn_WF_Delete, Button.btn_WF_Delete:selected, Button.btn_WF_Delete:focused,
+Button.btn_WF_Delete:mouseover, Button.btn_WF_Delete:pushed, Button.btn_WF_Delete:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_deleteN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+Button.btn_WF_Delete:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_deleteO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+
+/* btn_WF_Excel */
+Button.btn_WF_Excel, Button.btn_WF_Excel:selected, Button.btn_WF_Excel:focused,
+Button.btn_WF_Excel:mouseover, Button.btn_WF_Excel:pushed, Button.btn_WF_Excel:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_excelN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+
+}
+Button.btn_WF_Excel:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_excelO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+
+/* btn_WF_New */
+Button.btn_WF_New, Button.btn_WF_New:selected, Button.btn_WF_New:focused,
+Button.btn_WF_New:mouseover, Button.btn_WF_New:pushed, Button.btn_WF_New:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_newN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;
+}
+Button.btn_WF_New:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_newO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+/* btn_WF_Modify */
+Button.btn_WF_Modify, Button.btn_WF_Modify:selected, Button.btn_WF_Modify:focused,
+Button.btn_WF_Modify:mouseover, Button.btn_WF_Modify:pushed, Button.btn_WF_Modify:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_modifyN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;
+}
+Button.btn_WF_Modify:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_modifyO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+/* btn_WF_Spopup */
+Button.btn_WF_Spopup, Button.btn_WF_Spopup:selected, Button.btn_WF_Spopup:focused,
+Button.btn_WF_Spopup:mouseover, Button.btn_WF_Spopup:pushed, Button.btn_WF_Spopup:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_spopupN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+Button.btn_WF_Spopup:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_spopupO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+/* btn_WF_Complete */
+Button.btn_WF_Complete, Button.btn_WF_Complete:selected, Button.btn_WF_Complete:focused,
+Button.btn_WF_Complete:mouseover, Button.btn_WF_Complete:pushed, Button.btn_WF_Complete:disabled
+{
+	background		: #ffffffff;
+	align			: left middle;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_completeN.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+
+}
+Button.btn_WF_Complete:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	color			: #333333;
+	image			: URL('theme://images/btn_WF_completeO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 10 3 10;	
+}
+
+/* Grid Control Button */
+
+/* btn_WF_ddrow */
+Button.btn_WF_addrow, Button.btn_WF_addrow:selected, Button.btn_WF_addrow:focused,
+Button.btn_WF_addrow:mouseover, Button.btn_WF_addrow:pushed, Button.btn_WF_addrow:disabled
+{
+	align			: left middle;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_addrow.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+
+Button.btn_WF_addrow:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	image			: URL('theme://images/btn_WF_addrow_O.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+
+Button.btn_WF_addrow:pushed
+{
+	padding			: 1 0 -1 0;
+}
+
+/* btn_WF_delrow */
+Button.btn_WF_delrow, Button.btn_WF_delrow:selected, Button.btn_WF_delrow:focused,
+Button.btn_WF_delrow:mouseover, Button.btn_WF_delrow:pushed, Button.btn_WF_delrow:disabled
+{
+	align			: left middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_WF_delrow.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_delrow:mouseover
+{
+	background		: #eeeeeeff;
+	gradation		: linear 0,0 #ffffffff 0,100 #eeeeeeff;
+	border			: 1 solid #cccccc;
+	image			: URL('theme://images/btn_WF_delrow_O.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+}
+Button.btn_WF_delrow:pushed
+{
+	padding			: 1 0 -1 0;
+}
+
+
+/* Search btn */
+Button.btn_WFD_search, Button.btn_WFD_search:selected, Button.btn_WFD_search:focused
+{
+	image				: theme://images/btn_TF_searchN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_search:mouseover
+{
+	image				: theme://images/btn_TF_searchO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_search:pushed
+{
+	image				: theme://images/btn_TF_searchP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}   
+Button.btn_WFD_search:disabled
+{
+	image				: theme://images/btn_TF_searchD.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_WFD_searchNu, Button.btn_WFD_searchNu:selected, Button.btn_WFD_searchNu:focused
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/btn_TF_searchN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_searchNu:mouseover
+{
+	background			: transparent;
+	border				: 0 none;		
+	image				: theme://images/btn_TF_searchO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_searchNu:pushed
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/btn_TF_searchP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}   
+Button.btn_WFD_searchNu:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/btn_TF_searchD.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}
+Button.btn_WFD_calNu, Button.btn_WFD_calNu:selected, Button.btn_WFD_calNu:focused
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/cal_ico_N.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_calNu:mouseover
+{
+	background			: transparent;
+	border				: 0 none;		
+	image				: theme://images/cal_ico_O.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_calNu:pushed
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/cal_ico_P.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}   
+Button.btn_WFD_calNu:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/cal_ico_D.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}
+
+
+/* Combo btn */
+Button.btn_WFD_combo, Button.btn_WFD_combo:selected, Button.btn_WFD_combo:focused
+{
+	image				: theme://images/cmb_drop_N.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_combo:mouseover
+{
+	image				: theme://images/cmb_drop_O.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_combo:pushed
+{
+	image				: theme://images/cmb_drop_P.png;
+	imagealign			: center middle;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_WFD_combo:disabled
+{
+	image				: theme://images/cmb_drop_D.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_comboNu, Button.btn_WFD_comboNu:selected, Button.btn_WFD_comboNu:focused
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/cmb_drop_N.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_comboNu:mouseover
+{
+	background			: transparent;
+	border				: 0 none;		
+	image				: theme://images/cmb_drop_O.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_comboNu:pushed
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/cmb_drop_P.png;
+	imagealign			: center middle;
+	padding				: 1 0 -1 0;	
+}   
+Button.btn_WFD_comboNu:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/cmb_drop_D.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}
+
+/* Delete btn */
+Button.btn_WFD_delete, Button.btn_WFD_delete:selected, Button.btn_WFD_delete:focused
+{
+	image				: theme://images/btn_WFD_modify.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_delete:mouseover
+{
+	image				: theme://images/btn_WFD_modify.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WFD_delete:pushed
+{
+	image				: theme://images/btn_WFD_modify.png;
+	imagealign			: center middle;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_WFD_delete:disabled
+{
+	image				: theme://images/btn_WFD_modify.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+
+/* Page btn */
+Button.btn_WF_page, Button.btn_WF_page:focused
+{
+	align				: center middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal;
+	color				: #333333;
+	cursor				: hand;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 1 0 0 0;
+}
+Button.btn_WF_page:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal;
+	color				: #216eb2;		
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 1 0 0 0;	
+}
+Button.btn_WF_page:pushed, Button.btn_WF_page:selected
+{
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal;
+	font				: underline bold antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #216eb2;
+	padding				: 2 0 -1 0;
+}   
+Button.btn_WF_page:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	color				: #a2a2a2;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+Button.btn_WF_pageS, Button.btn_WF_pageS:focused
+{
+	align				: center middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal;
+	color				: #0e55a1;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 1 0 0 0;
+}
+Button.btn_WF_pageS:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal;
+	color				: #0e55a1;		
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 1 0 0 0;	
+}
+Button.btn_WF_pageS:pushed, Button.btn_WF_pageS:selected
+{
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #0e55a1;
+	padding				: 2 0 -1 0;
+}   
+Button.btn_WF_pageS:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	color				: #0e55a1;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+Button.btn_WF_first, Button.btn_WF_first:selected, Button.btn_WF_first:focused,
+Button.btn_WF_end, Button.btn_WF_end:selected, Button.btn_WF_end:focused,
+Button.btn_WF_prev, Button.btn_WF_prev:selected, Button.btn_WF_prev:focused,
+Button.btn_WF_next, Button.btn_WF_next:selected, Button.btn_WF_next:focused,
+Button.btn_WF_shuttleL, Button.btn_WF_shuttleL:selected, Button.btn_WF_shuttleL:focused,
+Button.btn_WF_shuttleR, Button.btn_WF_shuttleR:selected, Button.btn_WF_shuttleR:focused,
+Button.btn_WF_shuttleL_Txt, Button.btn_WF_shuttleL_Txt:selected, Button.btn_WF_shuttleL_Txt:focused,
+Button.btn_WF_shuttleR_Txt, Button.btn_WF_shuttleR_Txt:selected, Button.btn_WF_shuttleR_Txt:focused,
+Button.btn_WF_shuttleT, Button.btn_WF_shuttleT:selected, Button.btn_WF_shuttleT:focused,
+Button.btn_WF_shuttleB, Button.btn_WF_shuttleB:selected, Button.btn_WF_shuttleB:focused,
+Button.btn_WF_search, Button.btn_WF_search:selected, Button.btn_WF_search:focused,
+Button.btn_WF_add, Button.btn_WF_add:selected, Button.btn_WF_add:focused,
+Button.btn_WF_addplus, Button.btn_WF_addplus:selected, Button.btn_WF_addplus:focused,
+Button.btn_WF_addminus, Button.btn_WF_addminus:selected, Button.btn_WF_addminus:focused,
+Button.btn_WF_search, Button.btn_WF_search:selected, Button.btn_WF_search:focused
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 1 solid #b7b7b7;
+	bordertype			: round 2 2;
+	color				: #333333;
+	cursor				: hand;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #ffffff 0,100 #f5f5f5;
+	image				: theme://images/btn_WF_pageAllaw2LN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WF_first:mouseover, 
+Button.btn_WF_end:mouseover, 
+Button.btn_WF_prev:mouseover,
+Button.btn_WF_next:mouseover,
+Button.btn_WF_shuttleL:mouseover, Button.btn_WF_shuttleL_Txt:mouseover,
+Button.btn_WF_shuttleR:mouseover, Button.btn_WF_shuttleR_Txt:mouseover,
+Button.btn_WF_shuttleT:mouseover,
+Button.btn_WF_shuttleB:mouseover,
+Button.btn_WF_add:mouseover,
+Button.btn_WF_addplus:mouseover,
+Button.btn_WF_addminus:mouseover,
+Button.btn_WF_search:mouseover
+{
+	background			: @gradation;
+	border				: 1 solid #216eb2;
+	bordertype			: round 2 2;
+	color				: #216eb2;
+	gradation			: linear 0,0 #fdfefe 0,100 #f5f5f5;
+	image				: theme://images/btn_WF_pageAllaw2LO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_WF_first:pushed, Button.btn_WF_prev:pushed, Button.btn_WF_next:pushed, Button.btn_WF_end:pushed,
+Button.btn_WF_shuttleL:pushed, Button.btn_WF_shuttleR:pushed, Button.btn_WF_shuttleT:pushed, Button.btn_WF_shuttleB:pushed,
+Button.btn_WF_shuttleL_Txt:pushed, Button.btn_WF_shuttleR_Txt:pushed, 
+Button.btn_WF_add:pushed, Button.btn_WF_addplus:pushed, Button.btn_WF_addminus:pushed, Button.btn_WF_search:pushed
+{
+	background			: @gradation;
+	border				: 1 solid #0f4e87;
+	bordertype			: round 2 2;
+	color				: #0c2d4e;
+	gradation			: linear 0,0 #d3d3d3 0,100 #fcfcfc [15% #fcfcfc];
+	image				: theme://images/btn_WF_pageAllaw2LP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}   
+Button.btn_WF_first:disabled, Button.btn_WF_prev:disabled, Button.btn_WF_next:disabled, Button.btn_WF_end:disabled,
+Button.btn_WF_shuttleL:disabled, Button.btn_WF_shuttleR:disabled, Button.btn_WF_shuttleT:disabled, Button.btn_WF_shuttleB:disabled,
+Button.btn_WF_shuttleL_Txt:disabled, Button.btn_WF_shuttleR_Txt:disabled, 
+Button.btn_WF_add:disabled, Button.btn_WF_addplus:disabled, Button.btn_WF_addminus:disabled, Button.btn_WF_search:disabled
+{
+	background			: @gradation;
+	border				: 1 solid #b7b7b7;
+	bordertype			: round 2 2;
+	color				: ##999999ff;
+	gradation			: linear 0,0 #ffffff 0,100 #f5f5f5;	
+	image				: theme://images/btn_WF_pageAllaw2LD.png;
+	imagealign			: center middle;
+	opacity				: 50;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_WF_end, Button.btn_WF_end:selected, Button.btn_WF_end:focused
+{
+	image				: theme://images/btn_WF_pageAllaw2RN.png;
+}
+Button.btn_WF_end:mouseover
+{
+	image				: theme://images/btn_WF_pageAllaw2RO.png;
+}
+Button.btn_WF_end:pushed
+{
+	image				: theme://images/btn_WF_pageAllaw2RP.png;
+}   
+Button.btn_WF_end:disabled
+{
+	image				: theme://images/btn_WF_pageAllaw2RD.png;
+}
+
+Button.btn_WF_prev, Button.btn_WF_prev:selected, Button.btn_WF_prev:focused
+{
+	image				: theme://images/btn_WF_pageAllawLN.png;
+}
+Button.btn_WF_prev:mouseover
+{
+	image				: theme://images/btn_WF_pageAllawLO.png;
+}
+Button.btn_WF_prev:pushed
+{
+	image				: theme://images/btn_WF_pageAllawLP.png;
+}   
+Button.btn_WF_prev:disabled
+{
+	image				: theme://images/btn_WF_pageAllawLD.png;
+}
+
+Button.btn_WF_next, Button.btn_WF_next:selected, Button.btn_WF_next:focused
+{
+	image				: theme://images/btn_WF_pageAllawRN.png;
+}
+Button.btn_WF_next:mouseover
+{
+	image				: theme://images/btn_WF_pageAllawRO.png;
+}
+Button.btn_WF_next:pushed
+{
+	image				: theme://images/btn_WF_pageAllawRP.png;
+}   
+Button.btn_WF_next:disabled
+{
+	image				: theme://images/btn_WF_pageAllawRD.png;
+}
+
+/* Suttle btn */
+Button.btn_WF_shuttleL, Button.btn_WF_shuttleL:selected, Button.btn_WF_shuttleL:focused
+{
+	image				: theme://images/btn_WF_shuttleLN.png;
+}
+Button.btn_WF_shuttleL:mouseover
+{
+	image				: theme://images/btn_WF_shuttleLO.png;
+}
+Button.btn_WF_shuttleL:pushed
+{
+	image				: theme://images/btn_WF_shuttleLP.png;
+}   
+Button.btn_WF_shuttleL:disabled
+{
+	image				: theme://images/btn_WF_shuttleLD.png;	
+}
+Button.btn_WF_shuttleR, Button.btn_WF_shuttleR:selected, Button.btn_WF_shuttleR:focused
+{
+	image				: theme://images/btn_WF_shuttleRN.png;
+}
+Button.btn_WF_shuttleR:mouseover
+{
+	image				: theme://images/btn_WF_shuttleRO.png;
+}
+Button.btn_WF_shuttleR:pushed
+{
+	image				: theme://images/btn_WF_shuttleRP.png;
+}   
+Button.btn_WF_shuttleR:disabled
+{
+	image				: theme://images/btn_WF_shuttleRD.png;
+}
+Button.btn_WF_shuttleT, Button.btn_WF_shuttleT:selected, Button.btn_WF_shuttleT:focused
+{
+	image				: theme://images/btn_WF_shuttleTN.png;
+}
+Button.btn_WF_shuttleT:mouseover
+{
+	image				: theme://images/btn_WF_shuttleTO.png;
+}
+Button.btn_WF_shuttleT:pushed
+{
+	image				: theme://images/btn_WF_shuttleTP.png;
+}   
+Button.btn_WF_shuttleT:disabled
+{
+	image				: theme://images/btn_WF_shuttleTD.png;
+}
+Button.btn_WF_shuttleB, Button.btn_WF_shuttleB:selected, Button.btn_WF_shuttleB:focused
+{
+	image				: theme://images/btn_WF_shuttleBN.png;
+}
+Button.btn_WF_shuttleB:mouseover
+{
+	image				: theme://images/btn_WF_shuttleBO.png;
+}
+Button.btn_WF_shuttleB:pushed
+{
+	image				: theme://images/btn_WF_shuttleBP.png;
+}   
+Button.btn_WF_shuttleB:disabled
+{
+	image				: theme://images/btn_WF_shuttleBD.png;
+}
+
+/* btn_WF_shuttleL_Text */
+Button.btn_WF_shuttleL_Txt, Button.btn_WF_shuttleL_Txt:selected, Button.btn_WF_shuttleL_Txt:focused
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleLN.png;
+}
+Button.btn_WF_shuttleL_Txt:mouseover
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleLO.png;
+}
+Button.btn_WF_shuttleL_Txt:pushed
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleLP.png;
+}   
+Button.btn_WF_shuttleL_Txt:disabled
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleLD.png;	
+}
+
+/* btn_WF_shuttleR_Text */
+Button.btn_WF_shuttleR_Txt, Button.btn_WF_shuttleR_Txt:selected, Button.btn_WF_shuttleR_Txt:focused
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleRN.png;
+}
+Button.btn_WF_shuttleR_Txt:mouseover
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleRO.png;
+}
+Button.btn_WF_shuttleR_Txt:pushed
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleRP.png;
+}   
+Button.btn_WF_shuttleR_Txt:disabled
+{
+	align				: center bottom;
+	imagealign			: center top;
+	padding				: 8 0 8 0;
+	image				: theme://images/btn_WF_shuttleRD.png;
+}
+
+
+/* File Upload btn */
+
+Button.btn_WFD_addsample, Button.btn_WFD_addsample:selected, Button.btn_WFD_addsample:focused
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/img_filesample.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_addsample:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_filesample.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_addsample:pushed
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_filesample.png;
+	imagealign			: center middle;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_WFD_addsample:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_filesample.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_WFD_addsave, Button.btn_WFD_addsave:selected, Button.btn_WFD_addsave:focused
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/img_filesave.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_addsave:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_filesave.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_addsave:pushed
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_filesave.png;
+	imagealign			: center middle;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_WFD_addsave:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_filesave.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_WFD_addon, Button.btn_WFD_addon:selected, Button.btn_WFD_addon:focused
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/img_fileon.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_addon:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_fileon.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_WFD_addon:pushed
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_fileon.png;
+	imagealign			: center middle;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_WFD_addon:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	image				: theme://images/img_fileon.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_WFD_addoff, Button.btn_WFD_addoff:selected, Button.btn_WFD_addoff:focused, Button.btn_WFD_addoff:mouseover,
+Button.btn_WFD_addoff:pushed, Button.btn_WFD_addoff:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	cursor				: hand;
+	image				: theme://images/img_fileoff.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50;
+	shadow				: ;
+}
+Button.btn_WFD_addoff:pushed
+{
+	padding				: 1 0 -1 0;
+}   
+
+
+Button.btn_WF_add, Button.btn_WF_add:selected, Button.btn_WF_add:focused
+{
+	image				: theme://images/btn_WF_addN.png;
+}
+Button.btn_WF_add:mouseover
+{
+	image				: theme://images/btn_WF_addO.png;
+}
+Button.btn_WF_add:pushed
+{
+	image				: theme://images/btn_WF_addP.png;
+}   
+Button.btn_WF_add:disabled
+{
+	image				: theme://images/btn_WF_addD.png;
+}
+
+Button.btn_WF_addplus, Button.btn_WF_addplus:selected, Button.btn_WF_addplus:focused
+{
+	image				: theme://images/btn_WF_addplusN.png;
+}
+Button.btn_WF_addplus:mouseover
+{
+	image				: theme://images/btn_WF_addplusO.png;
+}
+Button.btn_WF_addplus:pushed
+{
+	image				: theme://images/btn_WF_addplusP.png;
+}   
+Button.btn_WF_addplus:disabled
+{
+	image				: theme://images/btn_WF_addplusD.png;
+}
+
+Button.btn_WF_addminus, Button.btn_WF_addminus:selected, Button.btn_WF_addminus:focused
+{
+	image				: theme://images/btn_WF_addminusN.png;
+}
+Button.btn_WF_addminus:mouseover
+{
+	image				: theme://images/btn_WF_addminusO.png;
+}
+Button.btn_WF_addminus:pushed
+{
+	image				: theme://images/btn_WF_addminusP.png;
+}   
+Button.btn_WF_addminus:disabled
+{
+	image				: theme://images/btn_WF_addminusD.png;
+}
+
+
+
+/* WF SearchArea open btn */
+Button.btn_WFSA_open, Button.btn_WFSA_open:selected, Button.btn_WFSA_open:disabled, Button.btn_WFSA_open:focused
+{
+	background			: ;
+	border				: 0 none #577ca5;
+	cursor				: hand;
+	image				: theme://images/btn_WFSA_searchopenN.png;
+	imagealign			: right bottom;
+	padding				: 0 0 0 0;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WFSA_open:mouseover
+{
+	background			: ;
+	border				: 0 none #577ca5;
+	image				: theme://images/btn_WFSA_searchopenO.png;
+	imagealign			: right bottom;
+	padding				: 0 0 0 0;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WFSA_open:pushed
+{
+	background			: ;
+	border				: 0 none #577ca5;
+	image				: theme://images/btn_WFSA_searchopenP.png;
+	imagealign			: right bottom;
+	padding				: 0 0 0 0;
+	shadow				: outer 0,0 0 #00000026;
+}
+
+/* WF SearchArea close btn */
+Button.btn_WFSA_close, Button.btn_WFSA_close:selected, Button.btn_WFSA_close:disabled, Button.btn_WFSA_close:focused
+{
+	background			: ;
+	border				: 0 none #577ca5;
+	cursor				: hand;
+	image				: theme://images/btn_WFSA_searchcloseN.png;
+	imagealign			: right bottom;
+	padding				: 0 0 0 0;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WFSA_close:mouseover
+{
+	background			: ;
+	border				: 0 none #577ca5;
+	image				: theme://images/btn_WFSA_searchcloseO.png;
+	imagealign			: right bottom;
+	padding				: 0 0 0 0;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WFSA_close:pushed
+{
+	background			: ;
+	border				: 0 none #577ca5;
+	image				: theme://images/btn_WFSA_searchcloseP.png;
+	imagealign			: right bottom;
+	padding				: 0 0 0 0;
+	shadow				: outer 0,0 0 #00000026;
+}
+
+
+
+
+/***** SearchArea *****/
+/* WF SearchArea Search BG */
+Div.div_WFSA_bg
+{
+	background		: @gradation;
+	border			: 1 solid #cecece;
+	bordertype		: normal 0 0;
+	gradation		: linear 0,0 #f8f8f8ff 0,100 #f8f8f8ff [15% #f8f8f8ff];
+	shadow			: outer 0,1 1 #ebebebff
+}
+Static.sta_WFSA_bg2, Static.sta_WFSA_bg2:mouseover
+{
+	background		: #f5f8f9ff;
+	border			: 1 solid #b6d2d6ff, 0 none, 0 none, 0 none;
+	bordertype		: normal 0 0;
+	padding			: 0 0 0 0;
+}
+Div.div_WFSA_bg2, Div.div_WFSA_bg2:mouseover
+{
+	background		: #fdf8f0;
+	border			: 1 solid #ded0bc;
+	bordertype		: normal 0 0;
+}
+Div.div_WFSA_bg3, Div.div_WFSA_bg3:mouseover
+{
+	background		: #f0f0f0ff;
+	border			: 1 solid #cecece;
+	bordertype		: normal 0 0;
+	shadow			: outer 0,1 1 #ebebebff
+}
+Static.sta_WFSA_label, Static.sta_WFSA_label:mouseover
+{
+	background		: URL('theme://images/ico_WFSA_labelB.png') left middle;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	font			: bold antialias 9 Malgun Gothic, Tahoma, Arial;
+	color			: #40454f;
+	align			: left middle;
+	padding			: -1 0 0 8;
+}
+
+
+Static.sta_WFSA_GuideTi, Static.sta_WFSA_GuideTi:mouseover
+{
+	align				: center middle;
+	background			: #f5ebdc;
+	border				: 1 solid #ded0bc;
+	bordertype			: normal 0 0;
+	font				: bold antialias 9 Malgun Gothic, Tahoma, Arial;
+	color				: #84715c;
+}
+Static.sta_WFSA_Guidetxt, Static.sta_WFSA_Guidetxt:mouseover
+{
+	align				: left top;
+	background			: #ffffff;
+	border				: 1 solid #ded0bc;
+	bordertype			: normal 0 0;
+	font				:  antialias 9 Malgun Gothic, Tahoma, Arial;
+	color				: #444444;
+	padding				: 8 8 8 8;
+	linespace			: 8;
+}
+
+
+/***** DetailArea *****/
+/* div_Detail_bg */
+Div.div_Detail_bg, Div.div_Detail_bg:mouseover
+{
+	background			: #ffffffff;
+	border				: 1 solid #dcdcdcff;
+	padding				: 0 0 0 0;
+}
+
+
+Div.div_Mywork_this, Div.div_Mywork_this:mouseover
+{
+	background			: #ffffff;
+	border				: 0 none #295e9f, 2 solid #295e9f, 2 solid #295e9f, 2 solid #295e9f;
+	padding				: 0 0 0 0;
+}
+Div.div_Mywork_prev, Div.div_Mywork_prev:mouseover,
+Div.div_Mywork_next, Div.div_Mywork_next:mouseover
+{
+	background			: #ffffff;
+	border				: 2 solid #ffffff;
+	padding				: 0 0 0 0;
+	opacity				: 40;
+}
+
+Div.div_SQ_STDBox, Div.div_SQ_STDBox:mouseover
+{
+	background			: #e7f0f8;
+	border				: 1 solid #90b8e1;
+}
+
+
+Static.sta_SQ_STti, Static.sta_SQ_STti:mouseover
+{
+	align				: center middle;
+	background			: #cddff1;
+	border				: 0 none #90b8e1, 1 solid #90b8e1, 0 none #90b8e1, 0 none #90b8e1;
+	color				: #295e9f;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;
+}
+
+Static.sta_SQ_STBtxt, Static.sta_SQ_STBtxt:mouseover
+{
+	align				: center middle;
+	background			: ;
+	border				: 0 none #90b8e1, 1 solid #90b8e1ff, 0 none #90b8e1, 0 none #90b8e1 ;
+	color				: #4275b4;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;
+}
+
+
+Static.sta_Mywork_tibg, Static.sta_Mywork_tibg:mouseover
+{
+	align				: center middle;
+	background			: #8cb4dd;
+	border				: 1 solid #5791cd;
+	color				: #ffffff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 8 0 8;
+}
+
+
+Static.sta_Detail_this, Static.sta_Detail_this:mouseover
+{
+	align				: center middle;
+	background			: #295e9f;
+	border				: 0 none #dcdcdcff;
+	color				: #ffffff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 8 0 8;
+}
+Static.sta_Detail_day, Static.sta_Detail_day:mouseover, Static.sta_Detail_day:disabled
+{
+	align				: center middle;
+	background			: #c1d2e1;
+	border				: 1 solid #216eb2ff, 0 none #dcdcdcff, 0 none #dcdcdcff, 0 none #dcdcdcff;
+	color				: #184a87;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 8 0 8;
+}
+Static.sta_Detail_day:disabled
+{
+	align				: center middle;
+	background			: #e4e4e4;
+	border				: 1 solid #666666, 0 none #dcdcdcff, 0 none #dcdcdcff, 0 none #dcdcdcff;
+	color				: #555555;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 8 0 8;
+}
+
+Static.sta_Weekrep_databg, Static.sta_Weekrep_databg:mouseover
+{
+	align				: center middle;
+	background			: #ffffff;
+	border				: 2 solid #5791cd;
+	color				: #333333;
+	font				: bold antialias 11 malgun gothic, Tahoma, Arial;
+	padding				: 0 8 2 8;
+}
+
+
+Static.sta_Weekrep_titbg, Static.sta_Weekrep_titbg:mouseover
+{
+	align				: center middle;
+	background			: #295e9f;
+	border				: 0 none #dcdcdcff;
+	color				: #ffffff;
+	font				: bold antialias 11 malgun gothic, Tahoma, Arial;
+	padding				: 0 8 2 8;
+}
+
+
+/* Static_Detail_bg */
+Static.sta_Detail_bg, Static.sta_Detail_bg:mouseover
+{
+	align				: left middle;
+	background			: #ffffffff;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;	
+	padding				: 0 8 0 8;
+}
+Static.sta_Detail_labelP, Static.sta_Detail_labelP:mouseover
+{
+	align				: left middle;
+	background			: #f4f5f5ff URL('theme://images/bg_requiredT.png') no-repeat 7,7 left top;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;
+	padding				: 0 8 0 8;
+}
+Static.sta_Detail_label, Static.sta_Detail_label:mouseover
+{
+	align				: left middle;
+	background			: #f4f5f5ff;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;
+	padding				: 0 8 0 8;
+}
+Static.sta_Detail_labelCen, Static.sta_Detail_labelCen:mouseover
+{
+	align				: center middle;
+	background			: #f4f5f5ff;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;
+	padding				: 0 8 0 8;
+}
+Static.sta_Detail_labelR, Static.sta_Detail_labelR:mouseover
+{
+	align				: right middle;
+	background			: #f4f5f5ff;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;
+	padding				: 0 8 0 8;
+}
+Static.sta_WF_schline, Static.sta_WF_schline:mouseover, Static.sta_WF_schline:focused
+{
+	background			: #999999;
+	border				: 0 none #d9d9d9;
+}
+
+
+Static.sta_PopDetail_label, Static.sta_PopDetail_label:mouseover
+{
+	align				: left middle;
+	background			: #ebf4ff;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 4 0 4;
+}
+Static.sta_PopDetail_labelCen, Static.sta_PopDetail_labelCen:mouseover
+{
+	align				: center middle;
+	background			: #f4f4f4;
+	border				: 2 solid #999999ff,1 solid #cececeff,1 solid #cececeff,1 solid #cececeff;
+	color				: #444444ff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 4 0 4;
+}
+Static.sta_PopDetail_labelR, Static.sta_PopDetail_labelR:mouseover
+{
+	align				: right middle;
+	background			: #ebf4ff;
+	border				: 1 solid #dcdcdcff;
+	color				: #444444ff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 4 0 4;
+}
+Static.sta_GridCondtion_bg, Static.sta_GridCondtion_bg:mouseover
+{
+	align				: left middle;
+	background			: #f4f4f4;
+	border				: 2 solid #999999ff,1 solid #cececeff,1 solid #cececeff,1 solid #cececeff;
+	color				: #333333ff;	
+	padding				: 0 8 0 8;
+}
+Static.sta_GridCondtion_bgL, Static.sta_GridCondtion_bgL:mouseover
+{
+	align				: left middle;
+	background			: #f4f4f4;
+	border				: 2 solid #999999ff,0 none,1 solid #cececeff,1 solid #cececeff;
+	color				: #333333ff;	
+	padding				: 0 8 0 8;
+}
+Static.sta_GridCondtion_bgR, Static.sta_GridCondtion_bgR:mouseover
+{
+	align				: left middle;
+	background			: #f4f4f4;
+	border				: 2 solid #999999ff,1 solid #cececeff,1 solid #cececeff,0 none;
+	color				: #333333ff;	
+	padding				: 0 8 0 8;
+}
+Static.sta_index_gray, Static.sta_index_gray:mouseover
+{
+	align				: left middle;
+	background			: transparent URL('theme://images/ico_index_gray.png') left middle;
+	border				: 0 none;
+	color				: #333333ff;	
+	font				: antialias 8 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 16;
+}
+Static.sta_index_green, Static.sta_index_green:mouseover
+{
+	align				: left middle;
+	background			: transparent URL('theme://images/ico_index_green.png') left middle;
+	border				: 0 none;
+	color				: #333333ff;	
+	font				: antialias 8 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 16;
+}
+Static.sta_index_blue, Static.sta_index_blue:mouseover
+{
+	align				: left middle;
+	background			: transparent URL('theme://images/ico_index_blue.png') left middle;
+	border				: 0 none;
+	color				: #333333ff;	
+	font				: antialias 8 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 16;
+}
+Static.sta_index_white, Static.sta_index_white:mouseover
+{
+	align				: left middle;
+	background			: transparent URL('theme://images/ico_index_white.png') left middle;
+	border				: 0 none;
+	color				: #333333ff;	
+	font				: antialias 8 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 16;
+}
+Static.sta_bottom_point_red, Static.sta_bottom_point_red:mouseover
+{
+	align				: center middle;
+	background			: transparent URL('theme://images/ico_arrow_bottom_red.png') center top;
+	border				: 0 none;
+	color				: #333333ff;	
+	padding				: 0 0 0 0;
+}
+Div.div_bottom_point_bg, Static.div_bottom_point_bg:mouseover
+{
+	align				: center middle;
+	background			: transparent URL('theme://images/bg_arrow_red_dash.png') repeat-y center;
+	border				: 0 none;
+	color				: #333333ff;	
+	padding				: 0 0 0 0;
+}
+Div.div_bottom_point_black_bg, Static.div_bottom_point_bg:mouseover
+{
+	align				: center middle;
+	background			: transparent URL('theme://images/bg_arrow_black_dash.png') repeat-y center;
+	border				: 0 none;
+	color				: #333333ff;	
+	padding				: 0 0 0 0;
+}
+
+Div.div_bottom_point_gray_bg, Static.div_bottom_point_bg:mouseover
+{
+	align				: center middle;
+	background			: transparent URL('theme://images/bg_arrow_gray_dash.png') repeat-y center;
+	border				: 0 none;
+	color				: #333333ff;	
+	padding				: 0 0 0 0;
+}
+
+Grid.grd_WF_InGrd, Grid.grd_WF_InGrd:mouseover, Grid.grd_WF_InGrd:focused, Grid.grd_WF_InGrd:disabled
+{
+	border			: 1 solid #999999ff,1 solid #cececeff,1 solid #cececeff,1 solid #cececeff;
+}
+
+Grid.grd_WF_NonSelect, Grid.grd_WF_NonSelect:mouseover, Grid.grd_WF_NonSelect:focused
+{
+	background			: #ffffff;
+	border				: 1 solid #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc;
+	bordertype			: normal;
+	focusborder			: 0 none;
+	treelinetype			: 1 dotted #a5b6b6;
+	color                  		: #444444 ;
+}
+Grid.grd_WF_NonSelect>#body, Grid.grd_WF_NonSelect>#body:mouseover, Grid.grd_WF_NonSelect>#body:focused,
+Grid.grd_WF_NonSelect>#body:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #ffffff;
+	cellbackground2			: #ffffff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: transparent;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #444444;
+	selectline			: 1 solid #d0d3dc;
+}
+
+
+
+/* Grd_menu_tree */
+Grid.grd_WFD_tree, Grid.grd_WFD_tree:mouseover, Grid.grd_WFD_tree:focused
+{
+	align			: center middle;
+	background		: #ffffffff;
+	border			: 1 solid #216eb2ff,1 solid #cececeff,1 solid #cececeff,1 solid #cececeff;
+	bordertype		: normal;
+	color			: #333333ff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	treeclosebuttonimage	: URL('theme://images/tree_close.png');
+	treecollapseimage	: ;
+	treeexpandimage		: ;
+	treeitemimage		: URL('theme://images/tree_item.png');
+	treeopenbuttonimage	: URL('theme://images/tree_open.png');
+	padding			: 0 0 0 0;
+}
+
+
+
+
+
+Grid>#body, Grid>#body:focused, Grid>#body:disabled
+{
+	align			: center middle;	
+	background		: #ffffffff;
+	border			: 0 none;
+	cellbackground		: #ffffffff;
+	cellbackground2		: #f1f1f1;
+	cellcolor		: #555555ff;
+	cellcolor2		: #555555ff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 1 solid #ebebebff;
+	cellpadding		: 2 4 2 4;
+	selectbackground	: #e4eaf8ff;
+	selectborder		: 1 solid #ebebebff;
+	selectcolor		: #00389aff;
+	selectfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 1 solid #ebebebff;
+}Grid>#body:mouseover
+{
+	background		: #ffffffff;
+	border			: 0 none;
+	cellbackground		: #f2f2f2ff;
+	cellbackground2		: #f2f2f2ff;
+	cellcolor		: #000000ff;
+	cellcolor2		: #000000ff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 1 solid #ebebebff;
+	cellpadding		: 2 4 2 4;
+}
+
+
+.grd_WF_SummaryBody1
+{
+	background			: #e2f1cb;
+	color				: #333333ff;
+	color2				: #333333ff;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	border				: 1 solid #d1dfbcff,0 none,0 none,0 none;	
+	line				: 1 solid #d1dfbcff;
+	selectline			: 1 solid #d1dfbcff; 
+}
+.grd_WF_SummaryBody2
+{
+	background			: #d6f0ef;
+	color				: #333333ff;
+	color2				: #333333ff;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	border				: 1 solid #c6deddff,0 none,0 none,0 none;
+	line				: 1 solid #c6deddff;
+	selectline			: 1 solid #c6deddff; 
+}
+.grd_WF_SummaryBody3
+{
+	background			: #dce1f0;
+	color				: #333333ff;
+	color2				: #333333ff;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	border				: 1 solid #ccd0deff,0 none,0 none,0 none;	
+	line				: 1 solid #ccd0deff;
+	selectline			: 1 solid #ccd0deff; 	
+}
+.grd_WF_SummaryBody4
+{
+	background			: #ecdaed;
+	color				: #333333ff;
+	color2				: #333333ff;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	border				: 1 solid #dacadbff,0 none,0 none,0 none;	
+	line				: 1 solid #dacadbff;
+	selectline			: 1 solid #dacadbff; 
+}
+
+.grd_WF_SubTitle
+{
+	background			: #f5f5f5;
+	background2			: #f5f5f5;
+	color				: #444444;
+	color2				: #444444;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectbackground		: #f5f5f5;
+	line				: 1 solid #e2e2e2;	
+	selectline			: 1 solid #e2e2e2;
+	selectfont			: bold antialias 9 malgun gothic, Tahoma, Arial;	
+}
+
+.grd_WF_WeekTitle
+{
+	background			: #f1ecd4;
+	background2			: #f1ecd4;
+	color				: #7e6d5a;
+	color2				: #7e6d5a;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectbackground		: #f1ecd4;
+	selectcolor			: #7e6d5a;
+	line				: 1 solid #e2e2e2;	
+	selectline			: 1 solid #e2e2e2;
+	selectfont			: bold antialias 9 malgun gothic, Tahoma, Arial;	
+}
+
+/***** page Design *****/
+
+Div.div_WFBA
+{
+	background			: #f2f4f7;
+	border				: 1 solid #cecece;
+	bordertype			: normal 0 0;
+}
+
+Static.sta_WF_total, Static.sta_WF_total:mouseover
+{
+	background			: ;
+	color				: #0e55a1;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+Static.sta_WF_pageRecent, Static.sta_WF_pageRecent:mouseover
+{
+	background			: ;
+	color				: #888888;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+Button.btn_srcSmall, Button.btn_srcSmall:focused
+{
+	align				: center middle;
+	background			: #7a839a;
+	border				: 0 none;
+	bordertype			: round 2 2;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;
+}
+Button.btn_srcSmall:mouseover
+{
+	background			: #0e55a1;
+	border				: 0 none;
+	bordertype			: round 3 3;
+	color				: #ffffff;		
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;	
+}
+Button.btn_srcSmall:pushed, Button.btn_srcSmall:selected
+{
+	background			: #073362;
+	border				: 0 none;
+	bordertype			: round 3 3;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #ffffff;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_srcSmall:disabled
+{
+	background			: #999999;
+	border				: 0 none;
+	color				: #ffffff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+Button.btn_WF_tabbtn, Button.btn_WF_tabbtn:focused
+{
+	align				: center middle;
+	background			: #8cb4dd;
+	border				: 1 solid #799dc3;
+	bordertype			: normal 0 0;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;
+}
+Button.btn_WF_tabbtn:mouseover, Button.btn_WF_tabbtnS:mouseover
+{
+	background			: #ffffff;
+	border				: 1 solid #295e9f;
+	bordertype			: normal 0 0;
+	color				: #295e9f;		
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;	
+}
+Button.btn_WF_tabbtn:pushed, Button.btn_WF_tabbtn:selected, 
+Button.btn_WF_tabbtnS, Button.btn_WF_tabbtnS:focused, Button.btn_WF_tabbtnS:pushed, Button.btn_WF_tabbtnS:selected
+{
+	background			: #0e559f;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #ffffff;
+	padding				: 1 0 -1 0;
+}   
+Button.btn_WF_tabbtn:disabled
+{
+	background			: #999999;
+	border				: 0 none;
+	color				: #ffffff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+
+/***** popup Design *****/
+
+Form.frm_POP_message, Form.frm_POP_message:mouseover, Form.frm_POP_message:pushed,
+Form.frm_POP_message:focused, Form.frm_POP_message:selected, Form.frm_POP_message:disabled
+{
+	background			: #e3f0fe;
+	border				: 1 solid #317ecf;
+	bordertype			: round 3 3;
+}
+
+
+PopupDiv.pdiv_popup_box
+{
+	background			: #ffffff;
+	border				: 2 solid #0e559fff;
+	bordertype			: normal 0 0;
+}
+
+Div.div_popup_box
+{
+	background			: #ffffff;
+	border				: 2 solid #0e559fff;
+	bordertype			: normal 0 0;
+}
+
+
+Div.div_POP_message, Div.div_POP_message:mouseover
+{
+	background			: #e3f0fe;
+	border				: 1 solid #317ecf;
+	bordertype			: normal 0 0;
+}
+
+
+
+Static.sta_POP_messageTi, Static.sta_POP_messageTi:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/ico_pop_massgeti.png') left middle;
+	color				: #0e559f;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 1 0 0 22;
+}
+
+Static.sta_pop_title, Static.sta_pop_title:mouseover
+{
+	align				: left middle;
+	background			: #0e559f;
+	border				: 0 none;
+	color				: #c3e1ff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 1 0 0 16;
+}
+
+
+TextArea.txt_POP_messageTxt, TextArea.txt_POP_messageTxt:mouseover, TextArea.txt_POP_messageTxt:focused
+{
+	align				: center middle;
+	background			: #ffffffff;
+	border				: 0 none #ccccccff;
+	bordertype			: normal 0 0;
+	color				: #333333ff;
+	cursor				: text;
+	padding				: 6 6 6 6;
+	selectcolor			: #333333ff;
+	selectbackground		: #ffffffff;
+	linespace			: 6;
+}
+
+TextArea.txt_POP_messageTxt:disabled
+{
+	background			: #ffffffff;
+	border				: 0 none #ccccccff;
+	color				: #999999ff;
+	padding				: 6 6 6 6;
+}
+
+TextArea.txt_POP_messageTxt:readonly
+{
+	background			: #ffffffff;
+	border				: 0 none #ccccccff;
+	color				: #333333ff;
+	padding				: 6 6 6 6;
+	selectcolor			: #333333ff;
+	selectbackground		: #f7f7f7ff;
+}
+
+
+
+/***** 18 Activity Start *****/
+Div.div_Activity_box, Div.div_Activity_box:mouseover
+{
+	background			: @gradation;
+	gradation 			: linear 0,0 #ebedf1 0,100 #ffffff ;
+	border				: 1 solid #b4bacc;
+	bordertype			: normal 0 0;
+}
+Div.div_Activity_box2
+{
+	background			: ;
+	border				: 1 solid #ffffff00;
+	bordertype			: round 4 4;
+	cursor				: hand;
+}
+Div.div_Activity_box2:mouseover, Div.div_Activity_box2:pushed
+{
+	background			: #e6efff;
+	border				: 1 solid #9fbbf5;
+	bordertype			: round 4 4;
+	cursor				: hand;
+}
+
+Div.div_Activity_box2S, Div.div_Activity_box2S:mouseover, Div.div_Activity_box2S:pushed
+{
+	background			: #e6efff;
+	border				: 1 solid #9fbbf5;
+	bordertype			: round 4 4;
+	cursor				: hand;
+}
+
+Static.St_Activ_Txt, Static.St_Activ_Txt:mouseover, Static.St_Activ_Txt:pushed, Static.St_Activ_Txt:focused
+{
+	background			: transparent;
+	border				: 0 none #f17401;
+	bordertype			: normal 0 0;
+	align				: center middle;
+	font				: 9 Dotum, Tahoma, Arial;
+	color				: #405470;
+	cursor				: hand;
+	padding				: 0 0 0 0;
+}
+
+Static.St_RuYellow:disabled, Static.St_RuRed:disabled, Static.St_RuGreen:disabled, Static.St_RuBlue:disabled, Static.St_RuPurple:disabled
+{
+	background			: #9196a2;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial;
+	color				: #ffffffff;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c ;
+	opacity				: 100 ;
+}
+
+Static.St_RuYellow, Static.St_RuYellow:mouseover, Static.St_RuYellow:pushed, Static.St_RuYellow:focused
+{
+	background			: #fe8d00;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial;
+	color				: #ffffff;
+	cursor				: hand;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c;
+}
+Static.St_RuYellow:mouseover
+{
+	background			: #fead00;
+	cursor				: hand;
+}
+
+
+Static.St_RuRed, Static.St_RuRed:mouseover, Static.St_RuRed:pushed, Static.St_RuRed:focused
+{
+	background			: #db2c53;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial;
+	color				: #ffffffff;
+	cursor				: hand;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c;
+}
+Static.St_RuRed:mouseover
+{
+	background			: #ec3860;
+	cursor				: hand;
+}
+
+Static.St_RuGreen, Static.St_RuGreen:mouseover, Static.St_RuGreen:pushed, Static.St_RuGreen:focused
+{
+	background			: #83b013;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial; 
+	color				: #ffffff;
+	cursor				: hand;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c;
+}
+Static.St_RuGreen:mouseover
+{
+	background			: #96c620;
+	cursor				: hand;
+}
+
+Static.St_RuBlue, Static.St_RuBlue:mouseover, Static.St_RuBlue:pushed, Static.St_RuBlue:focused
+{
+	background			: #4e97f7;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial;
+	color				: #ffffff;
+	cursor				: hand;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c;
+}
+Static.St_RuBlue:mouseover
+{
+	background			: #6babff;
+	cursor				: hand;
+}
+
+
+Static.St_RuPurple, Static.St_RuPurple:mouseover, Static.St_RuPurple:pushed, Static.St_RuPurple:focused
+{
+	background			: #c15ae4;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial; 
+	color				: #ffffff;
+	cursor				: hand;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c;
+}
+Static.St_RuPurple:mouseover
+{
+	background			: #d573f6;
+	cursor				: hand;
+}
+
+Static.St_RuGray, Static.St_RuGray:mouseover, Static.St_RuGray:pushed, Static.St_RuGray:focused
+{
+	background			: #808994;
+	bordertype			: round 23 23;
+	align				: center middle;
+	font				: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial; 
+	color				: #ffffff;
+	cursor				: hand;
+	padding				: 1 0 0 0;
+	shadow 				: outer 1,1 3 #0000004c;
+}
+/***** 18 Activity End *****/
+
+
+
+/***** session Out Design *****/
+
+Static.sta_WF_sessionOut, Static.sta_WF_sessionOut:mouseover
+{
+	background		: URL('theme://images/img_sessionOut.png') center top;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	font			: bold antialias 14 Malgun Gothic, Dotum, Tahoma, Arial;
+	color			: #3c4858;
+	align			: center bottom;
+	padding			: 0 0 0 0;
+}
+
+
+Static.St_POPTi_Blue, Static.St_POPTi_Blue:mouseover, Static.St_POPTi_Blue:pushed, Static.St_POPTi_Blue:focused
+{
+	background			: url('theme://images/popup_titBlue_bg.gif') stretch 36,24 left top;
+	gradation			: ;
+	border				: 0 none #327be0;
+	bordertype			: normal 0 0;
+	align				: left middle;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #ffffff;
+	padding				: 2 30 0 20;
+	shadow 				: drop 0,0 0 #0000004c ;
+}
+
+Static.St_POPTi_BlueD, Static.St_POPTi_BlueD:mouseover, Static.St_POPTi_BlueD:pushed, Static.St_POPTi_BlueD:focused
+{
+	background			: url('theme://images/popup_titBlueD_bg.gif') stretch 36,24 left top;
+	gradation			: ;
+	border				: 0 none #327be0;
+	bordertype			: normal 0 0;
+	align				: left middle;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #6d86ad;
+	padding				: 2 30 0 20;
+	shadow 				: drop 0,0 0 #0000004c ;
+}
+Static.St_POPTi_BlueD:mouseover, Static.St_POPTi_BlueD:pushed
+{
+	background			: url('theme://images/popup_titBlue_bg.gif') stretch 36,24 left top;
+	color				: #ffffff;
+}
+
+
+Button.btn_Activity_box2_qstd:mouseover, Div.div_Activity_box2:pushed
+{
+	align				: center top;
+	background			: #295e9fff;
+	border				: 1 solid #799dc3;
+	bordertype			: round 10 10;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding				: 10 0 0 0;
+	cursor				: hand;
+}
+
+
+
+Div.div_Activity_box2_qstd
+{
+	
+	align				: center middle;
+	background			: #a7c6e4ff;
+	border				: 1 solid #799dc3;
+	bordertype			: round 10 10;
+	color				: #000000;
+	cursor				: hand;
+	font 				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;
+	cursor				: hand;
+}Div.div_Activity_box2_qstd:disabled
+{
+	background			: @gradation;
+	border				: 1 solid #ffffff00;
+	bordertype			: round 10 10;
+	cursor				: hand;
+}
+
+Div.div_Activity_box2_qstd:mouseover, Div.div_Activity_box2:pushed
+{
+	align				: center middle;
+	background			: #295e9fff;
+	border				: 1 solid #799dc3;
+	bordertype			: round 10 10;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 0;
+	cursor				: hand;
+}
+
+Static.St_Activ_Txt_qstd,  Static.St_Activ_Txt_qstd:pushed, Static.St_Activ_Txt_qstd:focused
+{
+	background			: transparent;
+	border				: 0 none #f17401;
+	bordertype			: normal 0 0;
+	align				: center middle;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	color				: #295e9fff;
+	cursor				: hand;
+	padding				: 0 0 0 0;
+}
+Static.St_Activ_Txt_qstd:mouseover
+{
+	background			: transparent;
+	border				: 0 none #f17401;
+	bordertype			: normal 0 0;
+	align				: center middle;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	color				: #ffffff;
+	cursor				: hand;
+	padding				: 0 0 0 0;
+	
+}
+
+/***** Tab *****/
+Tab.Maintab
+{
+	background		: transparent;
+	border			: 2 solid #3866c5ff, 0 none, 0 none, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: #ffffffff;
+	buttonborder		: 1 solid #dfdfdfff;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 6 11 6 10;
+	color			: #777777ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+
+Tab.Maintab:disabled
+{
+	background		: transparent;
+	border			: 2 solid #c9c9c9ff, 0 none, 0 none, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: #fafafaff;
+	buttonborder		: 1 solid #dfdfdfff;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 6 10 6 10;
+	color			: #999999ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+Tab.Maintab:mouseover
+{
+	background		: transparent;
+	border			: 2 solid #3866c5ff, 0 none, 0 none, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: #f6f6f6ff;
+	buttonborder		: 1 solid #dfdfdfff;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 6 11 6 10;
+	color			: #3866c5ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+Tab.Maintab:focused
+{
+	background		: transparent;
+	border			: 2 solid #3866c5ff, 0 none, 0 none, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: #ffffffff;
+	buttonborder		: 1 solid #3866c5ff;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 6 10 6 10;
+	color			: #333333ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+Tab.Maintab:selected
+{
+	background		: transparent;
+	border			: 2 solid #3866c5ff, 0 none, 0 none, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: #3866c5ff;
+	buttonborder		: 2 solid #3866c5ff;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 6 10 6 10;
+	color			: #ffffffff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+
+
+/* WF AUDIT Level btn */
+
+Button.btn_WF_Audit_lvl2, Button.btn_WF_Audit_lvl2:selected, Button.btn_WF_Audit_lvl2:disabled, Button.btn_WF_Audit_lvl2:focused
+{
+	background			: #ffffff;
+	border				: 1 solid #dddddd;
+	bordertype			: normal 0 0;
+	cursor				: hand;
+	color				: #6a737c;
+	padding				: 0 0 0 0;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl2:mouseover, Button.btn_WF_Audit_lvl2:pushed
+{
+	background			: #ffffff;
+	border				: 1 solid #6197e2;
+	bordertype			: normal 0 0;
+	color				: #6a737c;	
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl2:selected
+{
+	background			: #6197e2;
+	border				: 1 solid #6197e2;
+	bordertype			: normal 0 0;
+	color				: #ffffff;
+	padding				: 0 0 0 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+
+Button.btn_WF_Audit_lvl3, Button.btn_WF_Audit_lvl3:selected, Button.btn_WF_Audit_lvl3:disabled, Button.btn_WF_Audit_lvl3:focused
+{
+	align				: center middle;
+	background			: #a6aeb6;
+	border				: 0 none;
+	bordertype			: round 2 2;
+	cursor				: hand;
+	color				: #ffffff;
+	padding				: 0 0 0 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl3:mouseover, Button.btn_WF_Audit_lvl3:pushed
+{
+	align				: center middle;
+	background			: #5d9dfa;
+	border				: 0 none;
+	bordertype			: round 2 2;
+	cursor				: hand;	
+	color				: #ffffff;	
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl3:selected
+{
+	align				: center middle;
+	background			: #5d9dfa;
+	border				: 0 none;
+	bordertype			: round 2 2;
+	cursor				: hand;		
+	color				: #ffffff;
+	padding				: 0 0 0 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+
+Button.btn_WF_Audit_lvl3_Acti, Button.btn_WF_Audit_lvl3_Acti:selected, Button.btn_WF_Audit_lvl3_Acti:disabled, Button.btn_WF_Audit_lvl3_Acti:focused
+{
+	align				: center middle;
+	background			: #5d9dfa;
+	border				: 0 none;
+	bordertype			: round 2 2;
+	cursor				: hand;
+	color				: #ffffff;
+	padding				: 0 0 0 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl3_Acti:mouseover, Button.btn_WF_Audit_lvl3_Acti:pushed
+{
+	align				: center middle;
+	background			: #5d9dfa;
+	border				: 0 none;
+	bordertype			: round 2 2;
+	cursor				: hand;	
+	color				: #ffffff;	
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+
+Button.btn_WF_Audit_lvl4, Button.btn_WF_Audit_lvl4:selected, Button.btn_WF_Audit_lvl4:disabled, Button.btn_WF_Audit_lvl4:focused
+{
+	align				: center middle;
+	background			: #ffffff;
+	border				: 1 solid #dbdbdb,1 solid #dbdbdb,2 solid #295e9f,1 solid #dbdbdb;
+	bordertype			: round 1 1;
+	cursor				: hand;
+	color				: #888888;
+	padding				: 0 0 2 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl4:mouseover
+{
+	align				: center middle;
+	background			: #ffffff;
+	border				: 1 solid #aaaaaa,1 solid #aaaaaa,2 solid #295e9f,1 solid #aaaaaa;
+	bordertype			: round 1 1;
+	cursor				: hand;	
+	color				: #333333;
+	padding				: 0 0 2 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl4:pushed
+{
+	align				: center middle;
+	background			: #ffffff;
+	border				: 1 solid #295e9f,1 solid #295e9f,2 solid #295e9f,1 solid #295e9f;
+	bordertype			: round 1 1;
+	cursor				: hand;	
+	color				: #333333;
+	padding				: 0 0 0 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+Button.btn_WF_Audit_lvl4:selected
+{
+	align				: center middle;
+	background			: #295e9f;
+	border				: 1 solid #295e9f;
+	bordertype			: round 1 1;
+	color				: #ffffff;
+	padding				: 0 0 2 0;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+}
+
+/* AUDIT - Div */
+Div.div_WF_Audit_progbg01,Div.div_WF_Audit_progbg01:mouseover
+{
+	background		: #f2f2f2;
+	border			: 1 solid #d2d2d2;
+	bordertype		: normal 0 0;
+	cursor			: hand;
+	opacity			: 100;
+}
+Div.div_WF_Audit_progbg01:disabled
+{
+	background		: #fafafa;
+	border			: 1 solid #e7e7e7;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+Div.div_WF_Audit_progbg02,Div.div_WF_Audit_progbg02:mouseover
+{
+	background		: #ffffff;
+	border			: 1 solid #d2d2d2;
+	bordertype		: round 2 2;
+	cursor			: hand;
+	opacity			: 100;
+}
+Div.div_WF_Audit_progbg02:disabled
+{
+	background		: #fafafa;
+	border			: 1 solid #e7e7e7;
+	bordertype		: round 2 2;
+	cursor			: arrow;
+}
+/* AUDIT LVL - Button */
+Button.btn_WF_Audit_step01, Button.btn_WF_Audit_step01:selected, Button.btn_WF_Audit_step01:disabled, Button.btn_WF_Audit_step01:focused
+{
+	align	 			: left middle;
+	background			: transparent URL('theme://images/img_step01_B_D.png') stretch 29,0 left top;
+	border				: 0 none;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 0 20;
+}
+Button.btn_WF_Audit_step01:mouseover, Button.btn_WF_Audit_step01:pushed, Button.btn_WF_Audit_step01:selected
+{
+	align	 			: left middle;
+	background			: transparent URL('theme://images/img_step01_B_N.png') stretch 29,0 left top;
+	border				: 0 none;
+	color				: #ffffff;	
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+	padding				: 0 0 0 20;
+}
+Button.btn_WF_Audit_step02, Button.btn_WF_Audit_step02:selected, Button.btn_WF_Audit_step02:disabled, Button.btn_WF_Audit_step02:focused
+{
+	align	 			: center middle;
+	background			: transparent URL('theme://images/img_step02_B_D.png') stretch 29,0 left top;
+	border				: 0 none;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 10 0 0;
+}
+Button.btn_WF_Audit_step02:mouseover, Button.btn_WF_Audit_step02:pushed, Button.btn_WF_Audit_step02:selected
+{
+	align	 			: center middle;
+	background			: transparent URL('theme://images/img_step02_B_N.png') stretch 29,0 left top;
+	border				: 0 none;
+	color				: #ffffff;	
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+	padding				: 0 10 0 0;
+}
+Button.btn_WF_Audit_step03, Button.btn_WF_Audit_step03:selected, Button.btn_WF_Audit_step03:disabled, Button.btn_WF_Audit_step03:focused
+{
+	align	 			: right middle;
+	background			: transparent URL('theme://images/img_step05_B_D.png') stretch 29,0 left top;
+	border				: 0 none;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 30 0 0;
+}
+Button.btn_WF_Audit_step03:mouseover, Button.btn_WF_Audit_step03:pushed, Button.btn_WF_Audit_step03:selected
+{
+	align	 			: right middle;
+	background			: transparent URL('theme://images/img_step05_B_N.png') stretch 29,0 left top;
+	border				: 0 none;
+	color				: #ffffff;	
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	shadow				: outer 0,0 0 #00000026;
+	padding				: 0 30 0 0;
+}
+
+/* Static Audit Title */
+Static.sta_WF_Audit_tit, Static.sta_WF_Audit_tit:mouseover
+{
+	background		: #295e9fff;
+	border			: 1 solid #295e9fff;
+	bordertype		: round 2,2;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 5 2 5;
+}
+
+/* sta_WF_CR */
+Static.sta_WF_CR_S, Static.sta_WF_CR_S:mouseover
+{
+	background		: URL('theme://images/CR_S.png') left middle;
+	border			: 0 none #dddddd;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #333333;
+	align			: left middle;
+	padding			: 0 0 0 18;
+}
+Static.sta_WF_CR_C, Static.sta_WF_CR_C:mouseover
+{
+	background		: URL('theme://images/CR_C.png') left middle;
+	border			: 0 none #dddddd;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #333333;
+	align			: left middle;
+	padding			: 0 0 0 18;
+}
+Static.sta_WF_CR_A, Static.sta_WF_CR_A:mouseover
+{
+	background		: URL('theme://images/CR_A.png') left middle;
+	border			: 0 none #dddddd;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #333333;
+	align			: left middle;
+	padding			: 0 0 0 18;
+}
+Static.sta_WF_CR_R, Static.sta_WF_CR_R:mouseover
+{
+	background		: URL('theme://images/CR_R.png') left middle;
+	border			: 0 none #dddddd;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #333333;
+	align			: left middle;
+	padding			: 0 0 0 18;
+}
+Static.sta_WF_CR_P, Static.sta_WF_CR_P:mouseover
+{
+	background		: URL('theme://images/CR_P.png') left middle;
+	border			: 0 none #dddddd;
+	bordertype		: normal 0 0;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	color			: #333333;
+	align			: left middle;
+	padding			: 0 0 0 18;
+}

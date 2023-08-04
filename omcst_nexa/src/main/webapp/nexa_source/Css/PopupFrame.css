@@ -1,0 +1,1427 @@
+﻿/******************************************************************************************************/
+/***** PROJECT NAME		: NEXACRO DEFAULT THEME	********/
+/***** CREATION DATES		: 2016.12.16		********/
+/***** DRAFTER 			: TOBESOFT DESIGN TEAM	********/
+/***** DISTRIBUTION DATE 	: 2016.12.20		********/
+/******************************************************************************************************/
+
+/***** PopFrame 영역 Start *****/
+
+/***** Popup Frame *****/
+
+/* Div */
+Div.div_PTF_bg, Div.div_PTF_bg:mouseover
+{
+	background		: @gradation;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	gradation		: linear 0,0 #0e55a0 0,100 #0c427e;
+	shadow 			: outer 1,2 3 #0000004c ;
+}
+Div.div_PTF_bgG, Div.div_PTF_bgG:mouseover
+{
+	background		: @gradation;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	gradation		: linear 0,0 #699720 0,100 #518d14;
+	shadow 			: outer 1,2 3 #0000004c ;
+}
+
+Div.div_PLF_bg, Div.div_PLF_bg:mouseover
+{
+	background		: #5c6066;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+}
+
+Div.div_PTF_ActiveTi, Div.div_PTF_ActiveTi:mouseover
+{
+	align			: left middle;
+	background		: ;
+	border			: 0 none #c3c3c3;
+	bordertype		: normal 0 0;
+	color			: #0e559f;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Div.div_PTF_box, Div.div_PTF_box:mouseover
+{
+	align			: left middle;
+	background		: #ffffff;
+	border			: 1 solid #c3c3c3;
+	bordertype		: normal 0 0;
+	color			: #0e559f;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 24;
+}
+Div.div_PTF_box2, Div.div_PTF_box2:mouseover
+{
+	align			: center top;
+	background		: ;
+	border			: 0 none #c3c3c3;
+	bordertype		: normal 0 0;
+	color			: #0e559f;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 6 0 0 0;
+}
+
+/* Static */
+Static.sta_PTF_logo, Static.sta_PTF_logo:mouseover
+{
+	background		: URL('theme://images/img_PTF_logo.png') left middle;
+}
+
+Static.sta_PTF_title, Static.sta_PTF_title:mouseover
+{
+	color			: #ffffff;
+	font			: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding			: 0 0 2 0;
+}
+
+Static.sta_PWF_ActiveTi, Static.sta_PWF_ActiveTi:mouseover
+{
+	align			: left middle;
+	background		: URL('theme://images/img_PWF_bulet.png') left middle;
+	color			: #0e559f;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 18;
+}
+
+Static.sta_PWF_Active
+{
+	align			: right middle;
+	background		: URL('theme://images/img_WF_ActiveN.png') right middle;
+	color			: #8e9398;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cursor			: hand;
+	padding			: 0 24 0 0;
+}
+
+Static.sta_PWF_Active:mouseover
+{
+	align			: right middle;
+	background		: URL('theme://images/img_WF_ActiveO.png') right middle;
+	color			: #0e559f;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cursor			: hand;
+	padding			: 0 24 0 0;
+}
+
+Static.sta_PWF_Text01, Static.sta_PWF_Text01:mouseover
+{
+	align			: center middle;
+	background		: ;
+	color			: #333333;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PWF_Text02, Static.sta_PWF_Text02:mouseover
+{
+	align			: center middle;
+	background		: ;
+	color			: #666666;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+
+Static.sta_PWF_Hline, Static.sta_PWF_Hline:mouseover
+{
+	background		: #ededed;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+}
+
+Static.sta_PWF_O, Static.sta_PWF_O:mouseover
+{
+	background		: #ffffff;
+	border			: 4 solid #7d8d9c;
+	bordertype		: round 10 10;
+}
+
+/* sta_WF_message */
+Static.sta_PWF_messagebg, Static.sta_PWF_messagebg:mouseover
+{
+	background		: #f2f4f7;
+	border			: 1 solid #cfd3dd, 0 none #cfd3dd, 0 none #cfd3dd, 0 none #cfd3dd;
+	bordertype		: normal 0 0;
+}
+
+
+/* Button */
+Button.btn_PTF_help, Button.btn_PTF_help:selected, Button.btn_PTF_help:focused,
+Button.btn_PTF_help:mouseover, Button.btn_PTF_help:pushed, Button.btn_PTF_help:disabled
+{
+	background		: ;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	cursor			: hand;
+	color			: #ffffff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_PTF_helpO.png');
+	imagealign		: lefttext middle;
+	padding			: 0 12 0 12;
+	opacity			: 80;
+}
+Button.btn_PTF_help:mouseover
+{
+	color			: #ffffff;
+	image			: URL('theme://images/btn_PTF_helpO.png');
+	padding			: 0 12 0 12;
+	opacity			: 100;
+}
+Button.btn_PTF_help:pushed
+{
+	background		: ;
+	color			: #ffffff;
+	image			: URL('theme://images/btn_PTF_helpO.png');
+	padding			: 1 12 -1 12;
+	opacity			: 100;
+}
+
+
+/* Left Number btn */
+Button.btn_PLF_btn, Button.btn_PLF_btn:disabled
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #ffffff;
+	cursor				: hand;
+	font				: bold antialias 11 NanumGothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #3c4858 0,100 #334152 [80% #3a4657];
+	letterspace			: ;
+	padding				: 0 0 0 0;
+}
+Button.btn_PLF_btn:mouseover
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	font				: bold antialias 11 NanumGothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #7faced 0,100 #6b94ce [80% #77a3e1];
+	padding				: 0 0 0 0;
+}
+Button.btn_PLF_btn:pushed
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	font				: bold antialias 11 malgun gothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #183d62 0,100 #16385a [80% #173b5e];
+	padding				: 0 0 -1 0;
+}
+Button.btn_PLF_btn:selected, Button.btn_PLF_btn:focused
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #0d4889;
+	font				: bold antialias 11 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #f0f2f4 0,100 #c9ced4 [80% #e1e4e7];
+	padding				: 0 0 -1 0;
+}
+
+Button.btn_PLF_btnS, Button.btn_PLF_btnS:disabled
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #0d4889;
+	cursor				: hand;
+	font				: bold antialias 11 malgun gothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #f0f2f4 0,100 #c9ced4 [80% #e1e4e7];
+	padding				: 0 0 -1 0;
+}
+Button.btn_PLF_btnS:mouseover
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	font				: bold antialias 11 malgun gothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #7faced 0,100 #6b94ce [80% #77a3e1];
+	padding				: 0 0 0 0;
+}
+Button.btn_PLF_btnS:pushed
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	font				: bold antialias 11 malgun gothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #183d62 0,100 #16385a [80% #173b5e];
+	padding				: 0 0 -1 0;
+}
+Button.btn_PLF_btnS:selected, Button.btn_PLF_btnS:focused
+{
+	align				: center middle;
+	background			: @gradation;
+	border				: 0 none #216eb2;
+	bordertype			: normal 0 0;
+	color				: #0d4889;
+	font				: bold antialias 11 malgun gothic, Dotum, Tahoma, Arial;
+	gradation			: linear 0,0 #f0f2f4 0,100 #c9ced4 [80% #e1e4e7];
+	padding				: 0 0 -1 0;
+}
+
+
+
+Button.btn_PLF_ActiveTi_Nbtn, Button.btn_PLF_ActiveTi_Nbtn:disabled, Button.btn_PLF_ActiveTi_Nbtn:focused,
+Button.btn_PLF_ActiveTi_Nbtn:pushed, Button.btn_PLF_ActiveTi_Nbtn:selected
+{
+	align				: left middle;
+	background			: URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 0 none #c3c3c3;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	cursor				: hand;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	image				: URL('theme://images/img_btnlink.png');
+	imagealign			: right middle;
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTi_Nbtn:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 0 none #c3c3c3;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	image				: URL('theme://images/img_btnlinkO.png');
+	imagealign			: right middle;
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTi_Nbtn:pushed
+{
+	image				: URL('theme://images/img_btnlinkO.png');
+	imagealign			: right middle;
+	padding				: 0 16 0 16;
+}
+
+
+Button.btn_PLF_ActiveTi, Button.btn_PLF_ActiveTi:disabled, Button.btn_PLF_ActiveTi:focused
+{
+	align				: left middle;
+	background			: URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 0 none #c3c3c3;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	cursor				: hand;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTi:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 0 none #c3c3c3;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #e8f2fc 0,100 #d0e3f6;
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTi:pushed
+{
+	align				: left middle;
+	background			: URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 0 none #c3c3c3;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTi:selected
+{
+	align				: left middle;
+	background			: URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 1 solid #6f9dcd;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding				: 0 16 0 16;
+}
+
+Button.btn_PLF_ActiveTiS, Button.btn_PLF_ActiveTi:disabled, Button.btn_PLF_ActiveTiS:focused
+{
+	align				: left middle;
+	background			: @gradation URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 1 solid #6f9dcd;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #a5c4e1 0,100 #a5c4e1 [80% #a5c4e1];
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTiS:mouseover
+{
+	align				: left middle;
+	background			: @gradation URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 1 solid #6f9dcd;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #e8f2fc 0,100 #d0e3f6;
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTiS:pushed
+{
+	align				: left middle;
+	background			: @gradation URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 1 solid #6f9dcd;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #7ca8d5 0,100 #a5c3e0 [20% #9abee3];
+	padding				: 0 16 0 16;
+}
+Button.btn_PLF_ActiveTiS:selected
+{
+	align				: left middle;
+	background			: @gradation URL('theme://images/img_PWF_bulet.png') left middle;
+	border				: 1 solid #6f9dcd;
+	bordertype			: normal 0 0;
+	color				: #313131ff;
+	font				: bold antialias 10 malgun gothic, Tahoma, Arial;
+	gradation			: linear 0,0 #a5c4e1 0,100 #a5c4e1 [80% #a5c4e1];
+	padding				: 0 16 0 16;
+}
+
+
+
+/* btn_PF_zoom */
+Button.btn_PF_zoom, Button.btn_PF_zoom:selected, Button.btn_PF_zoom:focused,
+Button.btn_PF_zoom:mouseover, Button.btn_PF_zoom:pushed, Button.btn_PF_zoom:disabled
+{
+	align			: left middle;
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_PF_zoom.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+	shadow			: ;
+}
+
+Button.btn_PF_zoom:pushed
+{
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	padding			: 1 0 -1 0;
+}
+
+/* btn_PF_del */
+Button.btn_PF_del, Button.btn_PF_del:selected, Button.btn_PF_del:focused,
+Button.btn_PF_del:mouseover, Button.btn_PF_del:pushed, Button.btn_PF_del:disabled
+{
+	align			: left middle;
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_PF_del.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+	shadow			: ;
+}
+
+Button.btn_PF_del:pushed
+{
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	padding			: 1 0 -1 0;
+}
+
+/* btn_PF_folder */
+Button.btn_PF_folder, Button.btn_PF_folder:selected, Button.btn_PF_folder:focused,
+Button.btn_PF_folder:mouseover, Button.btn_PF_folder:pushed, Button.btn_PF_folder:disabled
+{
+	align			: left middle;
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_PF_folder.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+	shadow			: ;
+}
+
+Button.btn_PF_folder:pushed
+{
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	padding			: 1 0 -1 0;
+}
+
+
+/* btn_PF_PPT */
+Button.btn_PF_ppt, Button.btn_PF_ppt:selected, Button.btn_PF_ppt:focused,
+Button.btn_PF_ppt:mouseover, Button.btn_PF_ppt:pushed, Button.btn_PF_ppt:disabled
+{
+	align			: left middle;
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/btn_PF_ppt_N.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+	shadow			: ;
+}
+Button.btn_PF_ppt:mouseover
+{
+	image			: URL('theme://images/btn_PF_ppt_O.png');
+}
+Button.btn_PF_ppt:pushed
+{
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	image			: URL('theme://images/btn_PF_ppt_O.png');
+	padding			: 1 0 -1 0;
+}
+
+/* btn_PF_ArrowBottom */
+Button.btn_PF_arrBottom, Button.btn_PF_arrBottom:selected, Button.btn_PF_arrBottom:focused,
+Button.btn_PF_arrBottom:mouseover, Button.btn_PF_arrBottom:pushed, Button.btn_PF_arrBottom:disabled
+{
+	align			: left middle;
+	background		: #ffffff;
+	border			: 0 none #808080ff;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	image			: URL('theme://images/ico_arrow_bottomN.png');
+	imagealign		: center middle;
+	padding			: 0 0 0 0;
+	shadow			: ;
+}
+Button.btn_PF_arrBottom:mouseover
+{
+	image			: URL('theme://images/ico_arrow_bottomO.png');
+}
+Button.btn_PF_arrBottom:pushed
+{
+	image			: URL('theme://images/ico_arrow_bottomO.png');
+	padding			: 1 0 -1 0;
+}
+
+
+
+
+/***** Active Master *****/
+
+/* Div */
+Div.div_PWFD_bg, Div.div_PWFD_bg:mouseover
+{
+	background		: #e6eff2;
+	border			: 1 solid #b5d2db;
+	bordertype		: normal 0 0;
+}
+
+
+Div.div_PD_progbg01
+{
+	background		: #f2f2f2;
+	border			: 1 solid #d2d2d2;
+	bordertype		: normal 0 0;
+	cursor			: hand;
+	opacity			: 80;
+}
+Div.div_PD_progbg01:mouseover
+{
+	background		: #ffffff;
+	border			: 1 solid #0e549f;
+	cursor			: hand;
+	shadow			: outer 2,4 6 #00000026;
+	opacity			: 100;
+}
+Div.div_PD_progbg01:disabled
+{
+	background		: #fafafa;
+	border			: 1 solid #e7e7e7;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+Div.div_PD_progbg02
+{
+	background		: #ffefde;
+	border			: 1 solid #d97747;
+	bordertype		: normal 0 0;
+	cursor			: hand;
+	opacity			: 80;
+}
+Div.div_PD_progbg02:mouseover
+{
+	background		: #ffffff;
+	border			: 1 solid #ff3c00;
+	cursor			: hand;
+	shadow			: outer 2,4 6 #00000026;
+	opacity			: 100;
+}
+Div.div_PD_progbg02:disabled
+{
+	background		: #fafafa;
+	border			: 1 solid #e7e7e7;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+Div.div_PD_progbg03
+{
+	background		: #f0f6ff;
+	border			: 1 solid #749eda;
+	bordertype		: normal 0 0;
+	cursor			: hand;
+	opacity			: 80;
+}
+Div.div_PD_progbg03:mouseover
+{
+	background		: #ffffff;
+	border			: 1 solid #0e549f;
+	cursor			: hand;
+	shadow			: outer 2,4 6 #00000026;
+	opacity			: 100;
+}
+Div.div_PD_progbg03:disabled
+{
+	background		: #fafafa;
+	border			: 1 solid #e7e7e7;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+Div.div_PD_progbg04, Div.div_PD_progbg04:mouseover
+{
+	background		: #ebeff4;
+	border			: 1 solid #96aac8;
+	bordertype		: normal 0 0;
+	cursor			: hand;
+	opacity			: 80;
+}
+Div.div_PD_progbg04:mouseover
+{
+	border			: 1 solid #0e549f;
+	shadow			: outer 2,4 6 #00000026;
+}
+Div.div_PD_progbg04:disabled
+{
+	background		: #fafafa;
+	border			: 1 solid #e7e7e7;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+
+/* Static */
+
+Static.sta_PD_Activeti01, Static.sta_PD_Activeti01:mouseover
+{
+	align			: left middle;
+	background		: #e3e3e3;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti01:mouseover
+{
+	align			: left middle;
+	background		: #d2d2d2;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti01:disabled
+{
+	align			: left middle;
+	background		: #efefef;
+	border			: 1 solid #efefef;
+	bordertype		: normal 0 0;
+	color			: #bbbbbb;
+	cursor			: arrow;
+}
+
+Static.sta_PD_Activeti02
+{
+	align			: left middle;
+	background		: #ffa478;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti02:mouseover
+{
+	align			: left middle;
+	background		: #ff9968;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti02:disabled
+{
+	align			: left middle;
+	background		: #efefef;
+	border			: 1 solid #efefef;
+	bordertype		: normal 0 0;
+	color			: #bbbbbb;
+	cursor			: arrow;
+}
+
+Static.sta_PD_Activeti03
+{
+	align			: left middle;
+	background		: #a2c8ff;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti03:mouseover
+{
+	align			: left middle;
+	background		: #92bfff;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti03:disabled
+{
+	align			: left middle;
+	background		: #efefef;
+	border			: 1 solid #efefef;
+	bordertype		: normal 0 0;
+	color			: #bbbbbb;
+	cursor			: arrow;
+}
+
+Static.sta_PD_Activeti04, Static.sta_PD_Activeti04:mouseover
+{
+	align			: left middle;
+	background		: #adc8ea;
+	color			: #222222;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 10;
+}
+Static.sta_PD_Activeti04:disabled
+{
+	align			: left middle;
+	background		: #efefef;
+	border			: 1 solid #efefef;
+	bordertype		: normal 0 0;
+	color			: #bbbbbb;
+	cursor			: arrow;
+}
+
+
+Static.sta_PD_Complet, Static.sta_PD_Complet:mouseover
+{
+	align			: center middle;
+	background		: #88b335;
+	bordertype		: round 2 2;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;;
+}
+Static.sta_PD_Complet:disabled
+{
+	align			: center middle;
+	background		: #fefefe;
+	border			: 1 solid #dbdbdb;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+Static.sta_PD_Delay, Static.sta_PD_Delay:mouseover
+{
+	align			: center middle;
+	background		: #ff3c00;
+	bordertype		: round 2 2;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_PD_Delay:disabled
+{
+	align			: center middle;
+	background		: #fefefe;
+	border			: 1 solid #dbdbdb;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+Static.sta_PD_Progress, Static.sta_PD_Progress:mouseover
+{
+	align			: center middle;
+	background		: #5d9dfa;
+	bordertype		: round 2 2;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_PD_Progress:disabled
+{
+	align			: center middle;
+	background		: #fefefe;
+	border			: 1 solid #dbdbdb;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+Static.sta_PD_Schedule, Static.sta_PD_Schedule:mouseover
+{
+	align			: center middle;
+	background		: #a6aeb6;
+	bordertype		: round 2 2;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_PD_Schedule:disabled
+{
+	align			: center middle;
+	background		: #fefefe;
+	border			: 1 solid #dbdbdb;
+	bordertype		: normal 0 0;
+	cursor			: arrow;
+}
+
+
+Static.sta_PD_Data, Static.sta_PD_Data:mouseover
+{
+	align			: left middle;
+	background		: transparent;
+	bordertype		: normal 0 0;
+	color			: #555555;
+	cursor			: hand;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_PD_Data:disabled
+{
+	align			: left middle;
+	background		: transparent;
+	bordertype		: normal 0 0;
+	color			: #cccccc;
+	cursor			: arrow;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+
+Static.sta_PD_step01, Static.sta_PD_step01:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step01_N.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 0 0;
+}
+Static.sta_PD_step01D, Static.sta_PD_step01D:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step01_D.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 0 0;
+}
+
+Static.sta_PD_step02, Static.sta_PD_step02:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step02_N.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_step02D, Static.sta_PD_step02D:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step02_D.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_step03, Static.sta_PD_step03:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step03_N.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_step03D, Static.sta_PD_step03D:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step03_D.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Static.sta_PD_step04, Static.sta_PD_step04:mouseover
+{
+	align			: center middle;
+	background		: transparent URL('theme://images/img_step04_N.png') stretch 13,10 left top;
+	bordertype		: normal 0 0;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_AUDIT_title, Static.sta_PD_AUDIT_title:mouseover
+{
+	align			: left middle;
+	background		: transparent;
+	bordertype		: normal 0 0;
+	color			: #333333;
+	cursor			: hand;
+	font			: bold antialias 24 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_AUDIT_title_small, Static.sta_PD_AUDIT_title_small:mouseover
+{
+	align			: left middle;
+	background		: transparent;
+	bordertype		: normal 0 0;
+	color			: #333333;
+	cursor			: hand;
+	font			: bold antialias 20 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_AUDIT_titleline, Static.sta_PD_AUDIT_titleline:mouseover
+{
+	align			: left middle;
+	background		: #000000;
+	bordertype		: normal 0 0;
+	color			: #333333;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_PD_Dash_titG, Static.sta_PD_Dash_titG:mouseover
+{
+	background		: #888888ff;
+	border			: 0 none;
+	bordertype		: round 4 4;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 2 8;
+}
+Static.sta_PD_Dash_titB, Static.sta_PD_Dash_titB:mouseover
+{
+	background		: #0087b5ff;
+	border			: 0 none;
+	bordertype		: round 4 4;
+	color			: #ffffff;
+	align			: center middle;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 8 2 8;
+}
+
+/***** Grid *****/
+
+Grid.grd_PD_Carlist
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+	bordertype		: normal;
+	color			: #31465bff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+Grid.grd_PD_Carlist:mouseover
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+}
+Grid.grd_PD_Carlist:focused
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+}
+Grid.grd_PD_Carlist:disabled
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+}
+Grid.grd_PD_Carlist>#head, Grid.grd_PD_Carlist>#head:mouseover, 
+Grid.grd_PD_Carlist>#head:selected, Grid.grd_PD_Carlist>#head:disabled, Grid.grd_PD_Carlist>#head:focused
+{
+	align			: left middle;	
+	background		: #c9dce2;
+	border			: 0 none;
+	cellbackground		: #c9dce2;
+	cellbackground2		: #c9dce2;
+	cellcolor		: #5d6266;
+	cellcolor2		: #5d6266;
+	cellfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 1 solid #e6eff2ff;
+	cellpadding		: 2 10 2 10;
+	selectbackground	: #c9dce2;
+	selectborder		: 0 none #e6eff2ff;
+	selectcolor		: #5d6266;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 1 solid #e6eff2ff;
+}
+Grid.grd_PD_Carlist>#body, Grid.grd_PD_Carlist>#body:selected, Grid.grd_PD_Carlist>#body:disabled, Grid.grd_PD_Carlist>#body:focused
+{
+	align			: center middle;	
+	background		: #ffffff;
+	border			: 0 none;
+	cellbackground		: #ffffff;
+	cellbackground2		: #ffffff;
+	cellcolor		: #555555ff;
+	cellcolor2		: #555555ff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 1 solid #e6eff2ff;
+	cellpadding		: 2 4 2 4;
+	cursor			: hand;
+	selectbackground	: #cfe9f1;
+	selectborder		: 0 none #e6eff2ff;
+	selectcolor		: #0e539b;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 1 solid #e6eff2ff;
+}
+Grid.grd_PD_Carlist>#body:mouseover
+{
+	align			: center middle;
+	background		: #ffffff;
+	border			: 0 none;
+	cellbackground		: #7faced;
+	cellbackground2		: #7faced;
+	cellcolor		: #ffffff;
+	cellcolor2		: #ffffff;
+	cellfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 1 solid #e6eff2ff;
+	cellpadding		: 2 4 2 4;
+	selectborder		: 0 none #e6eff2ff;
+}
+
+
+Grid.grd_PD_flat, Grid.grd_PD_flat:mouseover, Grid.grd_PD_flat:focused
+{
+	background			: #ffffff;
+	border				: 1 solid #216eb2, 1 solid #c4c5c5, 1 solid #c4c5c5, 1 solid #c4c5c5;
+	bordertype			: normal;
+	focusborder			: 0 none;
+	color                  		: #444444 ;
+}
+Grid.grd_PD_flat>#head, Grid.grd_PD_flat>#head:mouseover, 
+Grid.grd_PD_flat>#head:selected, Grid.grd_PD_flat>#head:disabled, Grid.grd_PD_flat>#head:focused
+{
+	align				: left middle;	
+	background			: #c9dce2;
+	border				: 0 none;
+	cellbackground			: #ebf4ff;
+	cellbackground2			: #ebf4ff;
+	cellcolor			: #5d6266;
+	cellcolor2			: #5d6266;
+	cellfont			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cellline			: 1 solid #a6bbce;
+	cellpadding			: 2 10 2 10;
+	selectbackground		: #ebf4ff;
+	selectborder			: 0 none #e6eff2ff;
+	selectcolor			: #5d6266;
+	selectfont			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline			: 1 solid #a6bbce;
+}
+Grid.grd_PD_flat>#body, Grid.grd_PD_flat>#body:mouseover, Grid.grd_PD_flat>#body:focused,
+Grid.grd_PD_flat>#body:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #ffffff;
+	cellbackground2			: #ffffff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: transparent;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #444444;
+	selectline			: 1 solid #d0d3dc;
+}
+
+Grid.grd_PD_flatV, Grid.grd_PD_flatV:mouseover, Grid.grd_PD_flatV:focused
+{
+	background			: #ffffff;
+	border				: 1 solid #8557d1, 1 solid #c4c5c5, 1 solid #c4c5c5, 1 solid #c4c5c5;
+	bordertype			: normal;
+	focusborder			: 0 none;
+	color                  		: #444444 ;
+}
+Grid.grd_PD_flatV>#head, Grid.grd_PD_flatV>#head:mouseover, 
+Grid.grd_PD_flatV>#head:selected, Grid.grd_PD_flatV>#head:disabled, Grid.grd_PD_flatV>#head:focused
+{
+	align				: left middle;	
+	background			: #c9dce2;
+	border				: 0 none;
+	cellbackground			: #f3ebff;
+	cellbackground2			: #f3ebff;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellfont			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cellline			: 1 solid #c9badf;
+	cellpadding			: 2 10 2 10;
+	selectbackground		: #f3ebff;
+	selectborder			: 0 none #e6eff2ff;
+	selectcolor			: #444444;
+	selectfont			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline			: 1 solid #c9badf;
+}
+Grid.grd_PD_flatV>#body, Grid.grd_PD_flatV>#body:focused, Grid.grd_PD_flatV>#body:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #ffffff;
+	cellbackground2			: #ffffff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: #ece0ff;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #6637b5;
+	selectline			: 1 solid #d0d3dc;
+}
+Grid.grd_PD_flatV>#body:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #f2f2f2ff;
+	cellbackground2			: #f2f2f2ff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	cellcolor			: #000000ff;
+	cellcolor2			: #000000ff;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: #ece0ff;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #6637b5;
+	selectline			: 1 solid #d0d3dc;
+}
+
+Grid.grd_PD_flatG, Grid.grd_PD_flatG:mouseover, Grid.grd_PD_flatG:focused,
+Grid.grd_PD_flatGNone, Grid.grd_PD_flatGNone:mouseover, Grid.grd_PD_flatGNone:focused
+{
+	background			: #ffffff;
+	border				: 1 solid #65ac1f, 1 solid #c4c5c5, 1 solid #c4c5c5, 1 solid #c4c5c5;
+	bordertype			: normal;
+	focusborder			: 0 none;
+	color                  		: #444444 ;
+}
+Grid.grd_PD_flatG>#head, Grid.grd_PD_flatG>#head:mouseover, 
+Grid.grd_PD_flatG>#head:selected, Grid.grd_PD_flatG>#head:disabled, Grid.grd_PD_flatG>#head:focused,
+Grid.grd_PD_flatGNone>#head, Grid.grd_PD_flatGNone>#head:mouseover, 
+Grid.grd_PD_flatGNone>#head:selected, Grid.grd_PD_flatGNone>#head:disabled, Grid.grd_PD_flatGNone>#head:focused
+{
+	align				: left middle;	
+	background			: #c9dce2;
+	border				: 0 none;
+	cellbackground			: #f1ffe2;
+	cellbackground2			: #f1ffe2;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellfont			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cellline			: 1 solid #c0d6a8;
+	cellpadding			: 2 10 2 10;
+	selectbackground		: #f3ebff;
+	selectborder			: 0 none #e6eff2ff;
+	selectcolor			: #444444;
+	selectfont			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline			: 1 solid #c0d6a8;
+}
+Grid.grd_PD_flatG>#body, Grid.grd_PD_flatG>#body:focused, Grid.grd_PD_flatG>#body:disabled,
+Grid.grd_PD_flatGNone>#body, Grid.grd_PD_flatGNone>#body:focused, Grid.grd_PD_flatGNone>#body:disabled, 
+Grid.grd_PD_flatGNone>#body:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #ffffff;
+	cellbackground2			: #ffffff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: #e3ffc8;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #4a8f06;
+	selectline			: 1 solid #d0d3dc;
+}
+Grid.grd_PD_flatGNone>#body, Grid.grd_PD_flatGNone>#body:focused, Grid.grd_PD_flatGNone>#body:disabled, 
+Grid.grd_PD_flatGNone>#body:mouseover
+{
+	selectbackground		: #ffffff;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #444444;
+	selectline			: 1 solid #d0d3dc;
+}
+Grid.grd_PD_flatG>#body:mouseover
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 9 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #f2f2f2ff;
+	cellbackground2			: #f2f2f2ff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	cellcolor			: #000000ff;
+	cellcolor2			: #000000ff;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: #e3ffc8;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 9 malgun gothic, Tahoma, Arial;
+	selectcolor			: #4a8f06;
+	selectline			: 1 solid #d0d3dc;
+}
+
+Grid.grd_PD_Mini, Grid.grd_PD_Mini:mouseover, Grid.grd_PD_Mini:focused
+{
+	background			: #ffffff;
+	border				: 1 solid #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc;
+	bordertype			: normal;
+	focusborder			: 0 none;
+	treelinetype			: 1 dotted #a5b6b6;
+	color                  		: #444444 ;
+}
+Grid.grd_PD_Mini>#head, Grid.grd_PD_Mini>#head:mouseover, Grid.grd_PD_Mini>#head:focused,
+Grid.grd_PD_Mini>#head:disabled
+{
+	cellfont			: bold antialias 8 malgun gothic, Tahoma, Arial;
+}
+Grid.grd_PD_Mini>#body, Grid.grd_PD_Mini>#body:mouseover, Grid.grd_PD_Mini>#body:focused,
+Grid.grd_PD_Mini>#body:disabled
+{
+	background			: transparent;
+	border				: 0 none;
+	align				: center middle;
+	font				: antialias 8 malgun gothic, Tahoma, Arial;
+	color				: #444444;
+	cellalign			: center middle;
+	cellbackground			: #ffffff;
+	cellbackground2			: #ffffff;
+	cellline			: 1 solid #d0d3dc;
+	celllinetype			: normal 0 0;
+	cellfont			: antialias 8 malgun gothic, Tahoma, Arial;
+	cellcolor			: #444444;
+	cellcolor2			: #444444;
+	cellpadding			: 2 4 2 4;
+	selectbackground		: transparent;
+	selectborder			: 0 none #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 0 none #d0d3dc;
+	selectfont			: antialias 8 malgun gothic, Tahoma, Arial;
+	selectcolor			: #444444;
+	selectline			: 1 solid #d0d3dc;
+}
+
+
+.cell_O01
+{
+	background		: #7d8d9c URL('theme://images/ico_pop_GrdDAbg01.png') stretch 11,11 left top;
+	background2		: #7d8d9c URL('theme://images/ico_pop_GrdDAbg01.png') stretch 11,11 left top;
+	color			: #ffffff;
+	color2			: #ffffff;
+	line			: 1 solid #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectbackground	: #7d8d9c URL('theme://images/ico_pop_GrdDAbg01.png') stretch 11,11 left top;
+	selectcolor		: #ffffff;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 1 solid #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc;
+	padding			: 0 0 0 0;
+}
+
+.cell_O01W
+{
+	background		: #ffffff;
+	background2		: #ffffff;
+	color			: #ffffff;
+	color2			: #ffffff;
+	line			: 1 solid #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectbackground	: #ffffff URL('theme://images/ico_pop_GrdDAbg01.png') stretch 11,11 left top;
+	selectcolor		: #ffffff;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 1 solid #d0d3dc, 0 none #d0d3dc, 1 solid #d0d3dc, 1 solid #d0d3dc;
+	padding			: 0 0 0 0;
+}
+
+
+
+/***** ImageViewer *****/
+ImageViewer.img_PF_photo, ImageViewer.img_PF_photo:mouseover, ImageViewer.img_PF_photo:focused
+{
+	background		: #ffffffff URL('theme://images/ico_noimage_image.png') center middle;
+	border			: 1 solid #dcdcdcff ;
+	bordertype		: 0 none;
+	color			: #333333ff;
+}
+ImageViewer.img_PF_photo:disabled
+{
+	background		: #fafafaff  URL('theme://images/ico_noimage_image.png') img_PF_photo;
+	border			: 1 solid #e0e0e0ff;
+	bordertype		: normal 0 0;
+	color			: #999999ff;
+}
+
+
+/* AUDIT Chart Title */
+Edit.tra_PF_audit_title
+{
+	align			: left top;
+	background		: #f4f4f4;
+	border			: 1 solid #ccccccff;
+	bordertype		: normal 0 0;
+	color			: #0e559fff;
+	font 			: bold antialias 16 malgun gothic, Tahoma, Arial;
+	cursor			: text;
+	padding			: 0 10 0 10;
+	selectcolor		: #333333ff;
+	selectbackground	: #ffffffff;
+	linespace		: 6;
+}
+Edit.tra_PF_audit_title:mouseover
+{
+	background		: #f4f4f4;
+	border			: 1 solid #4f81bdff;
+	color			: #0e559fff;
+	selectcolor		: #ffffffff;
+	selectbackground	: #4f81bdff;
+	padding			: 0 10 0 10;
+}
+Edit.tra_PF_audit_title:focused
+
+{
+	background		: #f4f4f4;
+	border			: 1 solid #4f81bdff;
+	color			: #0e559fff;
+	selectcolor		: #ffffffff;
+	selectbackground	: #4f81bdff;
+	padding			: 0 10 0 10;
+}
+Edit.tra_PF_audit_title:disabled
+{
+	background		: #fafafaff;
+	border			: 1 solid #e0e0e0ff;
+	color			: #999999ff;
+	padding			: 0 10 0 10;
+}
+
+/* AUDIT Chart Title */
+TextArea.tra_PF_audit_title
+{
+	align			: left top;
+	background		: #f4f4f4;
+	border			: 1 solid #ccccccff;
+	bordertype		: normal 0 0;
+	color			: #0e559fff;
+	font 			: bold antialias 16 malgun gothic, Tahoma, Arial;
+	cursor			: text;
+	padding			: 0 10 0 10;
+	selectcolor		: #333333ff;
+	selectbackground	: #ffffffff;
+	linespace		: 6;
+}
+TextArea.tra_PF_audit_title:mouseover
+{
+	background		: #f4f4f4;
+	border			: 1 solid #4f81bdff;
+	color			: #0e559fff;
+	selectcolor		: #ffffffff;
+	selectbackground	: #4f81bdff;
+	padding			: 0 10 0 10;
+}
+TextArea.tra_PF_audit_title:focused
+
+{
+	background		: #f4f4f4;
+	border			: 1 solid #4f81bdff;
+	color			: #0e559fff;
+	selectcolor		: #ffffffff;
+	selectbackground	: #4f81bdff;
+	padding			: 0 10 0 10;
+}
+TextArea.tra_PF_audit_title:disabled
+{
+	background		: #fafafaff;
+	border			: 1 solid #e0e0e0ff;
+	color			: #999999ff;
+	padding			: 0 10 0 10;
+}

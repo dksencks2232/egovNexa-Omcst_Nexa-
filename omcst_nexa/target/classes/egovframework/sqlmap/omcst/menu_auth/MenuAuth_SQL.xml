@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="MenuAuth">
+
+	<select id="menuAuthDAO.selectMenuAuthList" resultClass="menuVO" parameterClass="menuAuthVO">
+	<![CDATA[
+		SELECT
+			A.MENU_ID
+			, A.MENU_NAME
+			, A.MENU_SEQ
+			, A.MENU_TOP
+			, A.MENU_GRP
+			, A.MENU_LEVEL
+			, NVL2(B.SEQ, 'Y', 'N') IS_CHECK
+		FROM
+			MENU A
+			LEFT OUTER JOIN MENU_AUTH B ON (A.MENU_ID = B.MENU_ID AND B.SEQ = #SEQ#)
+		START WITH A.MENU_TOP IS NULL
+		CONNECT BY PRIOR A.MENU_ID = A.MENU_TOP
+		ORDER SIBLINGS BY A.MENU_SEQ
+	]]>
+	</select>
+
+	<delete id="menuAuthDAO.deleteMenuAuth" parameterClass="menuAuthVO">
+	<![CDATA[
+		DELETE FROM MENU_AUTH
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</delete>
+	
+	<insert id="menuAuthDAO.insertMenuAuth" parameterClass="menuAuthVO">
+	<![CDATA[
+		INSERT INTO MENU_AUTH
+			(
+				SEQ
+				, MENU_ID
+			)
+		VALUES
+			(
+				#SEQ#
+				, #MENU_ID#
+			)
+	]]>
+	</insert>
+	
+	<delete id="menuAuthDAO.deleteMenu" parameterClass="menuVO">
+	<![CDATA[
+		DELETE FROM MENU_AUTH
+		WHERE
+			MENU_ID = #MENU_ID#
+	]]>
+	</delete>
+</sqlMap>

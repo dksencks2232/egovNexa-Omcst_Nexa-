@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Board" left="0" top="0" width="800" height="800" titletext="New Form" onload="Board_onload">
+    <Layouts>
+      <Layout>
+        <Div id="Div00" taborder="0" left="1.75%" top="17" right="1.88%" height="42" style="background:azure;">
+          <Layouts>
+            <Layout>
+              <Button id="btn_search" taborder="0" text="조회" left="89.11%" top="10" right="1.3%" height="26"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="Grid00" taborder="1" useinputpanel="false" left="1.5%" top="71" right="1.88%" height="342">
+          <Formats/>
+        </Grid>
+        <Div id="Div01" taborder="2" left="1.63%" top="428" right="1.75%" height="57" url="Base::paging_comm.xfdl"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.0"><![CDATA[
+this.Board_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	this.Div01.fn_initPageSet();
+}
+
+]]></Script>
+  </Form>
+</FDL>

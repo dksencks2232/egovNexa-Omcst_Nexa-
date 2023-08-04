@@ -1,0 +1,603 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="TOKN">﻿</span><span class="COMM">/**
+<span class='line'>  2</span>  * @fileoverview 넥사크로  공통 Library
+<span class='line'>  3</span>  * @author  copyright 2015 TOBESOFT {J}
+<span class='line'>  4</span>  */</span><span class="WHIT">
+<span class='line'>  5</span> </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">JsNamespace.exist</span><span class="PUNC">(</span><span class="STRN">"Iject"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>  7</span> 
+<span class='line'>  8</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>  9</span> 	 * @namespace
+<span class='line'> 10</span> 	 * @name Iject
+<span class='line'> 11</span> 	 * @author
+<span class='line'> 12</span> 	 * @memberof! Iject
+<span class='line'> 13</span> 	 * @author  copyright 2015 TOBESOFT {J}
+<span class='line'> 14</span> 	 */</span><span class="WHIT">
+<span class='line'> 15</span> </span><span class="WHIT">	</span><span class="NAME">JsNamespace.declare</span><span class="PUNC">(</span><span class="STRN">"Iject"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 16</span> 
+<span class='line'> 17</span> </span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="WHIT">		 </span><span class="COMM">/**
+<span class='line'> 19</span> 		 * Application 최초 로딩시 처리되는 함수 
+<span class='line'> 20</span> 		 * @parma {XaComp} application 
+<span class='line'> 21</span> 		 * @example
+<span class='line'> 22</span> 		 * this.application_onload = function(obj:Application, e:nexacro.LoadEventInfo)
+<span class='line'> 23</span> 		 *	{
+<span class='line'> 24</span> 		 *	   //초기 application onload setting
+<span class='line'> 25</span> 		 *	   Iject.appOnload(obj);
+<span class='line'> 26</span> 		 *	}
+<span class='line'> 27</span>          *
+<span class='line'> 28</span> 		 * @memberOf Iject
+<span class='line'> 29</span> 		 */</span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="WHIT">	      </span><span class="NAME">appOnload</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">app</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">	      </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">	            </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">app</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">	         	</span><span class="NAME">Iject.$.vFrameSet</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet</span><span class="PUNC">;</span><span class="WHIT">                                			</span><span class="COMM">//VFrameSet</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.loginFrame</span><span class="WHIT">     </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.LoginFrame</span><span class="PUNC">;</span><span class="WHIT"> 				   				</span><span class="COMM">//LoginFrame</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.hFrame</span><span class="WHIT">         </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.HFrameSet</span><span class="PUNC">;</span><span class="WHIT">                      			</span><span class="COMM">//HFrame</span><span class="WHIT">
+<span class='line'> 36</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.leftFrame</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.HFrameSet.LeftFrame</span><span class="PUNC">;</span><span class="WHIT">            			</span><span class="COMM">//leftFrame</span><span class="WHIT">
+<span class='line'> 37</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.vFrameSet1</span><span class="WHIT">     </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.HFrameSet.VFrameSet1</span><span class="PUNC">;</span><span class="WHIT">           			</span><span class="COMM">//VFrameSet1</span><span class="WHIT">
+<span class='line'> 38</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.topFrame</span><span class="WHIT">       </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.HFrameSet.VFrameSet1.TopFrame</span><span class="PUNC">;</span><span class="WHIT">  			</span><span class="COMM">//TopFrame</span><span class="WHIT">
+<span class='line'> 39</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.workFrame</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.HFrameSet.VFrameSet1.WorkFrame</span><span class="PUNC">;</span><span class="WHIT">            </span><span class="COMM">//WorkForm</span><span class="WHIT">
+<span class='line'> 40</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.mainFrame</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.HFrameSet.VFrameSet1.WorkFrame.MainForm</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="COMM">//mainform</span><span class="WHIT">
+<span class='line'> 41</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.mdiFrame</span><span class="WHIT">       </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.mainframe.VFrameSet.MDIFrame</span><span class="PUNC">;</span><span class="WHIT">                       			</span><span class="COMM">//mdi frame</span><span class="WHIT">
+<span class='line'> 42</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.httpurl</span><span class="WHIT">        </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o.services</span><span class="PUNC">[</span><span class="STRN">"svcurl"</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">url</span><span class="PUNC">;</span><span class="WHIT">							  	</span><span class="COMM">//trnasaction service url</span><span class="WHIT">
+<span class='line'> 43</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.loginSize</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="NAME">width</span><span class="PUNC">:</span><span class="NUMB">450</span><span class="PUNC">,</span><span class="NAME">height</span><span class="PUNC">:</span><span class="NUMB">290</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 44</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.mainframeSize</span><span class="WHIT">  </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="NAME">width</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">o.mainframe.width</span><span class="PUNC">,</span><span class="NAME">height</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">o.mainframe.height</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 45</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.$.ExtCommonPath</span><span class="WHIT">  </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">nexacro.Browser</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="STRN">"Runtime"</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="NAME">system.convertRealPath</span><span class="PUNC">(</span><span class="STRN">"%USERAPP%"</span><span class="PUNC">+</span><span class="STRN">"Component/ExtCommonV13.dll"</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 46</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'> 47</span> </span><span class="WHIT">				 </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="WHIT"> </span><span class="NAME">nexacro.Browser</span><span class="WHIT"> </span><span class="PUNC">!=</span><span class="WHIT"> </span><span class="STRN">"Runtime"</span><span class="WHIT">
+<span class='line'> 48</span> </span><span class="WHIT">				   </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">nexacro.Browser</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"IE"</span><span class="WHIT"> </span><span class="PUNC">&&</span><span class="WHIT"> </span><span class="NAME">nexacro.BrowserVersion</span><span class="WHIT"> </span><span class="PUNC">></span><span class="WHIT"> </span><span class="NUMB">9</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 49</span> </span><span class="WHIT">				     </span><span class="NAME">Iject.Html5.setFavicon</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="COMM">//favicon setting</span><span class="WHIT">
+<span class='line'> 50</span> </span><span class="WHIT">					 </span><span class="NAME">nexacro.loadJSLibraries</span><span class="PUNC">(</span><span class="PUNC">[</span><span class="STRN">"./nexacro14lib/component/IjectJS/ExtApi/jquery-1.10.2.js"</span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 51</span> </span><span class="WHIT">				   </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 52</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'> 53</span> </span><span class="WHIT">	 			</span><span class="NAME">Iject.login</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="COMM">//로그인처리</span><span class="WHIT">
+<span class='line'> 54</span> </span><span class="WHIT">	      </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 55</span> </span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'> 56</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 57</span> 		 * form onload 기본 함수
+<span class='line'> 58</span> 		 * @public
+<span class='line'> 59</span> 		 * @param  {XaComp} this(현재폼)
+<span class='line'> 60</span> 		 * @return
+<span class='line'> 61</span> 		 * @example
+<span class='line'> 62</span> 		 * this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+<span class='line'> 63</span> 		 *	{
+<span class='line'> 64</span> 		 *		Iject.formOnload(obj);
+<span class='line'> 65</span> 		 *		
+<span class='line'> 66</span> 		 *	}
+<span class='line'> 67</span> 		 * @memberOf Iject
+<span class='line'> 68</span> 		 */</span><span class="WHIT">
+<span class='line'> 69</span> </span><span class="WHIT">		</span><span class="NAME">formOnload</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 70</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 71</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 72</span> </span><span class="WHIT">  				</span><span class="COMM">//버튼 권한</span><span class="WHIT">
+<span class='line'> 73</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 74</span> 
+<span class='line'> 75</span> 
+<span class='line'> 76</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 77</span> 		 * logout 처리시 실행되는 함수
+<span class='line'> 78</span> 		 * @param  {XaComp} this(현재폼)
+<span class='line'> 79</span> 		 * @return
+<span class='line'> 80</span> 		 * @example
+<span class='line'> 81</span> 		 * @memberOf Iject
+<span class='line'> 82</span> 		 */</span><span class="WHIT">
+<span class='line'> 83</span> </span><span class="WHIT">		</span><span class="NAME">login</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 84</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 85</span> 
+<span class='line'> 86</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">nexacro.Browser</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"Runtime"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'> 87</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 88</span> </span><span class="WHIT">				</span><span class="NAME">Iject.Runtime.loginR</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 89</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 90</span> </span><span class="WHIT">			</span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'> 91</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 92</span> </span><span class="WHIT">				</span><span class="NAME">Iject.Html5.loginH</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 93</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 94</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 95</span> 
+<span class='line'> 96</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 97</span> 		 * 로그인 처리후 메인 프레임 값 setting
+<span class='line'> 98</span> 		 * @param  
+<span class='line'> 99</span> 		 * @return
+<span class='line'>100</span> 		 * @example
+<span class='line'>101</span> 		 * Iject.setSeprateFrame()
+<span class='line'>102</span> 		 * @memberOf Iject
+<span class='line'>103</span> 		 */</span><span class="WHIT">
+<span class='line'>104</span> </span><span class="WHIT">		</span><span class="NAME">setSeprateFrame</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>105</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>106</span> 
+<span class='line'>107</span> </span><span class="WHIT">			</span><span class="NAME">Iject.$.vFrameSet.set_separatesize</span><span class="PUNC">(</span><span class="NAME">Iject.$.framesize</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>108</span> 
+<span class='line'>109</span> </span><span class="WHIT">			</span><span class="COMM">//**** 임시 필요에따라 삭제해서 사용</span><span class="WHIT">
+<span class='line'>110</span> </span><span class="WHIT">			</span><span class="NAME">Iject.$.userid</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">application.gds_userInfo.getColumn</span><span class="PUNC">(</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="STRN">"USER_ID"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>111</span> </span><span class="WHIT">			</span><span class="NAME">Iject.$.usernm</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">application.gds_userInfo.getColumn</span><span class="PUNC">(</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="STRN">"USER_NM"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>112</span> 
+<span class='line'>113</span> </span><span class="WHIT">			</span><span class="NAME">Iject.$.mainFrame.form.fn_set</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="COMM">//mainframe argument setting</span><span class="WHIT">
+<span class='line'>114</span> </span><span class="WHIT">			</span><span class="NAME">Iject.$.topFrame.form.fn_set</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="COMM">//topframe argument setting</span><span class="WHIT">
+<span class='line'>115</span> 
+<span class='line'>116</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>117</span> 
+<span class='line'>118</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>119</span> 		 * logout 처리 함수
+<span class='line'>120</span> 		 * @param   
+<span class='line'>121</span> 		 * @return
+<span class='line'>122</span> 		 * @example
+<span class='line'>123</span> 		 * Iject.logout();
+<span class='line'>124</span> 		 * @memberOf Iject
+<span class='line'>125</span> 		 */</span><span class="WHIT">
+<span class='line'>126</span> </span><span class="WHIT">		</span><span class="NAME">logout</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>127</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>128</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">nexacro.Browser</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"Runtime"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>129</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>130</span> </span><span class="WHIT">				</span><span class="NAME">Iject.Runtime.logoutR</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="COMM">//Runtime</span><span class="WHIT">
+<span class='line'>131</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>132</span> </span><span class="WHIT">			</span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>133</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>134</span> </span><span class="WHIT">				</span><span class="NAME">Iject.Html5.logoutH</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="COMM">//html5</span><span class="WHIT">
+<span class='line'>135</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>136</span> 
+<span class='line'>137</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>138</span> 
+<span class='line'>139</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>140</span> 		 * 엑셀 익스포트 공통함수
+<span class='line'>141</span> 		 * @param  {XaComp} this(현재폼)
+<span class='line'>142</span> 		 * @param  {object} Grid
+<span class='line'>143</span> 		 * @param  {string} 파일명
+<span class='line'>144</span> 		 * @param  {string} sheet명
+<span class='line'>145</span> 		 * @return
+<span class='line'>146</span> 		 * @example
+<span class='line'>147</span> 		 *  Iject.exportExcel(this,this.grd_list);
+<span class='line'>148</span> 		 * @memberOf Iject
+<span class='line'>149</span> 		 */</span><span class="WHIT">
+<span class='line'>150</span> </span><span class="WHIT">		</span><span class="NAME">exportExcel</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">,</span><span class="NAME">oGrid</span><span class="PUNC">,</span><span class="NAME">sFileName</span><span class="PUNC">,</span><span class="NAME">strSheet</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>151</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>152</span> 
+<span class='line'>153</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>154</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">dToday</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Date</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>155</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sSvcUrl</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">application.services</span><span class="PUNC">[</span><span class="STRN">"svcurl"</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">url</span><span class="PUNC">+</span><span class="STRN">"XExportImport"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>156</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">strType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oGrid.toString</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">.</span><span class="NAME">toUpperCase</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>157</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">strSheet</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">strSheet</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">"sheet"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="NAME">strSheet</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>158</span> </span><span class="WHIT">            </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">strExportFileName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">sFileName</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT">  </span><span class="NAME">dToday.getTime</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">dToday.getTime</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">"_"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">sFileName</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>159</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">exportObj</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">ExcelExportObject</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>160</span> 
+<span class='line'>161</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.clear</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>162</span> </span><span class="WHIT">			</span><span class="COMM">//onsuccess</span><span class="WHIT">
+<span class='line'>163</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.addEventHandler</span><span class="PUNC">(</span><span class="STRN">"onsuccess"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">obj</span><span class="PUNC">,</span><span class="NAME">e</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>164</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>165</span> 
+<span class='line'>166</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>167</span> </span><span class="WHIT">			</span><span class="COMM">//onerror</span><span class="WHIT">
+<span class='line'>168</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.addEventHandler</span><span class="PUNC">(</span><span class="STRN">"onerror"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">obj</span><span class="PUNC">,</span><span class="NAME">e</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>169</span> </span><span class="WHIT">				 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">" =========== Excel Export onerror event start============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>170</span> </span><span class="WHIT">				 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">" =========== e.eventid : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.eventid</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>171</span> </span><span class="WHIT">				 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">" =========== e.fromobject : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.fromobject</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>172</span> </span><span class="WHIT">				 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"=========== e.fromreferenceobject : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.fromreferenceobject</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>173</span> </span><span class="WHIT">				 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"=========== e.errorcode : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.errorcode</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>174</span> </span><span class="WHIT">				 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"=========== e.errormsg) : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.errormsg</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>175</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>176</span> 
+<span class='line'>177</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.set_exporttype</span><span class="PUNC">(</span><span class="NAME">nexacro.ExportTypes.EXCEL2007</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>178</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.set_exportuitype</span><span class="PUNC">(</span><span class="STRN">"exportprogress"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">    </span><span class="COMM">// set</span><span class="WHIT">
+<span class='line'>179</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.set_exporturl</span><span class="PUNC">(</span><span class="NAME">sSvcUrl</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>180</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.set_exportfilename</span><span class="PUNC">(</span><span class="NAME">strExportFileName</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>181</span> 
+<span class='line'>182</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">strType</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"[OBJECT GRID]"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>183</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>184</span> </span><span class="WHIT">				</span><span class="NAME">oGrid</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oGrid</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>185</span> </span><span class="WHIT">				</span><span class="NAME">sSheetName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">strSheet</span><span class="PUNC">+</span><span class="STRN">"1"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>186</span> </span><span class="WHIT">				</span><span class="NAME">exportObj.addExportItem</span><span class="PUNC">(</span><span class="NAME">nexacro.ExportItemTypes.GRID</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">oGrid</span><span class="PUNC">,</span><span class="WHIT">  </span><span class="NAME">sSheetName</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">"!A1"</span><span class="PUNC">,</span><span class="STRN">"allband"</span><span class="PUNC">,</span><span class="STRN">"allrecord"</span><span class="PUNC">,</span><span class="STRN">"suppress"</span><span class="PUNC">,</span><span class="STRN">"allstyle"</span><span class="PUNC">,</span><span class="STRN">"background"</span><span class="PUNC">,</span><span class="STRN">"font"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"both"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>187</span> 
+<span class='line'>188</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>189</span> </span><span class="WHIT">			</span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>190</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>191</span> </span><span class="WHIT">				</span><span class="KEYW">for</span><span class="PUNC">(</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">=</span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">&lt;</span><span class="NAME">obj.length</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">++</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>192</span> </span><span class="WHIT">				</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>193</span> </span><span class="WHIT">					</span><span class="NAME">sSheetName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">strSheet</span><span class="PUNC">+</span><span class="PUNC">(</span><span class="NAME">i</span><span class="PUNC">+</span><span class="NUMB">1</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>194</span> </span><span class="WHIT">					</span><span class="NAME">oGrid</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oGrid</span><span class="PUNC">[</span><span class="NAME">i</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>195</span> </span><span class="WHIT">					</span><span class="NAME">exportObj.addExportItem</span><span class="PUNC">(</span><span class="NAME">nexacro.ExportItemTypes.GRID</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">oGrid</span><span class="PUNC">,</span><span class="WHIT">  </span><span class="NAME">sSheetName</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">"!A1"</span><span class="PUNC">,</span><span class="STRN">"allband"</span><span class="PUNC">,</span><span class="STRN">"allrecord"</span><span class="PUNC">,</span><span class="STRN">"suppress"</span><span class="PUNC">,</span><span class="STRN">"allstyle"</span><span class="PUNC">,</span><span class="STRN">"background"</span><span class="PUNC">,</span><span class="STRN">"font"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"both"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>196</span> </span><span class="WHIT">				</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>197</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>198</span> 
+<span class='line'>199</span> </span><span class="WHIT">			</span><span class="NAME">exportObj.exportData</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>200</span> 
+<span class='line'>201</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>202</span> 
+<span class='line'>203</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>204</span> 		 * excel import 공통함수
+<span class='line'>205</span> 		 * @param  {XaComp} this(현재폼)
+<span class='line'>206</span> 		 * @param  {string} sheet명
+<span class='line'>207</span> 		 * @param  {object} dataset명
+<span class='line'>208</span> 		 * @return N/A
+<span class='line'>209</span> 		 * @example
+<span class='line'>210</span> 		 * var sSheet = "body=sheet1!A2;";  
+<span class='line'>211</span> 		 * var ds = this.ds_out;
+<span class='line'>212</span> 	     * Iject.importExcel(this,sSheet,ds);
+<span class='line'>213</span> 		 * @memberOf Iject
+<span class='line'>214</span> 		 */</span><span class="WHIT">
+<span class='line'>215</span> </span><span class="WHIT">		</span><span class="NAME">importExcel</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">,</span><span class="NAME">sSheet</span><span class="PUNC">,</span><span class="NAME">ds</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>216</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>217</span> 
+<span class='line'>218</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>219</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">dsName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ds.name</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>220</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">ds_importTemp</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Iject.Util.isCheckDs</span><span class="PUNC">(</span><span class="NAME">pThis</span><span class="PUNC">,</span><span class="STRN">"ds_importTemp"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">	</span><span class="WHIT">
+<span class='line'>221</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sSvcUrl</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">application.services</span><span class="PUNC">[</span><span class="STRN">"svcurl"</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">url</span><span class="PUNC">+</span><span class="STRN">"XExportImport"</span><span class="PUNC">;</span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>222</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">importObj</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">nexacro.ExcelImportObject</span><span class="PUNC">(</span><span class="STRN">"importExcel"</span><span class="PUNC">,</span><span class="NAME">pThis</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>223</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>224</span> </span><span class="WHIT">			 </span><span class="NAME">Iject.$</span><span class="PUNC">[</span><span class="STRN">"fobj"</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>225</span> </span><span class="WHIT">			 </span><span class="NAME">ds.clearData</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'>226</span> </span><span class="WHIT">			 </span><span class="NAME">ds_importTemp.copyData</span><span class="PUNC">(</span><span class="NAME">ds</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>227</span> </span><span class="WHIT">			 </span><span class="NAME">pThis</span><span class="PUNC">[</span><span class="STRN">"ds_import"</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ds</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>228</span> </span><span class="WHIT">			 </span><span class="WHIT">
+<span class='line'>229</span> </span><span class="WHIT">			</span><span class="NAME">importObj.set_importtype</span><span class="PUNC">(</span><span class="NAME">nexacro.ImportTypes.EXCEL</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>230</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>231</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>232</span> </span><span class="WHIT">			</span><span class="COMM">//onsuccess</span><span class="WHIT">
+<span class='line'>233</span> </span><span class="WHIT">			</span><span class="NAME">importObj.addEventHandler</span><span class="PUNC">(</span><span class="STRN">"onsuccess"</span><span class="PUNC">,</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">obj</span><span class="PUNC">,</span><span class="NAME">e</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>234</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>235</span> </span><span class="WHIT">				</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">dsFromData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">this</span><span class="PUNC">[</span><span class="STRN">"ds_importTemp"</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="COMM">//엑셀데이타</span><span class="WHIT">
+<span class='line'>236</span> </span><span class="WHIT">				</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">dsToData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">this</span><span class="PUNC">[</span><span class="STRN">"ds_import"</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="COMM">//원본</span><span class="WHIT">
+<span class='line'>237</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'>238</span> </span><span class="WHIT">				 </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arrCol</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>239</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'>240</span> </span><span class="WHIT">				 </span><span class="KEYW">for</span><span class="PUNC">(</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">=</span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">&lt;</span><span class="WHIT"> </span><span class="NAME">dsToData.getColCount</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="NAME">i</span><span class="PUNC">++</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>241</span> </span><span class="WHIT">				</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>242</span> </span><span class="WHIT">					 </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sToCol</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">  </span><span class="NAME">dsToData.getColID</span><span class="PUNC">(</span><span class="NAME">i</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>243</span> </span><span class="WHIT">					 </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sFromCol</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">dsFromData.getColID</span><span class="PUNC">(</span><span class="NAME">i</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>244</span> </span><span class="WHIT">					 </span><span class="NAME">arrCol</span><span class="PUNC">[</span><span class="NAME">i</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">  </span><span class="NAME">sToCol</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">"="</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">sFromCol</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>245</span> </span><span class="WHIT">				</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>246</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'>247</span> </span><span class="WHIT">			    </span><span class="NAME">dsToData.clearData</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="COMM">//원본삭제</span><span class="WHIT">
+<span class='line'>248</span> </span><span class="WHIT">				</span><span class="NAME">dsFromData.set_enableevent</span><span class="PUNC">(</span><span class="KEYW">false</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>249</span> </span><span class="WHIT">				</span><span class="KEYW">for</span><span class="PUNC">(</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">=</span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="WHIT"> </span><span class="PUNC">&lt;</span><span class="WHIT"> </span><span class="NAME">dsFromData.getRowCount</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">++</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>250</span> </span><span class="WHIT">				</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>251</span> </span><span class="WHIT">				    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">addRow</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">dsToData.addRow</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>252</span> </span><span class="WHIT">				    </span><span class="NAME">dsToData.copyRow</span><span class="PUNC">(</span><span class="NAME">addRow</span><span class="PUNC">,</span><span class="NAME">dsFromData</span><span class="PUNC">,</span><span class="NAME">i</span><span class="PUNC">,</span><span class="NAME">arrCol.join</span><span class="PUNC">(</span><span class="STRN">","</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>253</span> 
+<span class='line'>254</span> </span><span class="WHIT">				</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>255</span> </span><span class="WHIT">				</span><span class="NAME">dsFromData.set_enableevent</span><span class="PUNC">(</span><span class="KEYW">true</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>256</span> </span><span class="WHIT">				</span><span class="NAME">dsToData.applyChange</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>257</span> </span><span class="WHIT">				</span><span class="NAME">dsFromData.clear</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>258</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>259</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">  </span><span class="NAME">pThis</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>260</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>261</span> </span><span class="WHIT">			</span><span class="COMM">//onerror</span><span class="WHIT">
+<span class='line'>262</span> </span><span class="WHIT">			</span><span class="NAME">importObj.addEventHandler</span><span class="PUNC">(</span><span class="STRN">"onerror"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">obj</span><span class="PUNC">,</span><span class="NAME">e</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>263</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'>264</span> </span><span class="WHIT">		     </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">" =========== Excel Import onerror event start============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>265</span> </span><span class="WHIT">			 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">" =========== e.eventid : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.eventid</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>266</span> </span><span class="WHIT">			 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">" =========== e.fromobject : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.fromobject</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>267</span> </span><span class="WHIT">			 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"=========== e.fromreferenceobject : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.fromreferenceobject</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>268</span> </span><span class="WHIT">			 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"=========== e.errorcode : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.errorcode</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>269</span> </span><span class="WHIT">			 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"=========== e.errormsg) : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">e.errormsg</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" ============"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>270</span> </span><span class="WHIT">			 </span><span class="NAME">trace</span><span class="PUNC">(</span><span class="STRN">"======================   end   ========================="</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>271</span> </span><span class="WHIT">					</span><span class="WHIT">
+<span class='line'>272</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="NAME">pThis</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>273</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>274</span> </span><span class="WHIT">			</span><span class="NAME">importObj.set_importurl</span><span class="PUNC">(</span><span class="NAME">sSvcUrl</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>275</span> </span><span class="WHIT">            </span><span class="NAME">Eco.Logger.debug</span><span class="PUNC">(</span><span class="PUNC">{</span><span class="NAME">message</span><span class="PUNC">:</span><span class="STRN">"#### ExceImport start log ###"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">stack</span><span class="PUNC">:</span><span class="KEYW">true</span><span class="PUNC">,</span><span class="NAME">elapsed</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>276</span> </span><span class="WHIT">			</span><span class="NAME">importObj.importData</span><span class="PUNC">(</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"[command=getsheetdata;output=outDs;"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">sSheet</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="STRN">"]"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"["</span><span class="PUNC">+</span><span class="NAME">ds_importTemp.name</span><span class="PUNC">+</span><span class="STRN">"=outDs]"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>277</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>278</span> 
+<span class='line'>279</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>280</span> 		 * 공통 팝업 modal
+<span class='line'>281</span> 		 *@param {XaComp} this(현재폼)
+<span class='line'>282</span> 		 *@param {object} arguments
+<span class='line'>283</span> 		 *@param {string | function} callback인자값
+<span class='line'>284</span> 		 *@return
+<span class='line'>285</span> 		 * callback function
+<span class='line'>286</span> 		 * @example
+<span class='line'>287</span> 		 * var oData ={
+<span class='line'>288</span>          *sId  : "singledetail",   //callback id
+<span class='line'>289</span>          *sUrl : "sample::Pattern_01.xfdl",   //url
+<span class='line'>290</span>          *bshowtitlebar : true, //title bar
+<span class='line'>291</span>          *bAutoSize  : true,    //autosize
+<span class='line'>292</span>          *bResize    : false,   //resize
+<span class='line'>293</span>          *bShowtatusbar : false,  //statusbar
+<span class='line'>294</span>          *sOpenalign    : "center middle",  //align
+<span class='line'>295</span>          *oArgs :{'arg1':'55555',
+<span class='line'>296</span>          *        'arg2':'333333'
+<span class='line'>297</span>          *      }          // argument
+<span class='line'>298</span>          * };
+<span class='line'>299</span>          * 
+<span class='line'>300</span> 		 * //팝업 테스트
+<span class='line'>301</span> 		 *Iject.showModal(this,oData,function(){
+<span class='line'>302</span>          *
+<span class='line'>303</span> 		 * var pThis= this.fobj;
+<span class='line'>304</span>     	 *
+<span class='line'>305</span> 	     * trace(" pThis.name : " + pThis.name);
+<span class='line'>306</span> 	     * });
+<span class='line'>307</span> 		 * @memberOf Iject
+<span class='line'>308</span> 		 */</span><span class="WHIT">
+<span class='line'>309</span> </span><span class="WHIT">		</span><span class="NAME">showModal</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">,</span><span class="NAME">oData</span><span class="PUNC">,</span><span class="NAME">fncCallback</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>310</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>311</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>312</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sId</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oData.sId</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">"_"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">Math.random</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>313</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sBackground</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.sBackground</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">""</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">oData.sBackground</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>314</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>315</span> </span><span class="WHIT">				</span><span class="NAME">Eco.Logger.error</span><span class="PUNC">(</span><span class="PUNC">{</span><span class="NAME">message</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"unKnown calback argument!!!"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">elapsed</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>316</span> </span><span class="WHIT">				</span><span class="KEYW">return</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>317</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>318</span> 
+<span class='line'>319</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">cf</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">ChildFrame</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>320</span> </span><span class="WHIT">			</span><span class="NAME">cf.init</span><span class="PUNC">(</span><span class="NAME">sId</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>321</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_formurl</span><span class="PUNC">(</span><span class="NAME">oData.sUrl</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>322</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_showtitlebar</span><span class="PUNC">(</span><span class="NAME">oData.bshowtitlebar</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>323</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_layered</span><span class="PUNC">(</span><span class="KEYW">false</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>324</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_autosize</span><span class="PUNC">(</span><span class="NAME">oData.bAutoSize</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>325</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_resizable</span><span class="PUNC">(</span><span class="NAME">oData.bResize</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>326</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_showstatusbar</span><span class="PUNC">(</span><span class="NAME">oData.bShowstatusbar</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>327</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_openalign</span><span class="PUNC">(</span><span class="NAME">oData.sOpenalign</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="COMM">//화면의 중앙에 위치</span><span class="WHIT">
+<span class='line'>328</span> </span><span class="WHIT">			</span><span class="NAME">cf.style.set_background</span><span class="PUNC">(</span><span class="NAME">sBackground</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="COMM">//backround color</span><span class="WHIT">
+<span class='line'>329</span> </span><span class="WHIT">			</span><span class="NAME">cf.set_dragmovetype</span><span class="PUNC">(</span><span class="STRN">"all"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>330</span> </span><span class="WHIT">			</span><span class="NAME">cf.arguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>331</span> </span><span class="WHIT">			</span><span class="COMM">//cf.arguments[pThis.name] = pThis.name;</span><span class="WHIT">
+<span class='line'>332</span> </span><span class="WHIT">			</span><span class="NAME">cf.arguments</span><span class="PUNC">[</span><span class="STRN">"fObj"</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>333</span> </span><span class="WHIT">			</span><span class="NAME">cf.arguments</span><span class="PUNC">[</span><span class="STRN">"popup_oArg"</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oData.oArgs</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>334</span> </span><span class="WHIT">			</span><span class="NAME">cf.arguments</span><span class="PUNC">[</span><span class="STRN">"p_callback"</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">fncCallback</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>335</span> </span><span class="WHIT">			</span><span class="COMM">//pThis.variant  = "";</span><span class="WHIT">
+<span class='line'>336</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">popWin</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">ChildFrame</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>337</span> 
+<span class='line'>338</span> </span><span class="WHIT">			</span><span class="NAME">cf.showModal</span><span class="PUNC">(</span><span class="NAME">sId</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">pThis.getOwnerFrame</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">,</span><span class="NAME">oData.oArgs</span><span class="PUNC">,</span><span class="WHIT">  </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">,</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">svcid</span><span class="PUNC">,</span><span class="NAME">variant</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>339</span> 
+<span class='line'>340</span> </span><span class="WHIT">				</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">p_variant</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">this.variant</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="NAME">variant</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">this.variant</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>341</span> </span><span class="WHIT">				</span><span class="NAME">this.variant</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>342</span> </span><span class="WHIT">				</span><span class="NAME">fncCallback.call</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="NAME">svcid</span><span class="PUNC">,</span><span class="NAME">p_variant</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>343</span> 
+<span class='line'>344</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>345</span> 
+<span class='line'>346</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>347</span> 
+<span class='line'>348</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>349</span> 		 * 공통 팝업 close
+<span class='line'>350</span> 		 * @param {XaComp} this(현재FORM)
+<span class='line'>351</span> 		 * @param {string|object|array} arguments
+<span class='line'>352</span> 		 * @return
+<span class='line'>353</span> 		 * @example
+<span class='line'>354</span> 		 *  //문자열
+<span class='line'>355</span> 		 *  var str = "testArgq11111111111111111111";      
+<span class='line'>356</span> 	     *   Iject.close(this,str);
+<span class='line'>357</span> 	     *   //array
+<span class='line'>358</span> 	     *   var arr = ["array","testvalue1", "testvalue2", "testvalue3"];
+<span class='line'>359</span>          *   Iject.close(this,arr);
+<span class='line'>360</span>          *  //json 문자열   
+<span class='line'>361</span>          *  var objJson = {key1:"1111",key2:"2222",key3:"3333"};    
+<span class='line'>362</span>     	 *	Iject.close(this,objJson);
+<span class='line'>363</span> 		 * @memberOf Iject
+<span class='line'>364</span> 		 */</span><span class="WHIT">
+<span class='line'>365</span> </span><span class="WHIT">		</span><span class="NAME">close</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">,</span><span class="NAME">variant</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>366</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>367</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT">  </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>368</span> 
+<span class='line'>369</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">pThis.opener</span><span class="WHIT"> </span><span class="PUNC">&&</span><span class="WHIT"> </span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">variant</span><span class="WHIT"> </span><span class="PUNC">!=</span><span class="STRN">"string"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>370</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>371</span> </span><span class="WHIT">				</span><span class="NAME">variant</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">variant</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">""</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">variant</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>372</span> </span><span class="WHIT">				</span><span class="NAME">pThis.opener.variant</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">variant</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>373</span> </span><span class="WHIT">				</span><span class="NAME">pThis.close</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>374</span> 
+<span class='line'>375</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>376</span> </span><span class="WHIT">			</span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>377</span> </span><span class="WHIT">			</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>378</span> </span><span class="WHIT">				</span><span class="NAME">pThis.close</span><span class="PUNC">(</span><span class="NAME">variant</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>379</span> </span><span class="WHIT">			</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>380</span> 
+<span class='line'>381</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>382</span> 
+<span class='line'>383</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>384</span> 		 * 공통 팝업 open
+<span class='line'>385</span> 		 * @param {XaComp} this(현재폼)
+<span class='line'>386</span> 		 * @param {string} id
+<span class='line'>387</span> 		 * @param {string} url
+<span class='line'>388</span> 		 * @param {object} arguments
+<span class='line'>389</span> 		 * @param {string} callback명
+<span class='line'>390</span> 		 * @return
+<span class='line'>391</span> 		 * @example
+<span class='line'>392</span> 		 *   Iject.open(this,"pOpen","aa::aa.xfdl",{arg1:"aaa},"fn_popCallbac");
+<span class='line'>393</span> 		 * @memberOf Iject
+<span class='line'>394</span> 		 */</span><span class="WHIT">
+<span class='line'>395</span> </span><span class="WHIT">		</span><span class="NAME">open</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">,</span><span class="NAME">sId</span><span class="PUNC">,</span><span class="NAME">url</span><span class="PUNC">,</span><span class="NAME">oArg</span><span class="PUNC">,</span><span class="NAME">fnCallback</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>396</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>397</span> 
+<span class='line'>398</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">bSucc</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>399</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">nScreenWidth</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>400</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>401</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">nScreenHeight</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>402</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">arrScreenSize</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>403</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">nLeft</span><span class="WHIT">   </span><span class="PUNC">=</span><span class="WHIT">  </span><span class="PUNC">(</span><span class="NAME">application.mainframe.width</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">Math.round</span><span class="PUNC">(</span><span class="NAME">pThis.width</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>404</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">nTop</span><span class="WHIT">    </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">application.mainframe.height</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">Math.round</span><span class="PUNC">(</span><span class="NAME">pThis.height</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>405</span> 
+<span class='line'>406</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">cf</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">pThis.getOwnerFrame</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>407</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">bSucc</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">application.open</span><span class="PUNC">(</span><span class="NAME">sId</span><span class="WHIT"> </span><span class="PUNC">,</span><span class="NAME">url</span><span class="PUNC">,</span><span class="NAME">cf</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">oArg</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"showtitlebar=true showstatusbar=false"</span><span class="PUNC">,</span><span class="NAME">nLeft</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">nTop</span><span class="PUNC">,</span><span class="KEYW">null</span><span class="PUNC">,</span><span class="KEYW">null</span><span class="PUNC">,</span><span class="NAME">pThis</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>408</span> 
+<span class='line'>409</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">bSucc</span><span class="PUNC">)</span><span class="WHIT"> 	</span><span class="NAME">Eco.Logger.error</span><span class="PUNC">(</span><span class="PUNC">{</span><span class="NAME">message</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"modaless open error"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">elapsed</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>410</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>411</span> 
+<span class='line'>412</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>413</span> 		 * alert 공통
+<span class='line'>414</span> 		 * @param {string} message
+<span class='line'>415</span> 		 * @param {string} title caption message
+<span class='line'>416</span> 		 * @return
+<span class='line'>417</span> 		 * @example
+<span class='line'>418</span> 		 * Iject.alert("처리되었습니다.","완료");
+<span class='line'>419</span> 		 * @memberOf Iject
+<span class='line'>420</span> 		 */</span><span class="WHIT">
+<span class='line'>421</span> </span><span class="WHIT">		</span><span class="NAME">alert</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">sMsg</span><span class="PUNC">,</span><span class="NAME">sCaption</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>422</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>423</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pCaption</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">sCaption</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">"알림"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">sCaption</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>424</span> </span><span class="WHIT">				</span><span class="NAME">application.alert</span><span class="PUNC">(</span><span class="NAME">sMsg</span><span class="PUNC">,</span><span class="NAME">pCaption</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>425</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>426</span> 
+<span class='line'>427</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>428</span> 		 * confirm 공통
+<span class='line'>429</span> 		 * @param {string} message
+<span class='line'>430</span> 		 * @param {string} title caption message
+<span class='line'>431</span> 		 * @return {boolen} true/false
+<span class='line'>432</span> 		 * @example
+<span class='line'>433</span> 		 * var isConfirm = Iject.confirm("처리하시겠습니까?","캡션");
+<span class='line'>434</span> 		 *    if(isConfirm) alert("정상");
+<span class='line'>435</span> 		 * @memberOf Iject
+<span class='line'>436</span> 		 */</span><span class="WHIT">
+<span class='line'>437</span> </span><span class="WHIT">		</span><span class="NAME">confirm</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">sMsg</span><span class="PUNC">,</span><span class="NAME">sCaption</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>438</span> 
+<span class='line'>439</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pCaption</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">sCaption</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">"확인"</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">sCaption</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>440</span> </span><span class="WHIT">				</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">application.confirm</span><span class="PUNC">(</span><span class="NAME">sMsg</span><span class="PUNC">,</span><span class="NAME">pCaption</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>441</span> 
+<span class='line'>442</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>443</span> </span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'>444</span> 
+<span class='line'>445</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'>446</span> 		 * 	developer log message print
+<span class='line'>447</span> 		 * @param {XaComp} this(현재Form)
+<span class='line'>448</span> 		 * @param  {object} arguments  
+<span class='line'>449</span> 		 * @return 
+<span class='line'>450</span> 		 * @example
+<span class='line'>451</span> 		 *   
+<span class='line'>452</span> 		 *    Iject.log({name : "fn_function",msg:{"logmessage":"aaaaaaaaaaaaaaaa"}});   
+<span class='line'>453</span> 		 *    or
+<span class='line'>454</span> 		 *    Iject.log({name : "fn_function",msg:"logmessage",info:"error"});   //에러일경우
+<span class='line'>455</span> 		 * 
+<span class='line'>456</span> 		 * @memberOf Iject
+<span class='line'>457</span> 		 */</span><span class="WHIT">
+<span class='line'>458</span> </span><span class="WHIT">		</span><span class="NAME">log</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">oData</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>459</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>460</span> </span><span class="WHIT">		   </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">[</span><span class="NUMB">0</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">!=</span><span class="WHIT"> </span><span class="STRN">"object"</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="KEYW">return</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>461</span> </span><span class="WHIT">		 </span><span class="WHIT">
+<span class='line'>462</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pArguments</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">  </span><span class="NAME">oData</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>463</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sName</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oData.name</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>464</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sMsg</span><span class="WHIT">       </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oData.msg</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>465</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sErrror</span><span class="WHIT">    </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oData.info</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="STRN">"info"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>466</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">nDate</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.date.getMaskFormatString</span><span class="PUNC">(</span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Date</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"yyyy년 MM월 dd일 tt hh시 mm분 ss초"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>467</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">dataString</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">levelString</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>468</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n"</span><span class="PUNC">;</span><span class="WHIT">	</span><span class="WHIT">
+<span class='line'>469</span> </span><span class="WHIT">			    </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT">  </span><span class="STRN">"========================= LOG PRINT("</span><span class="PUNC">+</span><span class="NAME">sErrror</span><span class="PUNC">+</span><span class="STRN">") =============="</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>470</span> </span><span class="WHIT">			    </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT">  </span><span class="STRN">"\n  (TimeStamp : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">nDate</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">")"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>471</span> </span><span class="WHIT">			    </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT">  </span><span class="STRN">"\n=============================================================="</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>472</span> </span><span class="WHIT">			    </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n  [Name]      : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">sName</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="WHIT">
+<span class='line'>473</span> </span><span class="WHIT">			    </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n  [Browser]   : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">nexacro.Browser</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="WHIT">
+<span class='line'>474</span> </span><span class="WHIT">		        </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n  [Arguments] : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">join.call</span><span class="PUNC">(</span><span class="NAME">arguments.callee.caller.arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">    </span><span class="COMM">//넘어온 아규먼트 	</span><span class="WHIT">
+<span class='line'>475</span> </span><span class="WHIT">		    </span><span class="WHIT">
+<span class='line'>476</span> </span><span class="WHIT">		    </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">sMsg</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>477</span> </span><span class="WHIT">		    </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>478</span> </span><span class="WHIT">		         </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT">  </span><span class="STRN">"\n === CURRENT MESSAGE ==="</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>479</span> </span><span class="WHIT">		         </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">sMsg</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"object"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>480</span> </span><span class="WHIT">		         </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>481</span> </span><span class="WHIT">		            </span><span class="KEYW">for</span><span class="PUNC">(</span><span class="NAME">key</span><span class="WHIT"> </span><span class="KEYW">in</span><span class="WHIT"> </span><span class="NAME">sMsg</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>482</span> </span><span class="WHIT">					</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>483</span> </span><span class="WHIT">				    	</span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n  ["</span><span class="PUNC">+</span><span class="NAME">key</span><span class="PUNC">+</span><span class="STRN">"] : "</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="NAME">sMsg</span><span class="PUNC">[</span><span class="NAME">key</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="STRN">" "</span><span class="PUNC">;</span><span class="WHIT">    </span><span class="COMM">//넘어온 아규먼트</span><span class="WHIT">
+<span class='line'>484</span> </span><span class="WHIT">					</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>485</span> </span><span class="WHIT">		         </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>486</span> </span><span class="WHIT">		         </span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>487</span> </span><span class="WHIT">		         </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>488</span> </span><span class="WHIT">		            </span><span class="NAME">resultMessage</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n  "</span><span class="PUNC">+</span><span class="NAME">sMsg</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="STRN">" "</span><span class="PUNC">;</span><span class="WHIT">    </span><span class="COMM">//넘어온 아규먼트</span><span class="WHIT">
+<span class='line'>489</span> </span><span class="WHIT">		        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>490</span> </span><span class="WHIT">		      </span><span class="WHIT">
+<span class='line'>491</span> </span><span class="WHIT">		    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>492</span> </span><span class="WHIT">		    </span><span class="NAME">resultMessage</span><span class="WHIT">  </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"\n===================== COMPLETE LOG ======================\n"</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="WHIT">
+<span class='line'>493</span> 
+<span class='line'>494</span> </span><span class="WHIT">		    </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">sErrror</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"error"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>495</span> </span><span class="WHIT">		    </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>496</span> </span><span class="WHIT">				  </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">e</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">Error</span><span class="PUNC">(</span><span class="NAME">resultMessage</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>497</span> </span><span class="WHIT">					  </span><span class="KEYW">throw</span><span class="WHIT"> </span><span class="NAME">e</span><span class="PUNC">;</span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'>498</span> </span><span class="WHIT">		    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>499</span> </span><span class="WHIT">		    </span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>500</span> </span><span class="WHIT">		    </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>501</span> </span><span class="WHIT">		      </span><span class="NAME">application.trace</span><span class="PUNC">(</span><span class="NAME">resultMessage</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>502</span> </span><span class="WHIT">		    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>503</span> </span><span class="WHIT">		   </span><span class="WHIT">
+<span class='line'>504</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>505</span> 
+<span class='line'>506</span> 
+<span class='line'>507</span> </span><span class="WHIT">		 </span><span class="COMM">/**
+<span class='line'>508</span> 		 * 공통 트랜잭션 함수
+<span class='line'>509</span> 		 * @param {XaComp} this(현재FORM)
+<span class='line'>510</span> 		 * @param {object} arguments  
+<span class='line'>511</span> 		 * @param {string | function} callback명
+<span class='line'>512</span> 		 * @return N/A
+<span class='line'>513</span> 		 * @example
+<span class='line'>514</span> 		 * var oDatas =  {
+<span class='line'>515</span> 		 *	  sController : "loginCheck.do",
+<span class='line'>516</span> 		 *	  inds :["dsin=dsin"],
+<span class='line'>517</span> 		 *	  outds :[
+<span class='line'>518</span> 		 *		 "gds_userInfo=gds_userInfo",
+<span class='line'>519</span> 		 *		 "gds_message=gds_message",
+<span class='line'>520</span> 		 *		 "gds_config=gds_userInfo"
+<span class='line'>521</span> 		 *		 ],
+<span class='line'>522</span> 		 *	  args  : [
+<span class='line'>523</span> 		 *		  "V_USER_ID=chulsoo",
+<span class='line'>524</span> 		 *		  "V_USER_PWD=test123"
+<span class='line'>525</span> 		 *	  ],
+<span class='line'>526</span> 		 *	  bAsync : true, // 비동기여부 (true : async  false: sync)
+<span class='line'>527</span> 		 *	  nDataType : 0, // (0: XML타입, 1: 이진 타입, 2: SSV 타입)
+<span class='line'>528</span> 		 *	  bCompress :false,	
+<span class='line'>529</span> 		 *	};
+<span class='line'>530</span> 		 *		
+<span class='line'>531</span> 		 *   Iject.transaction(this,oDatas,function(){
+<span class='line'>532</span> 		 *	 //nexacro request callback function
+<span class='line'>533</span> 		 *
+<span class='line'>534</span> 		 *	});
+<span class='line'>535</span> 		 * @memberOf Iject
+<span class='line'>536</span> 		 */</span><span class="WHIT">
+<span class='line'>537</span> </span><span class="WHIT">		 </span><span class="NAME">transaction</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">o</span><span class="PUNC">,</span><span class="NAME">oData</span><span class="PUNC">,</span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>538</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>539</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>540</span> </span><span class="WHIT">			</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="KEYW">return</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>541</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">o</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>542</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">strHttpUrl</span><span class="WHIT">         </span><span class="PUNC">=</span><span class="WHIT">  </span><span class="NAME">application.services</span><span class="PUNC">[</span><span class="STRN">"svcurl"</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">url</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>543</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">oSvc</span><span class="WHIT"> 	           </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>544</span> </span><span class="WHIT">			  </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>545</span> </span><span class="WHIT">					</span><span class="NAME">oForm</span><span class="WHIT">     </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">pThis</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>546</span> </span><span class="WHIT">				    </span><span class="NAME">svcid</span><span class="WHIT">      </span><span class="PUNC">:</span><span class="NAME">oData.svcid</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="COMM">//service id</span><span class="WHIT">
+<span class='line'>547</span> </span><span class="WHIT">					</span><span class="NAME">callback</span><span class="WHIT">   </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="WHIT">
+<span class='line'>548</span> </span><span class="WHIT">		         </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>549</span> </span><span class="WHIT">			 </span><span class="WHIT">
+<span class='line'>550</span> </span><span class="WHIT">			 </span><span class="COMM">//callback명</span><span class="WHIT">
+<span class='line'>551</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sController</span><span class="WHIT">        </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.sController</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">""</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">oData.sController</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>552</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">bCompress</span><span class="WHIT">          </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.bCompress</span><span class="PUNC">)</span><span class="WHIT">   </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">oData.bCompress</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="COMM">//controller id</span><span class="WHIT">
+<span class='line'>553</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">inputDataset</span><span class="WHIT">       </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.inds</span><span class="PUNC">)</span><span class="WHIT">        </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">""</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="NAME">oData.inds.join</span><span class="PUNC">(</span><span class="STRN">" "</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="COMM">//input dataset</span><span class="WHIT">
+<span class='line'>554</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">outputDataset</span><span class="WHIT">      </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.outds</span><span class="PUNC">)</span><span class="WHIT">       </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">""</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="NAME">oData.outds.join</span><span class="PUNC">(</span><span class="STRN">" "</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">   </span><span class="COMM">//output dataset</span><span class="WHIT">
+<span class='line'>555</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">strArgument</span><span class="WHIT">        </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.args</span><span class="PUNC">)</span><span class="WHIT">        </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="STRN">""</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">oData.args.join</span><span class="PUNC">(</span><span class="STRN">" "</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">  </span><span class="COMM">// argument  변환</span><span class="WHIT">
+<span class='line'>556</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">bAsync</span><span class="WHIT">             </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.bAsync</span><span class="PUNC">)</span><span class="WHIT">      </span><span class="PUNC">?</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">oData.bAsync</span><span class="PUNC">;</span><span class="WHIT">           </span><span class="COMM">// 비동기여부 (true : async  false: sync)</span><span class="WHIT">
+<span class='line'>557</span> </span><span class="WHIT">		    </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">nDataType</span><span class="WHIT">          </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">oData.nDataType</span><span class="PUNC">)</span><span class="WHIT">   </span><span class="PUNC">?</span><span class="WHIT">  </span><span class="KEYW">false</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">oData.nDataType</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>558</span> </span><span class="WHIT">			</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">sURL</span><span class="WHIT">               </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">strHttpUrl</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT"> </span><span class="NAME">sController</span><span class="PUNC">;</span><span class="WHIT">       </span><span class="COMM">//service url</span><span class="WHIT">
+<span class='line'>559</span> </span><span class="WHIT">   		    </span><span class="WHIT">
+<span class='line'>560</span> </span><span class="WHIT">			</span><span class="WHIT">
+<span class='line'>561</span> </span><span class="WHIT">   		    </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">Eco.isFunction</span><span class="PUNC">(</span><span class="NAME">pThis.transactionCallback</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>562</span> </span><span class="WHIT">   		    </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>563</span> </span><span class="WHIT">   		         </span><span class="COMM">//callback 처리</span><span class="WHIT">
+<span class='line'>564</span> </span><span class="WHIT">				</span><span class="NAME">nexacro.Form.prototype.transactionCallback</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">oSvc</span><span class="PUNC">,</span><span class="NAME">nErrorcode</span><span class="PUNC">,</span><span class="NAME">strErrorMsg</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>565</span> </span><span class="WHIT">				</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>566</span> </span><span class="WHIT">					</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">strSvcId</span><span class="WHIT">    </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oSvc.svcid</span><span class="PUNC">;</span><span class="WHIT">       </span><span class="COMM">// service id</span><span class="WHIT">
+<span class='line'>567</span> </span><span class="WHIT">					</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">svcCallback</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">oSvc.callback</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="COMM">//콜벡명</span><span class="WHIT">
+<span class='line'>568</span> 
+<span class='line'>569</span> </span><span class="WHIT">					</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">Eco.isEmpty</span><span class="PUNC">(</span><span class="NAME">svcCallback</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="KEYW">return</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>570</span> 
+<span class='line'>571</span> </span><span class="WHIT">					</span><span class="COMM">//check callback function</span><span class="WHIT">
+<span class='line'>572</span> </span><span class="WHIT">					</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">svcCallback</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"function"</span><span class="WHIT"> </span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>573</span> </span><span class="WHIT">					</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>574</span> </span><span class="WHIT">				</span><span class="WHIT">
+<span class='line'>575</span> </span><span class="WHIT">						</span><span class="NAME">svcCallback.call</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="NAME">strSvcId</span><span class="PUNC">,</span><span class="NAME">nErrorcode</span><span class="PUNC">,</span><span class="NAME">strErrorMsg</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>576</span> </span><span class="WHIT">						</span><span class="COMM">//callback in string 일경우</span><span class="WHIT">
+<span class='line'>577</span> </span><span class="WHIT">					</span><span class="PUNC">}</span><span class="KEYW">else</span><span class="WHIT"> </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">svcCallback</span><span class="WHIT"> </span><span class="PUNC">==</span><span class="WHIT"> </span><span class="STRN">"string"</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>578</span> </span><span class="WHIT">					</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>579</span> </span><span class="WHIT">						</span><span class="KEYW">if</span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">Eco.isFunction</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">[</span><span class="NAME">svcCallback</span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="KEYW">return</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>580</span> </span><span class="WHIT">						</span><span class="KEYW">this</span><span class="PUNC">[</span><span class="NAME">svcCallback</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">call</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="NAME">strSvcId</span><span class="PUNC">,</span><span class="NAME">nErrorcode</span><span class="PUNC">,</span><span class="NAME">strErrorMsg</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>581</span> </span><span class="WHIT">					</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>582</span> </span><span class="WHIT">					</span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>583</span> </span><span class="WHIT">					</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>584</span> </span><span class="WHIT">						</span><span class="NAME">Eco.Logger.error</span><span class="PUNC">(</span><span class="PUNC">{</span><span class="NAME">message</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"unKnown calback argument!!!"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">elapsed</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>585</span> </span><span class="WHIT">					</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>586</span> </span><span class="WHIT">				</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>587</span> </span><span class="WHIT">   		    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>588</span> </span><span class="WHIT">   		    </span><span class="NAME">Eco.Logger.debug</span><span class="PUNC">(</span><span class="PUNC">{</span><span class="NAME">message</span><span class="PUNC">:</span><span class="STRN">"#### transaction  start  ###"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">stack</span><span class="PUNC">:</span><span class="KEYW">true</span><span class="PUNC">,</span><span class="NAME">elapsed</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>589</span> </span><span class="WHIT">			</span><span class="NAME">pThis.transaction</span><span class="PUNC">(</span><span class="NAME">oSvc</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">sURL</span><span class="PUNC">,</span><span class="NAME">inputDataset</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">outputDataset</span><span class="PUNC">,</span><span class="NAME">strArgument</span><span class="PUNC">,</span><span class="STRN">"transactionCallback"</span><span class="PUNC">,</span><span class="NAME">bAsync</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>590</span> 
+<span class='line'>591</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>592</span> </span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'>593</span> </span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'>594</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>595</span> </span><span class="WHIT">	</span><span class="WHIT">
+<span class='line'>596</span> </span><span class="PUNC">}</span></pre></body></html>

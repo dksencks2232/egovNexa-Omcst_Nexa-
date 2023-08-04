@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="paging_comm" left="0" top="0" width="750" height="53" titletext="New Form" onload="paging_comm_onload">
+    <Layouts>
+      <Layout>
+        <Div id="paging_div" taborder="0" left="0" width="750" top="0" height="53" style="background:antiquewhite;">
+          <Layouts>
+            <Layout>
+              <Div id="paging" taborder="0" left="0" top="0" width="500" height="53" style="background:azure;">
+                <Layouts>
+                  <Layout>
+                    <Button id="btn_first" taborder="0" text="&lt;&lt;" left="1.4%" top="10" height="35" width="25" onclick="paging_div_paging_btn_first_onclick"/>
+                    <Button id="btn_prev" taborder="1" text="&lt;" left="7%" top="10" width="25" height="35" onclick="paging_div_paging_btn_prev_onclick"/>
+                    <Button id="btn_last" taborder="2" text="&gt;&gt;" left="93.4%" top="10" width="25" height="35" onclick="paging_div_paging_btn_last_onclick"/>
+                    <Button id="btn_next" taborder="3" text="&gt;" left="87.8%" top="10" width="25" height="35"/>
+                    <Div id="number_div" taborder="4" left="13.4%" top="0" right="13.6%" height="52">
+                      <Layouts>
+                        <Layout/>
+                      </Layouts>
+                    </Div>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="move_div" taborder="1" width="250" top="0" right="0" height="53">
+          <Layouts>
+            <Layout>
+              <Edit id="input_nowPage" taborder="0" left="4.8%" top="14" right="74.8%" height="25"/>
+              <Static id="label_total" taborder="1" text="/" left="28%" top="11" right="30.4%" height="29"/>
+              <Button id="btn_move" taborder="2" text="이동" left="74.4%" top="11" right="2.8%" height="31" cssclass="Red"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.0"><![CDATA[this.startPageNum = 1;
+this.endPageNum = 10;
+this.lastPageNum = 25;
+this.currentPageNum = 1;
+
+this.dataRowCount = 10;
+
+this.paging_comm_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+
+}
+
+this.fn_initPageSet = function() {  
+
+	var btn_left = 10;
+	var btn_top = 10;
+	var btn_width = 25;
+	var btn_height = 35
+
+	
+	for(var i = 1; i <= 10; i++) {
+	
+		var objBtnId = "btn_page_"+i;
+		var button = this.paging_div.paging.number_div.all[objBtnId];
+		
+		if(button) {
+			button.destroy();
+		}
+	}
+	
+	var index = 1;
+	for(var i = this.startPageNum; i <= this.endPageNum; i++) {
+	
+		var objBtnId = "btn_page_"+index;
+		
+		var objButton = new Button();
+		
+		objButton.init(objBtnId, "absolute", btn_left, btn_top, btn_width, btn_height, null, null);
+		objButton.set_text(i);
+		
+		if(this.currentPageNum == i) {
+			objButton.set_enable(false);
+		} else {
+			objButton.set_enable(true);
+		}
+		
+		this.paging_div.paging.number_div.addChild(objBtnId, objButton);
+		
+		objButton.show();
+		
+		btn_left += 30; 
+		index++;
+	}
+	
+	this.move_div.input_nowPage.set_value(this.currentPageNum);
+	this.move_div.label_total.set_text(" / " + this.lastPageNum);
+
+}
+
+this.paging_div_paging_btn_first_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.currentPageNum = 1;
+	this.startPageNum = 1;
+	this.endPageNum = 10;
+	
+	this.fn_initPageSet();
+}
+
+this.paging_div_paging_btn_last_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var mok = parseInt(this.lastPageNum / 10);
+	var other = this.lastPageNum % 10;
+	
+	this.currentPageNum = this.lastPageNum;
+	this.startPageNum = mok * 10 + 1;
+	this.endPageNum = other > 0 ? mok * 10 + other : (mok + 1) * 10;
+	
+	this.fn_initPageSet();
+}
+
+this.paging_div_paging_btn_prev_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	if(this.currentPageNum == 1) {
+		this.alert("첫페이지 입니다.");
+	} else {
+	
+	}
+}
+]]></Script>
+  </Form>
+</FDL>

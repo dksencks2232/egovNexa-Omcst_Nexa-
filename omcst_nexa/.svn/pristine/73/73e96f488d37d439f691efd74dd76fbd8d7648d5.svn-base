@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Pattern_07" classname="Test035" left="0" top="0" width="800" height="400" titletext="팝업샘플" onload="form_onload" onclose="Pattern_07_onclose">
+    <Layouts>
+      <Layout>
+        <Div id="div_search" taborder="0" left="0" top="0" right="0" height="41" scrollbars="none" cssclass="div_WF_searchBg">
+          <Layouts>
+            <Layout width="800" height="41"/>
+          </Layouts>
+        </Div>
+        <Button id="Button00" taborder="1" text="모달(Modal) 팝업창 오픈" left="24" top="7" width="212" height="39" onclick="Button00_onclick"/>
+        <TextArea id="txa_return" taborder="2" left="24" top="54" right="20" bottom="249"/>
+        <Grid id="Grid00" taborder="3" useinputpanel="false" left="25" width="374" binddataset="ds_rtn_1" bottom="72" height="123">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="Column0"/>
+                <Cell col="1" disptype="normal" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:Column0"/>
+                <Cell col="1" disptype="normal" text="bind:Column1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="4" useinputpanel="false" left="409" width="374" binddataset="ds_rtn_2" bottom="72" height="123">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="Column0"/>
+                <Cell col="1" disptype="normal" text="Column1"/>
+                <Cell col="2" disptype="normal" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:Column0"/>
+                <Cell col="1" disptype="normal" text="bind:Column1"/>
+                <Cell col="2" disptype="normal" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static01" taborder="5" text="데이타셋을 전달받은 경우 확인용 그리드" left="26" width="550" style="color:blue;font:bold 12 arial;" bottom="191" height="45"/>
+        <Button id="Button01" taborder="6" text="팝업닫고 열기" left="458" top="7" width="212" height="39" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="7" text="모달(Modaless) 팝업창 오픈" left="241" top="7" width="212" height="39" onclick="Button02_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_rtn_1" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false"/>
+      <Dataset id="ds_rtn_2" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false"/>
+      <Dataset id="ds_test">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">3</Col>
+            <Col id="Column3">4</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">3</Col>
+            <Col id="Column3">4</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">3</Col>
+            <Col id="Column3">4</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">3</Col>
+            <Col id="Column3">4</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[/***********************************************************************************
+ * 01. 업무구분 : 
+ * 02. 메뉴명   : 
+ * 03. 메뉴설명 :  
+ * 04. 작성일   : 
+ * 05. 작성자   : 
+ * 06. 수정이력 : 
+ ***********************************************************************************
+ *     수정일     작성자   내용
+ ***********************************************************************************
+ *     
+ ***********************************************************************************
+*/
+/***********************************************************************************
+* include 선언부  													               *
+***********************************************************************************/
+
+/***********************************************************************************/
+/* 폼 전역변수 선언부												               */
+/***********************************************************************************/
+
+
+/***********************************************************************************
+* Form Event
+***********************************************************************************/
+/**
+ * form onload 함수
+ * @return 
+ * @example
+ *
+ * @memberOf this
+ */
+this.form_onload = function (obj:Form, e:LoadEventInfo)
+{
+  
+    //폼로드시 공통함수 
+	Iject.formOnload(obj);
+}
+
+/**
+ * 모달(Modal) 팝업창 오픈
+ * @return 
+ * @example
+ *
+ * @memberOf Iject
+ */
+this.Button00_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	
+
+	
+
+	this.txa_return.set_value("");
+	this.ds_rtn_1.clear();
+	this.ds_rtn_2.clear();
+		 
+		 var oData ={
+         sId  : "popup_sample",             //callback id
+         sUrl : "Pattern::Pattern_07p.xfdl",   //url
+         bshowtitlebar : true,     //title bar
+         bAutoSize  : true,       //autosize
+         bResize    : false,       //resize
+         bShowtatusbar : false,     //statusbar
+         sOpenalign    : "center middle",  //align
+        oArgs :  {arg1:'1111111111111111111',
+                  arg2:'2222222222222222222222222'         
+               }    
+     };
+   
+     /**
+	 * @param {object} popup data object
+	 * @parma callback function
+	 * @return function callback
+	 * @example
+	 *
+	 * @memberOf Iject
+	 */
+      //팝업 테스트
+      Iject.showModal(this,oData,function(svcid,variant){
+      
+		
+		  /* 
+		  * popup calllback
+		  *@param {string} this.svcid 
+		  *@param {string} this.variant
+		  */                   
+           switch(Eco._toString.call(variant))
+           {
+           
+             case "[object Array]" :
+           
+                    var txt = "";
+                    for( var i=0; i<variant.length;i++)
+                    {
+                      txt += "[" + i + "]===> variant : " + variant[i] + "\n";
+                    }
+				
+					 this.txa_return.set_value(txt);
+                 
+             break;
+             
+               case "[object Object]" :
+
+                  this.txa_return.set_value(Eco.Json._objectToString(variant));  
+                  
+             break;
+             
+             default : 
+      
+             if(this.ds_rtn_1.rowcount > 0)
+             {
+                  this.ds_rtn_2.loadXML(variant);
+             }
+                this.txa_return.set_value(variant);
+             
+             
+             break;
+             
+             
+           } 
+            
+
+      
+      });
+    
+    
+  
+}
+
+
+//modaless 창 close
+this.Button02_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+  var args ={arg1:'1111111111111111111',
+                  arg2:'2222222222222222222222222'         
+               }; 
+  Iject.open(this,"StringReturnSample","Pattern::Pattern_07p.xfdl",args);
+
+}
+
+this.Button01_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+
+	  var args ={arg1:'1111111111111111111',
+                  arg2:'2222222222222222222222222'         
+               }; 
+	 if(Eco.isEmpty(this.getOwnerFrame().all["StringReturnSample"])==false)
+	 {
+	     this.getOwnerFrame().all["StringReturnSample"].form.close();
+	 }
+	Iject.open(this,"StringReturnSample","Pattern::Pattern_07p.xfdl",args);
+		
+	
+}
+
+this.Pattern_07_onclose = function(obj:Form, e:nexacro.CloseEventInfo)
+{
+	
+}
+]]></Script>
+  </Form>
+</FDL>

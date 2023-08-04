@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="PROJ" left="0" top="0" width="1024" height="768" titletext="New Form" onload="form_onload">
+    <Layouts>
+      <Layout>
+        <Grid id="menu_grid" taborder="0" binddataset="ds_developer" useinputpanel="false" autofittype="none" oncelldblclick="menu_grid_oncelldblclick" left="7" top="80" right="6" height="637" autosizingtype="none">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="40"/>
+                <Column size="65"/>
+                <Column size="92"/>
+                <Column size="92"/>
+                <Column size="65"/>
+                <Column size="100"/>
+                <Column size="139"/>
+                <Column size="40"/>
+                <Column size="40"/>
+                <Column size="70"/>
+                <Column size="136"/>
+                <Column size="119"/>
+                <Column size="75"/>
+                <Column size="86"/>
+                <Column size="72"/>
+                <Column size="99"/>
+                <Column size="99"/>
+                <Column size="114"/>
+                <Column size="141"/>
+                <Column size="174"/>
+                <Column size="96"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell/>
+                <Cell col="1" text="번호"/>
+                <Cell col="2" text="이름"/>
+                <Cell col="3" text="상태"/>
+                <Cell col="4" text="계약유형"/>
+                <Cell col="5" text="입금일"/>
+                <Cell col="6" text="투입중 프로젝트"/>
+                <Cell col="7" text="지역"/>
+                <Cell col="8" text="등급"/>
+                <Cell col="9" text="단가(만원)"/>
+                <Cell col="10" text="이메일"/>
+                <Cell col="11" text="핸드폰번호"/>
+                <Cell col="12" text="참여여부"/>
+                <Cell col="13" text="투입월"/>
+                <Cell col="14" text="맨먼스"/>
+                <Cell col="15" text="투입시작일자"/>
+                <Cell col="16" text="투입종료일자"/>
+                <Cell col="17" text="일반이력서"/>
+                <Cell col="18" text="VATTZ이력서"/>
+                <Cell col="19" text="정보제공동의서"/>
+                <Cell col="20" text="관리"/>
+              </Band>
+              <Band id="body">
+                <Cell/>
+                <Cell col="1" text="bind:SEQ"/>
+                <Cell col="2" text="bind:NAME"/>
+                <Cell col="3" text="bind:"/>
+                <Cell col="4" text="bind:AREA"/>
+                <Cell col="5" text="bind:GRADE"/>
+                <Cell col="6" text="bind:PROJ_NAME"/>
+                <Cell col="7" text="bind:AREA"/>
+                <Cell col="8" text="bind:"/>
+                <Cell col="9" text="bind:PROJ_PROJ_NAME"/>
+                <Cell col="10" text="bind:EMAIL"/>
+                <Cell col="11" text="bind:PHONE"/>
+                <Cell col="12"/>
+                <Cell col="13"/>
+                <Cell col="14" text="bind:ATTEND_MONTH"/>
+                <Cell col="15" text="bind:ATTEND_START"/>
+                <Cell col="16" text="bind:ATTEND_END"/>
+                <Cell col="17"/>
+                <Cell col="18"/>
+                <Cell col="19"/>
+                <Cell col="20"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_Search" taborder="1" left="8" top="5" right="6" height="70" cssclass="div_WF_SearchBg">
+          <Layouts>
+            <Layout>
+              <Edit id="Edit04" taborder="11" cssclass="edt_WF_Search" left="104" top="10" width="152" height="21" oneditclick="div_Search_Edit04_oneditclick"/>
+              <Combo id="Combo00" taborder="13" left="371" top="10" width="152" height="21"/>
+              <Button id="Button05" taborder="15" text="조회" cssclass="btn_WF_Search" top="22" right="125" width="60" height="25"/>
+              <Static id="Static01" taborder="16" text="이름" cssclass="sta_WF_SearchLabel" left="19" top="10" width="85" height="21"/>
+              <Static id="Static02" taborder="17" text="프로젝트" cssclass="sta_WF_SearchLabel" left="286" top="10" width="85" height="21"/>
+              <Static id="Static04" taborder="18" text="계약유형" cssclass="sta_WF_SearchLabel" left="553" top="10" width="85" height="21"/>
+              <Static id="Static00" taborder="19" text="참여여부" cssclass="sta_WF_SearchLabel" left="19" top="37" width="85" height="21" onclick="div_Search_Static00_onclick"/>
+              <Static id="Static03" taborder="21" text="Profile" cssclass="sta_WF_SearchLabel" left="286" top="37" width="85" height="21"/>
+              <Static id="Static05" taborder="23" text="갯수" cssclass="sta_WF_SearchLabel" left="553" top="37" width="85" height="21" onclick="div_Search_Static05_onclick"/>
+              <Combo id="Combo03" taborder="25" left="639" top="10" width="152" height="21"/>
+              <Combo id="Combo04" taborder="26" left="104" top="37" width="152" height="21"/>
+              <Combo id="Combo02" taborder="27" left="639" top="37" width="152" height="21"/>
+              <Edit id="Edit00" taborder="28" oneditclick="div_Search_Edit04_oneditclick" cssclass="edt_WF_Search" left="371" top="37" width="152" height="21"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_developer">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="256"/>
+          <Column id="INFO_DATE" type="STRING" size="256"/>
+          <Column id="PROJ_SEQ" type="INT" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="AREA" type="STRING" size="256"/>
+          <Column id="GRADE" type="STRING" size="256"/>
+          <Column id="PRICE" type="STRING" size="256"/>
+          <Column id="PROFILE" type="STRING" size="256"/>
+          <Column id="EMAIL" type="STRING" size="256"/>
+          <Column id="PHONE" type="STRING" size="256"/>
+          <Column id="ATTEND_YN" type="STRING" size="256"/>
+          <Column id="MAN_MONTH" type="STRING" size="256"/>
+          <Column id="ATTEND_MONTH" type="STRING" size="256"/>
+          <Column id="ATTEND_START" type="STRING" size="256"/>
+          <Column id="ATTEND_END" type="STRING" size="256"/>
+          <Column id="REG_DATE" type="STRING" size="256"/>
+          <Column id="REG_USER" type="STRING" size="256"/>
+          <Column id="UPDATE_DATE" type="STRING" size="256"/>
+          <Column id="UPDATE_USER" type="STRING" size="256"/>
+          <Column id="ZIP_CODE" type="STRING" size="256"/>
+          <Column id="ADDR" type="STRING" size="256"/>
+          <Column id="ADDR_DETAIL" type="STRING" size="256"/>
+          <Column id="DEPOSIT_DAY" type="INT" size="256"/>
+          <Column id="EMP_TYPE" type="STRING" size="256"/>
+          <Column id="TEL" type="STRING" size="256"/>
+          <Column id="PM" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_developerInfo">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	this.getSelect(); 
+}
+
+this.getSelect = function() {
+	this.ds_developer.clearData();
+	var id = "developerService";
+	var url = application.services["svcurl"].url + "/developer/developerList.do";
+	var inDateset = "";
+	var outDateset = "ds_developer=ds_developer";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+
+this.fn_add = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+
+	 var oData ={
+		sId  : "popup_sample",             //callback id
+		sUrl : "Base::MenuPopup.xfdl",   //url
+		bshowtitlebar : true,     //title bar
+		bAutoSize  : true,       //autosize
+		bResize    : false,       //resize
+		bShowtatusbar : false,     //statusbar
+		sOpenalign    : "center middle",  //align
+		oArgs :  {}    
+	};
+		   
+	Iject.showModal(this, oData, function(svcid,variant){
+		if(variant == "session") {
+			this.closefunc();
+		} else if(variant == "ok") {
+			this.getSelect();
+		}
+	});
+	 
+}
+
+this.menu_grid_oncelldblclick = function(obj:Grid, e:nexacro.GridClickEventInfo)
+{
+	var oData ={
+		sId  : "popup_sample",             //callback id
+		sUrl : "Base::MenuPopup.xfdl",   //url
+		bshowtitlebar : true,     //title bar
+		bAutoSize  : true,       //autosize
+		bResize    : false,       //resize
+		bShowtatusbar : false,     //statusbar
+		sOpenalign    : "center middle",  //align
+		oArgs :  {
+			menu_index : obj.selectendrow
+		}    
+	};
+		   
+	Iject.showModal(this, oData, function(svcid,variant){
+		if(variant == "session") {
+			this.closefunc();
+		} else if(variant == "ok") {
+			this.getSelect();
+		}
+	});
+}
+
+this.fn_delete = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var idx = this.menu_grid.selectendrow;
+	if(idx < 0) {
+		this.alert("선택된 행이 없습니다.");
+		return;
+	}
+
+	var menu_id = this.ds_menu.getColumn(idx, "MENU_ID");
+	var menu_level = this.ds_menu.getColumn(idx, "MENU_LEVEL");
+	if(menu_level == 0) {
+		var row = this.ds_menu.findRow("MENU_TOP", menu_id);
+		if(row > -1) {
+			this.alert("하위 메뉴가 존재하여 삭제 할 수 없습니다.");
+			return;
+		} else {
+			
+		}
+	} 
+	
+	if(this.confirm("선택한 항목을 삭제 하시겠습니까?")) {
+		this.ds_developerInfo.clearData();
+		this.ds_developerInfo.addRow();
+		this.ds_developerInfo.setColumn(0, "MENU_ID", menu_id);
+		
+		var id = "DeveloperService";
+		var url = application.services["svcurl"].url + "/developer/developerDelete.do";
+		
+		var inDateset = "ds_developerInfo=ds_developerInfo";
+		var outDateset = "ds_developer=ds_developer";
+		var arg = "";
+		var callback = "Developer_callback";
+		
+		this.transaction(id, url, inDateset, outDateset, arg, callback);
+	}
+}
+
+this.Developer_callback = function(id, code, message) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.alert("삭제되었습니다.");
+			break;
+	}
+}
+
+this.closefunc = function() {
+	if(nexacro.Browser == "Runtime") {
+		application.exit();
+	} else {
+		Iject.$.vFrameSet.set_separatesize("*,0,0");
+	}
+}
+
+this.getSelectCallBack = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+	}
+}]]></Script>
+  </Form>
+</FDL>

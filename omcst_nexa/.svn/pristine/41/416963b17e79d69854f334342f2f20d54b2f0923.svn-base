@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="sample010" classname="jquery_sample" left="0" top="0" width="1260" height="589" titletext="animation sample(3rdParty)" onload="form_onload">
+    <Layouts>
+      <Layout>
+        <GroupBox id="GroupBox02" text="Example" taborder="22" left="6" top="429" right="18" height="138" style="border:1 solid darkgray ;color:black;font:9 Verdana bold;"/>
+        <Button id="Button01" taborder="1" text="Run" onclick="Button01_onclick" left="14" top="252" width="97" height="29"/>
+        <Static id="Static00" taborder="5" text="1.jQuery animation" left="14" top="216" width="239" height="34" cssclass="sample_Title"/>
+        <Static id="Static02" taborder="7" text="$(Ex.ani.jquery(this.Div00)).animate({left:0},'slow');&#13;&#10;&#9;$(Ex.ani.jquery(this.Div00)).animate({left:10},'fast');&#13;&#10; &#9;$(Ex.ani.jquery(this.Div00)).fadeOut(function(){&#13;&#10; &#9;&#13;&#10; &#9;   trace(&quot; this.callback&quot;);&#13;&#10; &#9;});" left="35" top="453" width="446" height="97" cssclass="sample_example"/>
+        <GroupBox id="GroupBox00" text="Preveiw" taborder="17" left="10" top="299" height="124" style="border:1 solid darkgray ;color:black;font:9 Verdana bold;" right="15"/>
+        <Div id="Div00" taborder="18" left="480" top="318" width="405" height="55" style="border:1 solid red ;">
+          <Layouts>
+            <Layout>
+              <Edit id="Edit00" taborder="5" left="22" top="11" width="174" height="34"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static06" taborder="20" text="★.index.html element" left="8" top="-1" width="195" height="24" cssclass="sample_Title"/>
+        <ImageViewer id="ImageViewer00" taborder="21" image="URL('image::sample010.png')" stretch="fixaspectratio" left="2" top="27" height="181" right="0" style="align:left middle;" imagealign="left middle"/>
+        <Button id="btn_goCss" taborder="23" text="css" left="120" top="252" width="97" height="29" onclick="btn_goCss_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="reset" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="withdrawn_account" type="STRING" size="256"/>
+          <Column id="bank" type="STRING" size="256"/>
+          <Column id="transaction_time" type="STRING" size="256"/>
+          <Column id="description" type="STRING" size="256"/>
+          <Column id="sender" type="STRING" size="256"/>
+          <Column id="receiver" type="STRING" size="256"/>
+          <Column id="memo" type="STRING" size="256"/>
+          <Column id="withdrawn_amount" type="STRING" size="256"/>
+          <Column id="deposited_amount" type="BIGDECIMAL" size="256"/>
+          <Column id="balance" type="STRING" size="256"/>
+          <Column id="branch" type="STRING" size="256"/>
+          <Column id="type" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[
+
+
+this.form_onload= function(obj,e)
+{
+  var h = 990;
+  
+  if(nexacro.Browser == "Runtime" || Eco.isEmpty(Iject.$.workFrame)){ 
+      alert("실행할 수 없습니다."); 
+     application.exit();
+  return;
+  };
+  
+  nexacro.loadJSLibraries(["./nexacro14lib/component/IjectJS/ExtApi/jquery-1.10.2.js"]);
+}
+
+
+this.Button01_onclick = function(obj:Button,  e:TOBE.ClickEventInfo)
+{
+	$(Iject.Html5.jquery(this.Div00)).animate({"height": "100px"}, {"queue": false, "duration": 500})
+                                 .animate({"width": "250px"}, 500);
+	$(Iject.Html5.jquery(this.Div00)).animate({left:0},'slow');
+	$(Iject.Html5.jquery(this.Div00)).animate({left:10},'fast');
+ 	
+}
+
+
+
+
+/**
+* index page onload element 생성
+* @return 
+* @example
+* @memberOf Ex.core
+*/
+this.createElement = function()
+{
+
+  var anchor = document.all["linkcss"];
+   if(!Eco.isEmpty(anchor)){
+	   anchor.parentNode.removeChild(anchor);   
+   }
+   
+   var csslink  = document.createElement('link');
+   
+	   csslink .setAttribute('id', 'linkcss');
+	   csslink .setAttribute('rel', 'stylesheet');		  
+	   csslink .setAttribute('type', 'text/css');
+	   csslink .setAttribute('href', './nexacro14lib/component/ExLib/openapi/animate.css');
+   document.getElementsByTagName("head")[0].insertBefore(csslink ,document.getElementsByTagName("title")[0]);
+
+}
+
+
+//ling page 
+this.btn_goCss_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	var url =  "";
+	
+	system.execBrowser("http://daneden.github.io/animate.css/");
+}
+
+
+]]></Script>
+  </Form>
+</FDL>

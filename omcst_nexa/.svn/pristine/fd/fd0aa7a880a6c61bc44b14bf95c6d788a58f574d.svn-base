@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="UserAuth">
+
+	<select id="userAuthDAO.selectUserAuthList" resultClass="userVO" parameterClass="authVO">
+	<![CDATA[
+		SELECT
+			A.SEQ
+			, A.NAME
+			, A.EMAIL
+			, A.PHONE
+			, NVL2(B.USER_SEQ, 'Y', 'N') IS_CHECK
+		FROM
+			MEMBER A
+			LEFT OUTER JOIN USER_AUTH B ON (A.SEQ = B.USER_SEQ AND B.AUTH_SEQ = #SEQ#)
+		ORDER BY
+			A.SEQ
+	]]>
+	</select>
+	
+	<delete id="userAuthDAO.deleteUserAuth" parameterClass="authVO">
+	<![CDATA[
+		DELETE FROM USER_AUTH
+		WHERE
+			AUTH_SEQ = #SEQ#
+	]]>
+	</delete>
+	
+	<insert id="userAuthDAO.insertUserAuth" parameterClass="userAuthVO">
+	<![CDATA[
+		INSERT INTO USER_AUTH
+			(
+				USER_SEQ
+				, AUTH_SEQ
+			)
+		VALUES
+			(
+				#USER_SEQ#
+				, #AUTH_SEQ#
+			)
+	]]>
+	</insert>
+</sqlMap>

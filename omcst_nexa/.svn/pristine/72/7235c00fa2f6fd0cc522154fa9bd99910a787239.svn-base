@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Annual">
+
+	<select id="annualDAO.selectAnnualList" resultClass="annualVO">
+	<![CDATA[
+		SELECT
+			A.SEQ
+			, A.MEMBER_SEQ
+			, M.NAME AS MEMBER_NAME
+			, A.YEAR
+			, A.ANNUAL_START
+			, A.ANNUAL_END
+			, A.NO
+			, A.STATUS
+			, A.APPLICATION_DATE
+			, A.CONFIRM_SEQ
+			, A.CONFIRM_DATE
+			, A.WELFARE_CODE
+			, A.ETC
+		FROM
+			ANNUAL A
+			INNER JOIN MEMBER M
+			ON A.MEMBER_SEQ = M.SEQ 
+		WHERE A.USEYN = 'Y'	
+		ORDER BY
+			A.MEMBER_SEQ ASC, A.NO DESC
+	]]>
+	</select>
+	
+	<select id="annualDAO.selectAnnualUserList" parameterClass="userVO" resultClass="annualVO">
+	<![CDATA[
+		SELECT
+			A.SEQ AS SEQ
+			, A.MEMBER_SEQ
+			, M.NAME AS MEMBER_NAME
+			, A.YEAR AS YEAR
+			, A.ANNUAL_START
+			, A.ANNUAL_END
+			, (TO_DATE(ANNUAL_END, 'YYYY-MM-DD') - TO_DATE(ANNUAL_START, 'YYYY-MM-DD') + 1) AS DIFF_DAY
+			, A.NO
+			, A.STATUS
+			, A.APPLICATION_DATE
+			, A.CONFIRM_SEQ
+			, A.CONFIRM_DATE
+			, A.WELFARE_CODE
+			, A.ETC
+		FROM
+			ANNUAL A
+			INNER JOIN MEMBER M
+			ON A.MEMBER_SEQ = M.SEQ
+		WHERE
+			A.MEMBER_SEQ = #SEQ#
+			AND A.USEYN = 'Y'	
+		ORDER BY
+			A.SEQ DESC
+	]]>
+	</select>	
+
+	<insert id="annualDAO.insertAnnual" parameterClass="annualVO">
+	<![CDATA[
+		INSERT INTO ANNUAL 
+			( 
+				SEQ 
+				, MEMBER_SEQ 
+				, YEAR
+ 				, ANNUAL_START 
+				, ANNUAL_END
+				, NO
+				, STATUS
+				, APPLICATION_DATE
+				, CONFIRM_SEQ
+				, CONFIRM_DATE
+				, WELFARE_CODE
+				, ETC
+				, USEYN
+			) 
+		VALUES 
+			( 
+				(SELECT NVL(MAX(SEQ),0) + 1 FROM ANNUAL) 
+				, #MEMBER_SEQ# 
+				, TO_CHAR(SYSDATE, 'YYYY') 
+				, #ANNUAL_START# 
+				, #ANNUAL_END# 
+				, (SELECT NVL(COUNT(NO)+1, 1) FROM ANNUAL WHERE MEMBER_SEQ = #MEMBER_SEQ#)
+				, 'APPLYCATION'
+				, SYSDATE 
+				, #UPDATE_USER# 
+				, SYSDATE
+				, #WELFARE_CODE#
+				, #ETC#
+				, 'Y'  
+			) 
+	]]> 
+	</insert>
+	
+	<update id="annualDAO.updateAnnual" parameterClass="annualVO">
+ 	<![CDATA[ 
+ 		UPDATE ANNUAL 
+ 			SET 
+ 				ANNUAL_START = #ANNUAL_START# 
+				, ANNUAL_END = #ANNUAL_END#
+				, NO = #NO#  
+ 				, STATUS = #STATUS# 
+ 				, CONFIRM_SEQ = #UPDATE_USER# 
+ 				, CONFIRM_DATE = SYSDATE
+ 				, WELFARE_CODE = #WELFARE_CODE#
+		WHERE 
+ 			SEQ = #SEQ# 
+ 	]]> 
+	</update>
+	
+	<update id="annualDAO.deleteAnnual" parameterClass="annualVO">
+	<![CDATA[
+ 		UPDATE ANNUAL
+ 			SET
+ 				USEYN = 'N' 
+ 		WHERE 
+ 			SEQ = #SEQ# 
+ 	]]> 
+	</update>
+	
+	<select id="annualDAO.selectUserSeq" parameterClass="userVO" resultClass="AnnualVO" >
+	<![CDATA[
+		SELECT SEQ
+				, NAME
+		FROM MEMBER
+		WHERE NAME LIKE '%'||#NAME#||'%'
+	]]>
+	</select>
+	
+	<select id="annualDAO.selectAnnualUserSearch" parameterClass="annualVO" resultClass="annualVO" >
+		SELECT
+			A.SEQ AS SEQ
+			, A.MEMBER_SEQ
+			, M.NAME AS MEMBER_NAME
+			, A.YEAR AS YEAR
+			, A.ANNUAL_START
+			, A.ANNUAL_END
+			, (TO_DATE(ANNUAL_END, 'YYYY-MM-DD') - TO_DATE(ANNUAL_START, 'YYYY-MM-DD') + 1) AS DIFF_DAY
+			, A.NO
+			, A.STATUS
+			, A.APPLICATION_DATE
+			, A.CONFIRM_SEQ
+			, A.CONFIRM_DATE
+			, A.WELFARE_CODE
+			, A.ETC
+		FROM
+			ANNUAL A
+			INNER JOIN MEMBER M
+			ON A.MEMBER_SEQ = M.SEQ
+		WHERE
+			A.MEMBER_SEQ IN (				 
+	 		  	SELECT SEQ
+	 		  	FROM MEMBER
+	 		  	WHERE NAME LIKE '%'||#MEMBER_NAME#||'%'
+			)
+		<isNotEmpty property="ANNUAL_START">
+			<isNotEmpty property="ANNUAL_END">
+			<![CDATA[	
+			AND TO_DATE(A.ANNUAL_START, 'YYYY-MM-DD') >= TO_DATE(#ANNUAL_START#, 'YYYY-MM-DD')
+			AND TO_DATE(A.ANNUAL_END, 'YYYY-MM-DD') <= TO_DATE(#ANNUAL_END#, 'YYYY-MM-DD')
+			]]>		
+			</isNotEmpty>	
+		</isNotEmpty>	
+			AND A.USEYN = 'Y'	
+		ORDER BY
+			A.SEQ DESC
+	</select>
+	
+</sqlMap>

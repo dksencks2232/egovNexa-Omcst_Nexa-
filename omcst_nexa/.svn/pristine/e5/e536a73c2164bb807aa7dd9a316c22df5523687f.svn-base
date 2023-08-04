@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE>XPLATFORM</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<SCRIPT LANGUAGE="JavaScript"> 
+var sKey = "nexacroTest";  //프로젝트 고유id를 입력하시면 됩니다.
+var Server_Path = "http://" + window.location.host + "/tobe/nex/nexacro14Runtime";
+
+function fn_onload()
+{  	
+	npnexacro14.autosize = true;
+	npnexacro14.key = sKey;
+	npnexacro14.bjson = Server_Path+"/DeploySource/DemoProjectForDeploy/start.json";
+	npnexacro14.run();
+	
+	fn_onresize();
+}
+
+function fn_onresize()
+{
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+
+	npnexacro14.width = w;
+	npnexacro14.height = h;
+	
+	//npnexacro14.callscript("gfn_OpenForm("+w+", "+h+")");
+}
+
+function npnexacro14_addlog(strMsg)
+{
+}
+
+function npnexacro14_beforeexit()
+{
+}
+
+function npnexacro14_communication(bStart)
+{
+}
+
+function npnexacro14_error(nError, strErrMsg)
+{
+}
+
+function npnexacro14_exit()
+{
+}
+
+function npnexacro14_load(strURL)
+{
+	//npnexacro14.callscript("gfn_OpenForm()");
+}
+
+function npnexacro14_loadingglobalvariables(strURL)
+{
+}
+
+function npnexacro14_loadtypedefinition(strURL)
+{
+}
+
+function npnexacro14_usernotify(nNotifyID, strMsg)
+{
+}
+
+</SCRIPT> 
+</HEAD>
+<BODY style="overflow:hidden;margin:0px;padding:0px;" onload="fn_onload()" onresize="fn_onresize()">
+<SCRIPT LANGUAGE="JavaScript">
+//XPLATFORM Engine
+document.write('<embed ID="npnexacro14" type="application/nexacro14-plugin" width="0" height="0" ' + 
+               'addlog="npnexacro14_addlog" ' +
+               'beforeexit="npnexacro14_beforeexit" ' +
+               'communication="npnexacro14_communication" ' +
+               'error="npnexacro14_error" ' +
+               'exit="npnexacro14_exit" ' +
+               'load="npnexacro14_load" ' +
+               'loadingglobalvariables="npnexacro14_loadingglobalvariables" ' +
+               'loadtypedefinition="npnexacro14_loadtypedefinition" ' +
+               'usernotify="npnexacro14_usernotify"> ' +
+		       '</embed>');
+</SCRIPT>
+</BODY>
+</HTML>

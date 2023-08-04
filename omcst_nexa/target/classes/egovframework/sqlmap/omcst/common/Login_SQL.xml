@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Login">
+
+	<select id="loginDAO.selectLogin" parameterClass="loginVO" resultClass="userVO">
+	<![CDATA[
+		SELECT
+			SEQ
+			, NAME
+			, NAME USER_NAME
+			, EMAIL
+			, EMAIL USER_ID
+			, PASSWORD
+			, ADDR
+			, ADDR_DETAIL
+			, ZIP_CODE
+			, PHONE
+			, TEL
+			, IMG_URL
+			, REG_DATE
+			, REG_USER
+			, UPDATE_DATE
+			, UPDATE_USER
+		FROM
+			MEMBER
+		WHERE
+			EMAIL = #USER_ID#
+	]]>
+	</select>
+
+</sqlMap>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="titlebar" classname="titlebar" left="0" top="0" width="1280" height="52" scrollbars="none" onload="form_onload" style="background:transparent;">
+    <Layouts>
+      <Layout>
+        <Div id="Div00" taborder="8" left="0" top="0" right="0" height="52" cssclass="bg_titlebar" scrollbars="none">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" left="16" top="19" height="14" width="17" cssclass="btn_burger"/>
+              <Static id="Static00" taborder="1" text="Static00" left="51" top="-1" height="52" width="1" cssclass="sta_line"/>
+              <Button id="btn_logout" taborder="2" text="로그아웃" onclick="fn_logout" cssclass="btn_TF_logout" top="30" right="10" width="64" height="19"/>
+              <Static id="Static01" taborder="3" text="w8" visible="false" left="1190" top="8" width="8" height="15" style="background:#ff727280;align:center middle;"/>
+              <Static id="stc_lastlogin" taborder="5" text="김현대 님" usedecorate="true" onclick="stc_lastlogin_onclick" cssclass="title_name" top="6" right="65" width="75" height="23"/>
+              <Static id="stc_empNm" taborder="6" text="품질기술2팀" usedecorate="true" cssclass="sta_TF_user" top="6" right="8" width="68" height="23"/>
+              <Static id="Static02" taborder="7" left="76" top="19" height="17" cssclass="sta_logo" width="30"/>
+              <Button id="btn_leftMenuOpen" taborder="9" onclick="btn_leftMenuOpen_onclick" cssclass="btn_TF_LeftMenuOpen" left="7" top="12" width="34" height="29"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="1" text="w92" visible="false" left="586" width="92" height="15" style="background:#ff727280;align:center middle;" bottom="0"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.0"><![CDATA[/***********************************************************************************
+ * 01. 업무구분 : 
+ * 02. 메뉴명   : 
+ * 03. 메뉴설명 :  
+ * 04. 작성일   : 
+ * 05. 작성자   : 
+ * 06. 수정이력 : 
+ ***********************************************************************************
+ *     수정일     작성자   내용
+ ***********************************************************************************
+ *     
+ ***********************************************************************************
+*/
+/***********************************************************************************
+* include 선언부  													               *
+***********************************************************************************/
+
+/***********************************************************************************/
+/* 폼 전역변수 선언부												               */
+/***********************************************************************************/
+
+
+/***********************************************************************************
+* Form Event
+***********************************************************************************/
+/**
+ * form onload 함수
+ * @return 
+ * @example
+ *
+ * @memberOf this
+ */
+this.fn_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+}
+
+
+//left 펼침 접힘 실행
+this.btn_leftMenuOpen_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+   Iject.Mdi.leftMenuAction(this,obj);
+   
+}
+
+//logout
+this.fn_logout = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	if(!confirm("로그아웃 하시겠습니까?")) {
+		return;
+	}
+	var id = "logoutService";
+	var url = application.services["svcurl"].url + "/logout.do";
+	var inDateset = "";
+	var outDateset = "";
+	var arg = "";
+	var callback = "getLogoutCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.getLogoutCallBack = function(id, code, message) {
+	if(nexacro.Browser == "Runtime") {
+		application.exit();
+	} else {
+		Iject.$.vFrameSet.set_separatesize("*,0,0");
+	}
+}
+
+this.fn_set = function()
+{
+   this.stNm.set_text(application.gds_userInfo.getColumn(0, "USER_NAME") + " <b v='false'>님 환영합니다.</b>");
+}
+]]></Script>
+  </Form>
+</FDL>

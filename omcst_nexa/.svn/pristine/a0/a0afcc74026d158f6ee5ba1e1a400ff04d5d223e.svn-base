@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Auth" left="0" top="0" width="800" height="600" titletext="New Form" onload="Auth_onload">
+    <Layouts>
+      <Layout>
+        <Button id="btn_save" taborder="0" text="저장" onclick="btn_save_onclick" top="24" right="120" width="50" height="23"/>
+        <Button id="btn_add" taborder="1" text="추가" onclick="btn_add_onclick" top="24" right="63" width="50" height="23"/>
+        <Button id="btn_del" taborder="2" text="삭제" onclick="btn_del_onclick" top="24" right="6" width="50" height="23"/>
+        <Grid id="auth_grid" taborder="3" binddataset="ds_auth" useinputpanel="false" autofittype="col" left="10" top="72" right="10" onheadclick="auth_grid_onheadclick" bottom="10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="74"/>
+                <Column size="120"/>
+                <Column size="53"/>
+                <Column size="50"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="코드ID"/>
+                <Cell col="1" text="코드명"/>
+                <Cell col="2" text="순번"/>
+                <Cell col="3" text="사용여부"/>
+              </Band>
+              <Band id="body">
+                <Cell edittype="text" style="align:left;padding:0 0 0 5;" text="bind:AUTH_ID"/>
+                <Cell col="1" edittype="text" style="padding:0 0 0 5;" text="bind:AUTH_NAME"/>
+                <Cell col="2" edittype="masknumber" style="align:center;" text="bind:ORDER_NO"/>
+                <Cell col="3" edittype="combo" style="align:center;" text="bind:USE_YN" combodataset="ds_useyn" combodatacol="use_yn"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_auth">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="10"/>
+          <Column id="AUTH_ID" type="STRING" size="32"/>
+          <Column id="AUTH_NAME" type="STRING" size="32"/>
+          <Column id="ORDER_NO" type="INT" size="10"/>
+          <Column id="USE_YN" type="STRING" size="1"/>
+          <Column id="STATUS" type="STRING" size="1"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_useyn">
+        <ColumnInfo>
+          <Column id="use_yn" type="STRING" size="1"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="use_yn">Y</Col>
+          </Row>
+          <Row>
+            <Col id="use_yn">N</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[this.isChange = false;
+
+this.Auth_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	this.ds_auth.clearData();
+	this.getSelect();
+} 
+
+this.btn_save_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	for(var i = 0; i < this.ds_auth.getRowCount(); i++) {
+		var rowType = this.ds_auth.getRowType(i);
+		if(rowType == 2) {
+			this.isChange = true;
+			this.ds_auth.setColumn(i, "STATUS", "I");
+			if(this.validation(i)) {
+				return;
+			}
+		} else if(rowType == 4) {
+			this.isChange = true;
+			this.ds_auth.setColumn(i, "STATUS", "U");
+			if(this.validation(i)) {
+				return;
+			}
+		}
+	}
+	
+	if(!this.isChange) {
+		this.alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	if(!confirm("저장 하시겠습니까?")) {
+		return;
+	}
+
+	var id = "AuthService";
+	var url = application.services["svcurl"].url + "/auth/authSave.do";
+	var inDateset = "ds_auth=ds_auth:U";
+	var outDateset = "ds_auth=ds_auth";
+	var arg = "";
+	var callback = "auth_callback";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.validation = function(idx) {
+	var auth_id = this.ds_auth.getColumn(idx, "AUTH_ID");
+	var auth_name = this.ds_auth.getColumn(idx, "AUTH_NAME");
+	var order_no = this.ds_auth.getColumn(idx, "ORDER_NO");
+	var use_yn = this.ds_auth.getColumn(idx, "USE_YN");
+	
+	if(!auth_id) {
+		this.auth_grid.setFocus(true);
+		this.auth_grid.selectCell(idx, 0, true);
+		this.auth_grid.showEditor(true);
+		this.alert("권한코드를 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!auth_name) {
+		this.auth_grid.setFocus(true);
+		this.auth_grid.selectCell(idx, 1, true);
+		this.auth_grid.showEditor(true);
+		this.alert("권한명을 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!order_no) {
+		this.auth_grid.setFocus(true);
+		this.auth_grid.selectCell(idx, 2, true);
+		this.auth_grid.showEditor(true);
+		this.alert("순번을 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!use_yn) {
+		this.auth_grid.setFocus(true);
+		this.auth_grid.selectCell(idx, 3, true);
+		this.auth_grid.showEditor(true);
+		this.alert("사용여부를 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	return false;
+}
+
+this.auth_callback = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.alert("저장되었습니다.");
+			break;
+	}
+}
+
+this.btn_add_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.ds_auth.addRow();
+}
+
+this.btn_del_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_auth.rowposition;
+	this.ds_auth.deleteRow(nRow);
+	this.isChange = true;
+}
+
+
+this.getSelect = function() {
+	this.ds_auth.clearData();
+	var id = "AuthService";
+	var url = application.services["svcurl"].url + "/auth/authList.do";
+	var inDateset = "";
+	var outDateset = "ds_auth=ds_auth";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.getSelectCallBack = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.isChange = false;
+			break;
+	}
+}
+
+this.closefunc = function() {
+	if(nexacro.Browser == "Runtime") {
+		application.exit();
+	} else {
+		Iject.$.vFrameSet.set_separatesize("*,0,0");
+	}
+}
+
+this.auth_grid_onheadclick = function(obj:Grid, e:nexacro.GridClickEventInfo)
+{
+	trace(e.col, e.cell);
+}
+]]></Script>
+  </Form>
+</FDL>

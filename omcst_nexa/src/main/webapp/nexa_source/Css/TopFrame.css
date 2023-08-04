@@ -1,0 +1,661 @@
+﻿/******************************************************************************************************/
+/***** PROJECT NAME		: NEXACRO DEFAULT THEME	********/
+/***** CREATION DATES		: 2016.12.16		********/
+/***** DRAFTER 			: TOBESOFT DESIGN TEAM	********/
+/***** DISTRIBUTION DATE 	: 2016.12.20		********/
+/******************************************************************************************************/
+
+/***** TopFrame 영역 Start *****/
+
+/***** Top Frame *****/
+
+Form.frm_Top, Form.frm_Top:mouseover, Form.frm_Top:pushed,
+Form.frm_Top:focused, Form.frm_Top:selected, Form.frm_Top:disabled
+{
+	background		: @gradation;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	gradation		: linear 0,0 #002c5fff 0,100 #002c5fff;
+/*	gradation		: linear 0,0 #0e55a0 0,100 #0c427e [15% #ff650c];*/
+}
+
+/* Static */
+Static.sta_Login_txt, Static.sta_Login_txt:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none #1d65a5;
+	color				: #ffffffff;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 1 0 0 14;	
+}
+
+Static.sta_User_info, Static.sta_User_info:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_TF_UserInfo.png') left middle;
+	border				: 0 none;
+	color				: #ffffffff;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 0 0 0 24;	
+}
+
+Static.sta_TF_logo, Static.sta_TF_logo:mouseover
+{
+	cursor				: hand;
+}
+
+Static.sta_Menu_00, Static.sta_Menu_00:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_menu_00.png') left middle;
+	border				: 0 none;
+	color				: #ffffffff;
+	font				: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 0 0 0 30;	
+}
+Static.sta_Menu_01, Static.sta_Menu_01:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_menu_01.png') left middle;
+	border				: 0 none;
+	color				: #ffffffff;
+	font				: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 0 0 0 30;	
+}
+Static.sta_Menu_02, Static.sta_Menu_02:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_menu_02.png') left middle;
+	border				: 0 none;
+	color				: #ffffffff;
+	font				: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 0 0 0 30;	
+}
+Static.sta_Menu_03, Static.sta_Menu_03:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_menu_03.png') left middle;
+	border				: 0 none;
+	color				: #ffffffff;
+	font				: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 0 0 0 30;	
+}
+Static.sta_Menu_04, Static.sta_Menu_04:mouseover
+{
+	align				: left middle;
+	background			: URL('theme://images/img_menu_04.png') left middle;
+	border				: 0 none;
+	color				: #ffffffff;
+	font				: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding				: 0 0 0 30;	
+}
+
+Static.sta_Line_Orange, Static.sta_Line_Orange:mouseover
+{
+	align				: left middle;
+	background			: #ff9805ff;
+	border				: 0 none;
+}
+Static.sta_Line_White, Static.sta_Line_White:mouseover
+{
+	align				: left middle;
+	background			: #ffffffff;
+	border				: 0 none;
+}
+Static.sta_Menu_BG, Static.sta_Menu_BG:mouseover
+{
+	align				: left middle;
+	background			: #002c5fff;
+	border				: 0 none;
+	opacity				: 80%;
+}
+
+/* Button */
+
+Button.btn_login, Button.btn_login:focused, Button.btn_login:selected, Button.btn_login:disabled
+{
+	align				: right middle;
+	background			: #ff7d0f;
+	border				: 1 solid #ff9e4b;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 12 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_login.png;
+	imagealign			: left middle;
+	shadow 				: outer 2,2 2 #00000026 ;
+	padding				: 0 12 0 12;
+}
+Button.btn_login:mouseover
+{
+	align				: right middle;
+	background			: @gradation;
+	border				: 1 solid #ff9e4b;
+	bordertype			: normal 0 0;
+	color				: #feff9f;
+	font				: bold antialias 12 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_login.png;
+	imagealign			: left middle;
+	gradation			: linear 0,0 #ff9512 0,100 #ff650c;
+	shadow 				: outer 2,2 2 #00000026 ;
+	padding				: 0 12 0 12;
+}
+Button.btn_login:pushed
+{
+	align				: right middle;
+	background			: @gradation;
+	border				: 1 solid #ff9e4b;
+	bordertype			: normal 0 0;
+	color				: #feff9f;
+	font				: bold antialias 12 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_login.png;
+	imagealign			: left middle;
+	gradation			: linear 0,0 #bd4500 0,100 #ff9512 [15% #ff650c];	
+	shadow 				: outer 2,2 2 #00000026 ;
+	padding				: 1 12 -1 12;
+}
+
+
+Button.btn_TF_Menu01, Button.btn_TF_Menu01:selected, Button.btn_TF_Menu01:focused,
+Button.btn_TF_Menu01:mouseover, Button.btn_TF_Menu01:pushed, Button.btn_TF_Menu01:disabled
+{
+	background		: URL('theme://images/btn_TF_Menu01N.png') stretch 16,16 left middle;
+	border			: 0 none #fc6219;
+	bordertype		: normal;
+	cursor			: hand;
+	color			: #ffffff;
+	font			: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Button.btn_TF_Menu01:mouseover
+{
+	background		: URL('theme://images/btn_TF_Menu01O.png') stretch 16,16 left middle;
+	color			: #ffffff;
+}
+Button.btn_TF_Menu01:pushed
+{
+	background		: URL('theme://images/btn_TF_Menu01P.png') stretch 16,16 left middle;
+	color			: #26ccff;
+	padding			: 1 0 -1 0;
+}
+
+Button.btn_TF_Menu02, Button.btn_TF_Menu02:selected, Button.btn_TF_Menu02:focused,
+Button.btn_TF_Menu02:mouseover, Button.btn_TF_Menu02:pushed, Button.btn_TF_Menu02:disabled
+{
+	background		: URL('theme://images/btn_TF_Menu02N.png') stretch 16,16 left middle;
+	border			: 0 none #fc6219;
+	bordertype		: normal;
+	cursor			: hand;
+	color			: #ffffff;
+	font			: bold antialias 10 Malgun Gothic, Dotum, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+Button.btn_TF_Menu02:mouseover
+{
+	background		: URL('theme://images/btn_TF_Menu02O.png') stretch 16,16 left middle;
+	color			: #ffffff;
+}
+Button.btn_TF_Menu02:pushed
+{
+	background		: URL('theme://images/btn_TF_Menu02P.png') stretch 16,16 left middle;
+	color			: #26ccff;
+	padding			: 1 0 -1 0;
+}
+
+
+Button.btn_Menu, Button.btn_Menu:focused, Button.btn_Menu:selected, Button.btn_Menu:disabled
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 12 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/btn_menu_N.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Menu:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 12 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/btn_menu_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Menu:pushed
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 12 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/btn_menu_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_Logout, Button.btn_Logout:focused, Button.btn_Logout:selected, Button.btn_Logout:disabled
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Logout_N.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Logout:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Logout_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Logout:pushed
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Logout_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_Setting, Button.btn_Setting:focused, Button.btn_Setting:selected, Button.btn_Setting:disabled
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Setting_N.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Setting:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Setting_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Setting:pushed
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Setting_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_TF_Close, Button.btn_TF_Close:focused, Button.btn_TF_Close:selected, Button.btn_TF_Close:disabled
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/btn_Close_N.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_TF_Close:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/btn_Close_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_TF_Close:pushed
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/btn_Close_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_Setting, Button.btn_Setting:focused, Button.btn_Setting:selected, Button.btn_Setting:disabled
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Setting_N.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Setting:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Setting_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_Setting:pushed
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_Setting_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+
+Button.btn_TF_Srch, Button.btn_TF_Srch:focused, Button.btn_TF_Srch:selected, Button.btn_TF_Srch:disabled
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_srch_N.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_TF_Srch:mouseover
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_srch_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+Button.btn_TF_Srch:pushed
+{
+	align				: left middle;
+	background			: transparent;
+	border				: 0 none;
+	bordertype			: normal 0 0;
+	color				: #ffffffff;
+	cursor				: hand;
+	font				: bold antialias 9 Malgun Gothic, Dotum, Tahoma, Arial;
+	image				: theme://images/img_TF_srch_O.png;
+	imagealign			: left middle;
+	shadow 				: outer 0,0 0 #00000026 ;
+	padding				: 0 0 0 0;
+}
+
+/* tab_TF_Menu */
+Tab.tab_TF_Menu, Tab.tab_TF_Menu:disabled, Tab.tab_TF_Menu:focused
+{
+	background		: transparent;
+	border			: 0 none, 0 none, 2 solid #002c5f, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 0 18 15 18;
+	color			: #b2b2b2;
+	cursor			: hand;
+	focusborder		: 0 none;
+	font			: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+	showextrabutton		: false;
+}
+Tab.tab_TF_Menu:mouseover
+{
+	background		: transparent;
+	border			: 0 none, 0 none, 2 solid #ff9900, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 0 18 15 18;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+}
+Tab.tab_TF_Menu:selected
+{
+	background		: transparent;
+	border			: 0 none, 0 none, 2 solid #ff9900, 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 0 18 15 18;
+	color			: #ffffff;
+	cursor			: hand;
+	font			: bold antialias 11 Malgun Gothic, Dotum, Tahoma, Arial;
+}
+
+/***** CheckBox *****/
+CheckBox.chk_TF_srch
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 0 none;
+	buttonbackground	: #ffffffff;
+	buttonborder		: 1 solid #ccccccff;
+	buttonbordertype	: normal;
+	buttonimage		: URL('theme://images/chk_btn_ico.png');
+	buttonsize		: 15;
+	color			: #aaaaaaff;
+	textpadding		: 0 0 0 5;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+CheckBox.chk_TF_srch:mouseover
+{
+	buttonbackground	: #f5f8fbff;
+	buttonborder		: 1 solid #4f81bdff;
+	buttonbordertype	: normal;
+	color			: #ffffffff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+CheckBox.chk_TF_srch:pushed
+{
+	buttonbackground	: #f0f0f0ff;
+	buttonborder		: 1 solid #ccccccff;
+	buttonbordertype	: normal;
+	color			: #ffffffff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+CheckBox.chk_TF_srch:focused
+{
+	buttonbackground	: #ffffffff;
+	buttonborder		: 1 solid #ccccccff;
+	buttonbordertype	: normal;
+	color			: #ffffffff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+CheckBox.chk_TF_srch:disabled
+{
+	buttonbackground	: #fafafaff;
+	buttonborder		: 1 solid #e0e0e0ff;
+	buttonimage		: URL('theme://images/chk_btn_ico_D.png');
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+CheckBox.chk_TF_srch:readonly
+{
+	buttonbackground	: #f7f7f7ff;
+	buttonborder		: 1 solid #ccccccff;
+	buttonimage		: URL('theme://images/chk_btn_ico_R.png');
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+
+/***** Edit *****/
+Edit.edit_TF_srch
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 2px solid #818181;
+	bordertype		: round 5 5;
+	color			: #ffffffff;
+	cursor			: text;
+	padding			: 0 6 3 6;
+	selectcolor		: #333333ff;
+	selectbackground	: #ffffffff;
+	displaynulltextcolor	: #aaaaaaff;
+	opacity			: 100%;
+}
+Edit.edit_TF_srch:mouseover
+{
+	background		: transparent;
+	border			: 2px solid #818181;
+	bordertype		: round 5 5;
+	color			: #ffffffff;
+	selectcolor		: #ffffffff;
+	selectbackground	: #4f81bdff;
+	padding			: 0 6 3 6;
+	opacity			: 100%;		
+}
+Edit.edit_TF_srch:focused
+{
+	background		: transparent;
+	border			: 2px solid #818181;
+	bordertype		: round 5 5;
+	color			: #ffffffff;
+	selectcolor		: #ffffffff;
+	selectbackground	: #4f81bdff;
+	padding			: 0 6 3 6;	
+	opacity			: 100%;
+}
+Edit.edit_TF_srch:disabled
+{
+	background		: transparent;
+	border			: 2 solid #e0e0e0ff;
+	bordertype		: round 5 5;
+	color			: #999999ff;
+	padding			: 0 6 3 6;
+}
+
+/* Grd_menu_tree */
+Grid.grd_TF_Ham, Grid.grd_TF_Ham:mouseover, Grid.grd_TF_Ham:focused
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	color			: #ffffffff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	treeclosebuttonimage	: URL('theme://images/tree_LF_close.png');
+	treecollapseimage	: ;
+	treeexpandimage		: ;
+	treeitemimage		: URL('theme://images/tree_LF_item.png');
+	treeopenbuttonimage	: URL('theme://images/tree_LF_open.png');
+}
+Grid.grd_TF_Ham>#body, Grid.grd_TF_Ham>#body:focused
+{
+	align			: center middle;	
+	background		: transparent;
+	border			: 0 none #e5e5e5;
+	cellbackground		: transparent;
+	cellbackground2		: transparent;
+	cellcolor		: #ccccccff;
+	cellcolor2		: #ccccccff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 0 none #e5e5e5ff;
+	celllinetype		: exhor;
+	cellpadding		: 2 5 2 5;
+	cursor			: hand;
+	selectbackground	: #4178a7ff;
+	selectborder		: ;
+	selectcolor		: #ffffffff;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 0 none #e5e5e5ff;
+}
+Grid.grd_TF_Ham>#body:mouseover
+{
+	background		: transparent;
+	border			: 0 none #e5e5e5;
+	cellbackground		: transparent;
+	cellbackground2		: transparent;	
+	cellcolor		: #ffffffff;
+	cellcolor2		: #ffffffff;
+	cellfont		: bold underline antialias 9 malgun gothic, Tahoma, Arial;
+	cellpadding		: 2 5 2 5;
+	cursor			: hand;
+}
+Grid.grd_TF_Ham>#body:disabled
+{
+	cellbackground		: #f8f8f8ff;
+	cellbackground2		: #f8f8f8ff;
+	cellcolor		: #999999ff;
+	cellcolor2		: #999999ff;
+}

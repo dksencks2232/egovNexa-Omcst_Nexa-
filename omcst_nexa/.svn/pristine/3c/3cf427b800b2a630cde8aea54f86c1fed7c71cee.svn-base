@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="UserAuth" left="0" top="0" width="800" height="600" titletext="New Form" onload="UserAuth_onload">
+    <Layouts>
+      <Layout>
+        <Button id="btn_save" taborder="0" text="저장" onclick="btn_save_onclick" top="30" right="7" width="50" height="23"/>
+        <Static id="Static00" taborder="2" text="권한 : " left="71%" top="70" right="22.38%" height="28"/>
+        <Combo id="auth_combo" taborder="3" displaynulltext="선택" innerdataset="ds_auth" codecolumn="SEQ" datacolumn="AUTH_NAME" onitemchanged="auth_combo_onitemchanged" left="75.75%" top="68" right="1.13%" height="31" canitemchange="auth_combo_canitemchange"/>
+        <Grid id="user_grid" taborder="4" binddataset="ds_user" useinputpanel="false" autofittype="col" left="2.38%" top="113" right="1.13%" height="328">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="83"/>
+                <Column size="68"/>
+                <Column size="131"/>
+                <Column size="137"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="선택"/>
+                <Cell col="1" text="이메일"/>
+                <Cell col="2" text="성명"/>
+                <Cell col="3" text="PHONE"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="checkbox" edittype="checkbox" style="align:center;" text="bind:IS_CHECK" expr="expr:IS_CHECK=='N'||IS_CHECK==null?'0':'1'"/>
+                <Cell col="1" text="bind:EMAIL"/>
+                <Cell col="2" text="bind:NAME"/>
+                <Cell col="3" text="bind:PHONE"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_auth">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="10"/>
+          <Column id="AUTH_ID" type="STRING" size="32"/>
+          <Column id="AUTH_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_search">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_user" oncolumnchanged="ds_user_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="22"/>
+          <Column id="NAME" type="STRING" size="10"/>
+          <Column id="EMAIL" type="STRING" size="50"/>
+          <Column id="PASSWORD" type="STRING" size="100"/>
+          <Column id="ADDR" type="STRING" size="150"/>
+          <Column id="ADDR_DETAIL" type="STRING" size="150"/>
+          <Column id="PHONE" type="STRING" size="20"/>
+          <Column id="TEL" type="STRING" size="20"/>
+          <Column id="REG_DATE" type="STRING" size="256"/>
+          <Column id="REG_USER" type="STRING" size="256"/>
+          <Column id="IS_CHECK" type="STRING" size="1"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[this.has_cheaged = false;
+
+this.UserAuth_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	this.getSelect();
+}
+
+this.getSelect = function() {
+	this.ds_auth.clearData();
+	var id = "AuthService";
+	var url = application.services["svcurl"].url + "/auth/authList.do";
+	var inDateset = "";
+	var outDateset = "ds_auth=ds_auth";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.getSelectUserAuth = function() {
+	var id = "UserAuthService";
+	var url = application.services["svcurl"].url + "/user_auth/userAuthList.do";
+	var inDateset = "ds_search=ds_search";
+	var outDateset = "ds_user=ds_user";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.getSelectCallBack = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.has_cheaged = false;
+			break;
+	}
+}
+this.auth_combo_onitemchanged = function(obj:Combo, e:nexacro.ItemChangeEventInfo)
+{
+	if(obj.value) {
+		this.ds_search.clearData();
+		this.ds_search.addRow();
+		this.ds_search.setColumn(0, "SEQ", obj.value);
+		this.getSelectUserAuth();
+	}
+}
+
+this.auth_combo_canitemchange = function(obj:Combo, e:nexacro.ItemChangeEventInfo)
+{
+	if(this.has_cheaged) {
+		if(confirm("변경된 내용이 있습니다. 이전 데이터는 초기화 됩니다 변경 하시겠습니까?")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+this.ds_user_oncolumnchanged = function(obj:Dataset, e:nexacro.DSColChangeEventInfo)
+{
+	this.has_cheaged = true;
+	if(e.columnid == "IS_CHECK") {
+        // 다른 이벤트가 동작하지 않도록 설정
+        obj.enableevent = false;  //false can stop event temporarily 
+        // 변경된 값이 1(체크가 된 경우)인경우
+        if(e.newvalue == '1') {
+            // 1인 경우 Dataset의 chk 값을 Y로 변경
+            obj.setColumn(e.row,"IS_CHECK",'Y');
+        } else if(e.newvalue == '0') {
+            // 0인 경우 Dataset의 chk 값을 N로 변경
+            obj.setColumn(e.row,"IS_CHECK",'N'); 
+        }
+        // 다시 이벤트가 정상 동작하도록 설정
+        obj.enableevent = true;
+    }
+}
+
+this.btn_save_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	if(this.has_cheaged){
+		if(confirm("저장 하시겠습니까?")) {
+			this.save();
+		}
+	} else {
+		this.alert("변경된 데이터가 없습니다.");
+	}
+}
+
+this.save = function() {
+	var id = "UserAuthService";
+	var url = application.services["svcurl"].url + "/user_auth/saveUserAuth.do";
+	var inDateset = "ds_search=ds_search ds_user=ds_user";
+	var outDateset = "";
+	var arg = "";
+	var callback = "getSaveCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.getSaveCallBack = function(id, code, message) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.alert("저장 되었습니다.");
+			this.has_cheaged = false;
+			break;
+	}
+}
+
+this.closefunc = function() {
+	if(nexacro.Browser == "Runtime") {
+		application.exit();
+	} else {
+		Iject.$.vFrameSet.set_separatesize("*,0,0");
+	}
+}]]></Script>
+  </Form>
+</FDL>

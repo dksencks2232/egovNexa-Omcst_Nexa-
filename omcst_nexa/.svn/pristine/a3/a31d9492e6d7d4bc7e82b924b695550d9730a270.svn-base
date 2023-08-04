@@ -1,0 +1,4410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - Iject.Util</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="../symbols/_global_.html">_global_</a></i></li>
+	
+	<li><a href="../symbols/Iject.html">Iject</a></li>
+	
+	<li><a href="../symbols/Iject.Html5.html">Iject.Html5</a></li>
+	
+	<li><a href="../symbols/Iject.Mdi.html">Iject.Mdi</a></li>
+	
+	<li><a href="../symbols/Iject.Runtime.html">Iject.Runtime</a></li>
+	
+	<li><a href="../symbols/Iject.Util.html">Iject.Util</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace Iject.Util
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/C__eduNexaBase_workspace_nexacro-xeni_nexaui_BaseMdi_nexacro14lib_component_IjectJS_Util.js.html">Util.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class Iject.Util.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/Iject.Util.html#constructor">Iject.Util</a></b>
+							</div>
+							<div class="description"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class Iject.Util.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.allRowDataCall">allRowDataCall</a></b>(objDs(DataSet), 호출할, 변경된)
+								</div>
+								<div class="description">Dataset의 모든 행을 함수의 인자로 넘겨주고 함수 호출처리</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.appendComma">appendComma</a></b>(nNumber, nDetail)
+								</div>
+								<div class="description">입력받은 Number에 컴마를 추가한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.appendDelimiter">appendDelimiter</a></b>(strValue, tokenNum, delimiter)
+								</div>
+								<div class="description">문자열에서 구분자를 추가한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.appendHyphen">appendHyphen</a></b>(strValue, tokenNum)
+								</div>
+								<div class="description">문자열에서 하이픈(-)을 추가한다</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.appendString">appendString</a></b>(strVal1, strVal2, delimiter)
+								</div>
+								<div class="description">두 문자열이 모두 존재시 구분자를 더해서 리턴한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.checkEmail">checkEmail</a></b>(strValue)
+								</div>
+								<div class="description">입력값이 e-mail Type인지 체크하는 함수</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.checkPhone">checkPhone</a></b>(strValue)
+								</div>
+								<div class="description">입력값이 전화번호 format 인지 체크하는 함수</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.convertMessage">convertMessage</a></b>(치화활, values)
+								</div>
+								<div class="description">메시지를 치환</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.decProc">decProc</a></b>(strString)
+								</div>
+								<div class="description">해당 데이터를 복호화 처리</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.deleteData">deleteData</a></b>(dataset, 키칼럼, :키값, 서브키칼럼, :서브)
+								</div>
+								<div class="description">dataset object에서 키에 해당되는 Row를 찾아서 삭제</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.diffTime">diffTime</a></b>(sStartTime(HHmmss형태의, sEndTime(HHmmss형태의, sType(구하고자하는)
+								</div>
+								<div class="description">두 시간간의 차이 계산</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.dsFilter">dsFilter</a></b>(목적데이타셋dsDs(DataSet), 처리데이타셋, 필터표현)
+								</div>
+								<div class="description">Dataset의 필터한 정보를 대상 Dataset으로 Copy하는 기능</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.editData">editData</a></b>(dataset, 키칼럼, :키값, :, :변경값, :, :)
+								</div>
+								<div class="description">dataset object에서 키에 해당되는 Row를 찾아서 값을 변경</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.emptyVal">emptyVal</a></b>(inVal, emptyVal)
+								</div>
+								<div class="description">입력값을 체크하여 Null이거나 빈값이면 지정한 값을 리턴</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.encProc">encProc</a></b>(strString)
+								</div>
+								<div class="description">해당 데이터를 암호화 처리</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.findData">findData</a></b>(dataset, 키칼럼, :키값, :, :서브)
+								</div>
+								<div class="description">dataSet object에서 키에 해당되는 Row를 찾아서 rowpostion 전달</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.gDecode">gDecode</a></b>(val)
+								</div>
+								<div class="description">decode 처리</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getAge">getAge</a></b>(sValue, sDate)
+								</div>
+								<div class="description">생년 월일 또는 주민 번호로 법적연령-만나이를 구한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getBefo">getBefo</a></b>(strRsrno)
+								</div>
+								<div class="description">주민번호 뒷 첫번째 자리로 년대를 return 한다</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getData">getData</a></b>(dataset, 키칼럼, :키값, :, :변경값, :, :)
+								</div>
+								<div class="description">dataset object에서 가져오는 함수 Null경우에는 Type에 의한 예외처리 하여 반환</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getDataset">getDataset</a></b>(this(현재Form), 데이터셋명)
+								</div>
+								<div class="description">해당 데이터셋명으로 검색하여 데이터셋찾아서 리턴 없으면 -1을 반환</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getDigit">getDigit</a></b>(입력문자열)
+								</div>
+								<div class="description">입력 문자열중 숫자값만 남긴다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getLengB">getLengB</a></b>(Char)
+								</div>
+								<div class="description">입력받은 전체 길이를 계산 결과를 Number Type으로 반환			  	  문자, 숫자, 특수문자 : 1 로 Count			  	  그 외 한글/한자 : 2 로 count</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getLookupData">getLookupData</a></b>(dataset, 키칼럼, :키값, :, :변경값, :, :)
+								</div>
+								<div class="description">dataSet object에서 키에 해당되는 Row를 찾아서 칼럼값을 전달</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getObjFont">getObjFont</a></b>(obj, iFontSize, 폰트명, sType)
+								</div>
+								<div class="description">Font Object 생성 반환.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.getSex">getSex</a></b>(strRsrno)
+								</div>
+								<div class="description">주민번호로 성별을 Return 한다.trRsrn</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isCardNo">isCardNo</a></b>(strNo)
+								</div>
+								<div class="description">카드번호 여부를 확인한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isCheckDs">isCheckDs</a></b>(this(현재Form), 데이터셋명)
+								</div>
+								<div class="description">해당 데이터셋명으로 검색하여 데이터셋이 없으면 데이터셋을 생성</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isCompRegNo">isCompRegNo</a></b>(사업자)
+								</div>
+								<div class="description">사업자 등록번호 확인</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isCorpRegNo">isCorpRegNo</a></b>(법인)
+								</div>
+								<div class="description">법인 등록번호 확인</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isDigit">isDigit</a></b>()
+								</div>
+								<div class="description">숫자 정합성 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isEmail">isEmail</a></b>()
+								</div>
+								<div class="description">E-메일 형식에 맞는지 Check한다</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isForm">isForm</a></b>(현재Form)
+								</div>
+								<div class="description">메인폼인지 팝업인지 구분</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isFrnrIdNo">isFrnrIdNo</a></b>(strNo)
+								</div>
+								<div class="description">외국인 등록번호 여부를 확인한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isHandPhone">isHandPhone</a></b>()
+								</div>
+								<div class="description">핸드폰(모바일) 전화번호 전체 유효성 check</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isHandPhoneFront">isHandPhoneFront</a></b>()
+								</div>
+								<div class="description">핸드폰(모바일) 전화번호 앞자리 유효성 체크 (010.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isHandPhoneLast">isHandPhoneLast</a></b>()
+								</div>
+								<div class="description">핸드폰(모바일) 전화번호 뒷자리 유효성 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isHandPhoneMid">isHandPhoneMid</a></b>()
+								</div>
+								<div class="description">핸드폰(모바일) 전화번호 가운데 유효성 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isKoreanChar">isKoreanChar</a></b>(str)
+								</div>
+								<div class="description">한글만으로 되어 있는지 Check한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isMonth">isMonth</a></b>()
+								</div>
+								<div class="description">년월 정합성 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isNum">isNum</a></b>(sNum)
+								</div>
+								<div class="description">문자열이 숫자형식에 맞는지 여부 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isNvl">isNvl</a></b>(val, val2)
+								</div>
+								<div class="description">입력값이 null에 해당되면 val2(대체문자열)로 반환한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isPhone">isPhone</a></b>()
+								</div>
+								<div class="description">일반 전화번호 유효성 check , 15XX-XXXX도 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isSSN">isSSN</a></b>(sJuminNo)
+								</div>
+								<div class="description">주민등록번호 여부를 확인한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isTime">isTime</a></b>()
+								</div>
+								<div class="description">시간 정합성 체크</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isUpdateColumn">isUpdateColumn</a></b>(objDs(DataSet), 체크할, 체크할)
+								</div>
+								<div class="description">dataSet의 Row 에서 해당 칼럼이 변경되었는지</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isUpdated">isUpdated</a></b>(DataSet)
+								</div>
+								<div class="description">dataSet의 Row 중에서 변경된 내용이 있는지 여부를  판단하는 함수</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.isUpdatedRow">isUpdatedRow</a></b>(objDs(DataSet), 체크할)
+								</div>
+								<div class="description">dataSet의 Row가 변경되었는지 판단하는 함수</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.left">left</a></b>(strString, nSize)
+								</div>
+								<div class="description">문자열의 왼쪽부분을 지정한 길이만큼 Return 한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.lpad">lpad</a></b>(sValue, nLength, Char)
+								</div>
+								<div class="description">왼쪽 채우기 함수</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.lTrimZero">lTrimZero</a></b>(strString)
+								</div>
+								<div class="description">왼쪽 0값을 제거한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.mid">mid</a></b>(trString, nIndex, nSize)
+								</div>
+								<div class="description">입력된 문자열에서 가운데 부분을 주어진 길이만큼 Return 한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.moveData">moveData</a></b>(dataset, 키칼럼, :키값, :, :서브키칼럼, :)
+								</div>
+								<div class="description">dataset object에서 키에 해당되는 Row를 찾아서 이동</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.removeDelimiter">removeDelimiter</a></b>(strValue, 구분자가, 구분자)
+								</div>
+								<div class="description">구분자를 제거한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.removeSpecialChar">removeSpecialChar</a></b>(문자열)
+								</div>
+								<div class="description">특수문자를 제거한다</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.right">right</a></b>(strString, nSize)
+								</div>
+								<div class="description">문자열의 오른쪽부분을 지정한 길이만큼 Return 한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.rpad">rpad</a></b>(sValue, nLength, Char)
+								</div>
+								<div class="description">오른쪽 채우기 함수</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.searchParentFunc">searchParentFunc</a></b>(this(현재Form), 찾을Function명)
+								</div>
+								<div class="description">부모창에 존재하는 함수명 검색하여 호출</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.setJSONToString">setJSONToString</a></b>(변경할JSON문자열)
+								</div>
+								<div class="description">JSON String을 JSON Object으로 변환하여 리턴한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.setParam">setParam</a></b>(설정할, p_value)
+								</div>
+								<div class="description">인자를 넘겨줄 경우에 넘겨주는 규칙대로 인자/값을 설정</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.setQuote">setQuote</a></b>(문자열)
+								</div>
+								<div class="description">Argument 전송된 각 Data 값에 Quote(') 를 붙여준다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.setStringToJSON">setStringToJSON</a></b>(obj)
+								</div>
+								<div class="description">JSON String을 JSON Object으로 변환하여 리턴한다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.splitDsName">splitDsName</a></b>(objString(inds=inds), 0:배열첫번째값1:배열두번째값)
+								</div>
+								<div class="description">= 을 배열로 분리 처리</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.today">today</a></b>()
+								</div>
+								<div class="description">해당 PC의 오늘 날짜(korea)를 가져온다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.todayTime">todayTime</a></b>()
+								</div>
+								<div class="description">해당 PC의 오늘 날짜+시간를 가져온다.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">Iject.Util.<b><a href="../symbols/Iject.Util.html#.trim">trim</a></b>(문자열)
+								</div>
+								<div class="description">공백제거</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>Iject.Util</b>
+				</div>
+				
+				<div class="description">
+					
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".allRowDataCall"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>allRowDataCall</b>(objDs(DataSet), 호출할, 변경된)
+					
+					</div>
+					<div class="description">
+						Dataset의 모든 행을 함수의 인자로 넘겨주고 함수 호출처리
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.allRowDataCall(dsObj, callFncObj, bModifiedOnly);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>objDs(DataSet)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>호출할</b>
+									
+								</dt>
+								<dd>함수</dd>
+							
+								<dt>
+									<span class="light fixedFont">{boolen}</span> <b>변경된</b>
+									
+								</dt>
+								<dd>데이터만 호출할지 여부</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 호출된값</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".appendComma"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>appendComma</b>(nNumber, nDetail)
+					
+					</div>
+					<div class="description">
+						입력받은 Number에 컴마를 추가한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var nNumber = 1234567;var nDetail = 2;;Iject.Util.appendComma(nNumber,nDetail)</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nNumber</b>
+									
+								</dt>
+								<dd>String</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nDetail</b>
+									
+								</dt>
+								<dd>출력시 소숫점 이하의 자릿수.(반올림함)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> (Comma 를 포함하고 있는 숫자)  정상 : Comma 가 포함하고 있는 Number Return</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".appendDelimiter"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>appendDelimiter</b>(strValue, tokenNum, delimiter)
+					
+					</div>
+					<div class="description">
+						문자열에서 구분자를 추가한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.appendDelimiter(strValue, tokenNum, delimiter);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strValue</b>
+									
+								</dt>
+								<dd>- 문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>tokenNum</b>
+									
+								</dt>
+								<dd>- 스페이스로 구분된 숫자</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>delimiter</b>
+									
+								</dt>
+								<dd>- 구분문자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 하이픈이 추가된 문자열가 반환된다.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".appendHyphen"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>appendHyphen</b>(strValue, tokenNum)
+					
+					</div>
+					<div class="description">
+						문자열에서 하이픈(-)을 추가한다
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str= "777722222";var str2 = " ";Iject.Util.appendHyphen(str,str2);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strValue</b>
+									
+								</dt>
+								<dd>- 하이픈이 없는 문자</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>tokenNum</b>
+									
+								</dt>
+								<dd>- 스페이스로 구분된 숫자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 하이픈이 추가된 문자열가 반환된다..</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".appendString"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>appendString</b>(strVal1, strVal2, delimiter)
+					
+					</div>
+					<div class="description">
+						두 문자열이 모두 존재시 구분자를 더해서 리턴한다.			  	  문자, 숫자, 특수문자 : 1 로 Count			  	  그 외 한글/한자 : 2 로 count
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.appendString(strVal1, strVal2, delimiter);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strVal1</b>
+									
+								</dt>
+								<dd>- 문자1</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strVal2</b>
+									
+								</dt>
+								<dd>- 문자2</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>delimiter</b>
+									
+								</dt>
+								<dd>- 구분자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 두분자열이 모두 존재시 strVal1 + delimiter + strVal2</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".checkEmail"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>checkEmail</b>(strValue)
+					
+					</div>
+					<div class="description">
+						입력값이 e-mail Type인지 체크하는 함수
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var res = Iject.Util.checkEmail("hongkildong@naver.com"); //trace(res)  true</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strValue</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".checkPhone"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>checkPhone</b>(strValue)
+					
+					</div>
+					<div class="description">
+						입력값이 전화번호 format 인지 체크하는 함수
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.checkPhone();</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strValue</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>true = 입력값이 전화번호 형태일 경우</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".convertMessage"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{array}</span>
+					<span class="light">Iject.Util.</span><b>convertMessage</b>(치화활, values)
+					
+					</div>
+					<div class="description">
+						메시지를 치환
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">	 var msg = "[{0}] 검색가능 일자는 {1} ~ {2} 입니다.";var convertMsg =  Iject.Util.convertMessage(msg,["알림", "2015-05-01", "2015-05-12"]);trace(convertMsg); //[알림] 검색가능 일자는 2015-05-01 ~ 2015-05-12 입니다.</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>치화활</b>
+									
+								</dt>
+								<dd>message</dd>
+							
+								<dt>
+									<b>values</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{array}</span> 치환할 인자값 array</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".decProc"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>decProc</b>(strString)
+					
+					</div>
+					<div class="description">
+						해당 데이터를 복호화 처리
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.decProc(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strString</b>
+									
+								</dt>
+								<dd>- 대상 문자열</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> String	- 변환 문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".deleteData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>deleteData</b>(dataset, 키칼럼, :키값, 서브키칼럼, :서브)
+					
+					</div>
+					<div class="description">
+						dataset object에서 키에 해당되는 Row를 찾아서 삭제
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.deleteData(ObjDs, strIdCol, strId, strSubCol, strSubId);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>dataset</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:키값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>서브키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:서브</b>
+									
+								</dt>
+								<dd>키값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".diffTime"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>diffTime</b>(sStartTime(HHmmss형태의, sEndTime(HHmmss형태의, sType(구하고자하는)
+					
+					</div>
+					<div class="description">
+						두 시간간의 차이 계산
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var sStartTime = "033025";var sEndTime = "034025";var sType = "HH";		 * Iject.Util.diffTime(sStartTime, sEndTime, sType);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sStartTime(HHmmss형태의</b>
+									
+								</dt>
+								<dd>From 시간) 	( 예 : "033025" )</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sEndTime(HHmmss형태의</b>
+									
+								</dt>
+								<dd>To 시간) 		( 예 : "034025" )</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sType(구하고자하는</b>
+									
+								</dt>
+								<dd>타입(시, 분, 초)) ( 예 : "HH" )</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> integer</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".dsFilter"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>dsFilter</b>(목적데이타셋dsDs(DataSet), 처리데이타셋, 필터표현)
+					
+					</div>
+					<div class="description">
+						Dataset의 필터한 정보를 대상 Dataset으로 Copy하는 기능
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">  Iject.Util.dsFilter(dsSc,dsTg,sFilterExpr);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>목적데이타셋dsDs(DataSet)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>처리데이타셋</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>필터표현</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".editData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>editData</b>(dataset, 키칼럼, :키값, :, :변경값, :, :)
+					
+					</div>
+					<div class="description">
+						dataset object에서 키에 해당되는 Row를 찾아서 값을 변경
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.editData(ObjDs, strIdCol, strId, valCol, newVal, strSubCol, strSubId);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>dataset</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:키값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>변경할 칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:변경값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브키칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브 키값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".emptyVal"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>emptyVal</b>(inVal, emptyVal)
+					
+					</div>
+					<div class="description">
+						입력값을 체크하여 Null이거나 빈값이면 지정한 값을 리턴
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str  ="aaaa"lvar res = Iject.Util.emptyVal(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>inVal</b>
+									
+								</dt>
+								<dd>- 문자열 값</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>emptyVal</b>
+									
+								</dt>
+								<dd>- 대치값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 입력값이 Null이거나 공백인 경우 지정한값						      	Null이거나 공백이 아닌경우 입력값</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".encProc"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>encProc</b>(strString)
+					
+					</div>
+					<div class="description">
+						해당 데이터를 암호화 처리
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.encProc(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strString</b>
+									
+								</dt>
+								<dd>- 대상 문자열</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> String	- 변환 문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".findData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>findData</b>(dataset, 키칼럼, :키값, :, :서브)
+					
+					</div>
+					<div class="description">
+						dataSet object에서 키에 해당되는 Row를 찾아서 rowpostion 전달
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.findData(ObjDs, strIdCol, strId, strSubCol, strSubId);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>dataset</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:키값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브키칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:서브</b>
+									
+								</dt>
+								<dd>키값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".gDecode"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>gDecode</b>(val)
+					
+					</div>
+					<div class="description">
+						decode 처리
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.gDecode("aaaa');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>val</b>
+									
+								</dt>
+								<dd>: 체크할 문자열( 예 : null 또는 undefined 또는 "" 또는 "abc" )</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> val값이 null에 해당하는 경우 val2값으로 대체 반환</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getAge"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>getAge</b>(sValue, sDate)
+					
+					</div>
+					<div class="description">
+						생년 월일 또는 주민 번호로 법적연령-만나이를 구한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var str = "123456-7554545";Iject.Util.getAge(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sValue</b>
+									
+								</dt>
+								<dd>- 생년 월일 또는 주민 번호</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sDate</b>
+									
+								</dt>
+								<dd>- 기준일자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> 나이 또는 true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getBefo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>getBefo</b>(strRsrno)
+					
+					</div>
+					<div class="description">
+						주민번호 뒷 첫번째 자리로 년대를 return 한다
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var str = "123456-7554545";Iject.Util.getBefo(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strRsrno</b>
+									
+								</dt>
+								<dd>입력문자열(주민번호 13자리)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> Boolen 형식의 정합성 체크</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>getData</b>(dataset, 키칼럼, :키값, :, :변경값, :, :)
+					
+					</div>
+					<div class="description">
+						dataset object에서 가져오는 함수 Null경우에는 Type에 의한 예외처리 하여 반환
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.getData(ObjDs,nRow,sColId,sVal);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>dataset</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:키값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>변경할 칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:변경값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브키칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브 키값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getDataset"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>getDataset</b>(this(현재Form), 데이터셋명)
+					
+					</div>
+					<div class="description">
+						해당 데이터셋명으로 검색하여 데이터셋찾아서 리턴 없으면 -1을 반환
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.getDataset(this,"ds_temp");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{XaComp}</span> <b>this(현재Form)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>데이터셋명</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> dataset</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getDigit"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>getDigit</b>(입력문자열)
+					
+					</div>
+					<div class="description">
+						입력 문자열중 숫자값만 남긴다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">  Iject.Util.getDigit(string);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>입력문자열</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 숫자문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getLengB"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>getLengB</b>(Char)
+					
+					</div>
+					<div class="description">
+						입력받은 전체 길이를 계산 결과를 Number Type으로 반환			  	  문자, 숫자, 특수문자 : 1 로 Count			  	  그 외 한글/한자 : 2 로 count
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>Char</b>
+									
+								</dt>
+								<dd>- 채울 문자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 대상문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getLookupData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>getLookupData</b>(dataset, 키칼럼, :키값, :, :변경값, :, :)
+					
+					</div>
+					<div class="description">
+						dataSet object에서 키에 해당되는 Row를 찾아서 칼럼값을 전달
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.getLookupData(ObjDs, strIdCol, strId, strInfo, strSubCol, strSubId);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>dataset</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:키값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>dataSet 칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:변경값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브키칼럼</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브 키값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getObjFont"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{array}</span>
+					<span class="light">Iject.Util.</span><b>getObjFont</b>(obj, iFontSize, 폰트명, sType)
+					
+					</div>
+					<div class="description">
+						Font Object 생성 반환.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">  Iject.getObjFont(this.Button00,"12","normal");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>obj</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>iFontSize</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>폰트명</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sType</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{array}</span> 변형문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getSex"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>getSex</b>(strRsrno)
+					
+					</div>
+					<div class="description">
+						주민번호로 성별을 Return 한다.trRsrn
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">  var str = "123456-7554545";Iject.Util.getSex(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strRsrno</b>
+									
+								</dt>
+								<dd>입력문자열(주민번호 13자리)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 남자 'M' 여자 'W' 기타 'X'</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isCardNo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isCardNo</b>(strNo)
+					
+					</div>
+					<div class="description">
+						카드번호 여부를 확인한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str="111111-1111111"; Iject.Util.isCardNo(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strNo</b>
+									
+								</dt>
+								<dd>입력문자열(카드번호13자리)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isCheckDs"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>isCheckDs</b>(this(현재Form), 데이터셋명)
+					
+					</div>
+					<div class="description">
+						해당 데이터셋명으로 검색하여 데이터셋이 없으면 데이터셋을 생성
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.isCheckDs(this,"ds_temp");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{XaComp}</span> <b>this(현재Form)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>데이터셋명</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> dataset</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isCompRegNo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isCompRegNo</b>(사업자)
+					
+					</div>
+					<div class="description">
+						사업자 등록번호 확인
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var str = "123456-7554545";Iject.Util.isCompRegNo(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>사업자</b>
+									
+								</dt>
+								<dd>등록 번호</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isCorpRegNo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isCorpRegNo</b>(법인)
+					
+					</div>
+					<div class="description">
+						법인 등록번호 확인
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var str = "123456-7554545";Iject.Util.isCorpRegNo(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>법인</b>
+									
+								</dt>
+								<dd>등록 번호</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isDigit"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isDigit</b>()
+					
+					</div>
+					<div class="description">
+						숫자 정합성 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "120101";Iject.Util.isDigit(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isEmail"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isEmail</b>()
+					
+					</div>
+					<div class="description">
+						E-메일 형식에 맞는지 Check한다
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.isEmail("123344-3345456");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isForm"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>isForm</b>(현재Form)
+					
+					</div>
+					<div class="description">
+						메인폼인지 팝업인지 구분
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var isHost = Iject.Util.isForm() //output : p 팝업 M 메인</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{XaComp}</span> <b>현재Form</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>p 팝업 M 메인</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isFrnrIdNo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isFrnrIdNo</b>(strNo)
+					
+					</div>
+					<div class="description">
+						외국인 등록번호 여부를 확인한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str = "123456-7554545";Iject.Util.isFrnrIdNo(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strNo</b>
+									
+								</dt>
+								<dd>입력문자열(등록번호13자리)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isHandPhone"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isHandPhone</b>()
+					
+					</div>
+					<div class="description">
+						핸드폰(모바일) 전화번호 전체 유효성 check
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var sPhone ="010-2123-1111";Iject.Util.isHandPhone(sPhone);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isHandPhoneFront"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isHandPhoneFront</b>()
+					
+					</div>
+					<div class="description">
+						핸드폰(모바일) 전화번호 앞자리 유효성 체크 (010...)
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "010-1234-3333"; Iject.Util.isHandPhoneFront(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isHandPhoneLast"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isHandPhoneLast</b>()
+					
+					</div>
+					<div class="description">
+						핸드폰(모바일) 전화번호 뒷자리 유효성 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "010-1234-3333";Iject.Util.isHandPhoneLast(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isHandPhoneMid"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isHandPhoneMid</b>()
+					
+					</div>
+					<div class="description">
+						핸드폰(모바일) 전화번호 가운데 유효성 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "010-1234-3333";Iject.Util.isHandPhoneMid(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isKoreanChar"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isKoreanChar</b>(str)
+					
+					</div>
+					<div class="description">
+						한글만으로 되어 있는지 Check한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> var str = "한글";Iject.Util.isKoreanChar(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>str</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> Boolean형의 한글 여부</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isMonth"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isMonth</b>()
+					
+					</div>
+					<div class="description">
+						년월 정합성 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "20160101";Iject.Util.isMonth(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isNum"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isNum</b>(sNum)
+					
+					</div>
+					<div class="description">
+						문자열이 숫자형식에 맞는지 여부 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "120101";Iject.Util.isNum(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sNum</b>
+									
+								</dt>
+								<dd>( 체크할 문자열 )</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isNvl"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>isNvl</b>(val, val2)
+					
+					</div>
+					<div class="description">
+						입력값이 null에 해당되면 val2(대체문자열)로 반환한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.isNvl("","####"); // #####</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>val</b>
+									
+								</dt>
+								<dd>: 체크할 문자열( 예 : null 또는 undefined 또는 "" 또는 "abc" )</dd>
+							
+								<dt>
+									<b>val2</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> val값이 null에 해당하는 경우 val2값으로 대체 반환</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isPhone"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isPhone</b>()
+					
+					</div>
+					<div class="description">
+						일반 전화번호 유효성 check , 15XX-XXXX도 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "010-1234-3333";Iject.Util.isPhone(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isSSN"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>isSSN</b>(sJuminNo)
+					
+					</div>
+					<div class="description">
+						주민등록번호 여부를 확인한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str = "123456-7554545";Iject.Util.isSSN(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sJuminNo</b>
+									
+								</dt>
+								<dd>입력문자열(주민번호 13자리)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> Boolen 형식의 정합성 체크</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isTime"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isTime</b>()
+					
+					</div>
+					<div class="description">
+						시간 정합성 체크
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var value = "120101";Iject.Util.isTime(value);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b></b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true/false</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isUpdateColumn"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isUpdateColumn</b>(objDs(DataSet), 체크할, 체크할)
+					
+					</div>
+					<div class="description">
+						dataSet의 Row 에서 해당 칼럼이 변경되었는지
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.isUpdateColumn(objDs, nRow, Column);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>objDs(DataSet)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>체크할</b>
+									
+								</dt>
+								<dd>Row index</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>체크할</b>
+									
+								</dt>
+								<dd>컬럼값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true = 변경 된 데이터가 존재 , false = 변경 된 데이터가 없음</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isUpdated"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isUpdated</b>(DataSet)
+					
+					</div>
+					<div class="description">
+						dataSet의 Row 중에서 변경된 내용이 있는지 여부를  판단하는 함수
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.getLookupData(this.dsIn);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>DataSet</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true=변경된데이터가존재,false=변경된데이터가없음</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isUpdatedRow"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolen}</span>
+					<span class="light">Iject.Util.</span><b>isUpdatedRow</b>(objDs(DataSet), 체크할)
+					
+					</div>
+					<div class="description">
+						dataSet의 Row가 변경되었는지 판단하는 함수
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.isUpdatedRow(this.dsin,dsin.rowposition):</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>objDs(DataSet)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>체크할</b>
+									
+								</dt>
+								<dd>Row index</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolen}</span> true = 변경 된 데이터가 존재 , false = 변경 된 데이터가 없음</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".left"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>left</b>(strString, nSize)
+					
+					</div>
+					<div class="description">
+						문자열의 왼쪽부분을 지정한 길이만큼 Return 한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.left(str, 2, 2);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strString</b>
+									
+								</dt>
+								<dd>- 대상 문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nSize</b>
+									
+								</dt>
+								<dd>- 얻어올 크기. [Default Value = 0]</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 왼쪽 부분이 얻어진 문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".lpad"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>lpad</b>(sValue, nLength, Char)
+					
+					</div>
+					<div class="description">
+						왼쪽 채우기 함수
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.lpad(sValue, nLength, Char);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sValue</b>
+									
+								</dt>
+								<dd>- 대상문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nLength</b>
+									
+								</dt>
+								<dd>- 자리수</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>Char</b>
+									
+								</dt>
+								<dd>- 채울 문자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".lTrimZero"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>lTrimZero</b>(strString)
+					
+					</div>
+					<div class="description">
+						왼쪽 0값을 제거한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.lTrimZero(str);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strString</b>
+									
+								</dt>
+								<dd>- 대상 문자열</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> String	변환 문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".mid"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>mid</b>(trString, nIndex, nSize)
+					
+					</div>
+					<div class="description">
+						입력된 문자열에서 가운데 부분을 주어진 길이만큼 Return 한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str = "adfdasdrere";Iject.Util.mid(str, 2, 2);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>trString</b>
+									
+								</dt>
+								<dd>- 가운데 부문을 얻어올 원본 문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nIndex</b>
+									
+								</dt>
+								<dd>- 얻어올 첫 글자의 Index</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nSize</b>
+									
+								</dt>
+								<dd>- 얻어올 글자수</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 얻어진 문자열.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".moveData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>moveData</b>(dataset, 키칼럼, :키값, :, :서브키칼럼, :)
+					
+					</div>
+					<div class="description">
+						dataset object에서 키에 해당되는 Row를 찾아서 이동
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.moveData(ObjDs, strIdCol, strId, newRow, strSubCol, strSubId);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>dataset</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:키값</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>이동할 Row,</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:서브키칼럼</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>:</b>
+									
+								</dt>
+								<dd>서브 키값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>N/A</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".removeDelimiter"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>removeDelimiter</b>(strValue, 구분자가, 구분자)
+					
+					</div>
+					<div class="description">
+						구분자를 제거한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.removeDelimiter(strValue, delimiter);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strValue</b>
+									
+								</dt>
+								<dd>- 문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>구분자가</b>
+									
+								</dt>
+								<dd>포함된 스트링</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>구분자</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 구분자가 제거된 스트링이 반환된다.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".removeSpecialChar"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>removeSpecialChar</b>(문자열)
+					
+					</div>
+					<div class="description">
+						특수문자를 제거한다
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.removeSpecialChar(strValue);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>문자열</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 특수문자를 제거한 문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".right"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>right</b>(strString, nSize)
+					
+					</div>
+					<div class="description">
+						문자열의 오른쪽부분을 지정한 길이만큼 Return 한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var str = "adfdasdrere";Iject.Util.right(str, 2, 2);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>strString</b>
+									
+								</dt>
+								<dd>- 대상 문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nSize</b>
+									
+								</dt>
+								<dd>- 얻어올 크기. [Default Value = 0]</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 오른쪽 부분이 얻어진 문자열.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".rpad"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>rpad</b>(sValue, nLength, Char)
+					
+					</div>
+					<div class="description">
+						오른쪽 채우기 함수
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.rpad(sValue, nLength, Char);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>sValue</b>
+									
+								</dt>
+								<dd>- 대상문자열</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>nLength</b>
+									
+								</dt>
+								<dd>- 자리수</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>Char</b>
+									
+								</dt>
+								<dd>- 채울 문자</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 채운문자</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".searchParentFunc"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">Iject.Util.</span><b>searchParentFunc</b>(this(현재Form), 찾을Function명)
+					
+					</div>
+					<div class="description">
+						부모창에 존재하는 함수명 검색하여 호출
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.searchParentFunc(this,"fn_func").call(this,arg1);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{XaComp}</span> <b>this(현재Form)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>찾을Function명</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setJSONToString"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>setJSONToString</b>(변경할JSON문자열)
+					
+					</div>
+					<div class="description">
+						JSON String을 JSON Object으로 변환하여 리턴한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.setJSONToString({a:"aa"});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>변경할JSON문자열</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 변형문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setParam"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>setParam</b>(설정할, p_value)
+					
+					</div>
+					<div class="description">
+						인자를 넘겨줄 경우에 넘겨주는 규칙대로 인자/값을 설정
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">    paramStr += Iject.Util.setParam("sql_xml", "gspl_sql_common");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>설정할</b>
+									
+								</dt>
+								<dd>파리미터명</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>p_value</b>
+									
+								</dt>
+								<dd>- 설정할 값</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> String</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setQuote"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>setQuote</b>(문자열)
+					
+					</div>
+					<div class="description">
+						Argument 전송된 각 Data 값에 Quote(') 를 붙여준다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var arg1= "aaaa";Iject.Util.setQuate(arg1);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>문자열</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setStringToJSON"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{object}</span>
+					<span class="light">Iject.Util.</span><b>setStringToJSON</b>(obj)
+					
+					</div>
+					<div class="description">
+						JSON String을 JSON Object으로 변환하여 리턴한다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.setJSONToString({a:"aa"});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>obj</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{object}</span> 변형문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".splitDsName"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>splitDsName</b>(objString(inds=inds), 0:배열첫번째값1:배열두번째값)
+					
+					</div>
+					<div class="description">
+						= 을 배열로 분리 처리
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.splitDsName("arg1=1 arg2=2",0);  //arg1 arg2</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>objString(inds=inds)</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>0:배열첫번째값1:배열두번째값</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> return된배열값</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".today"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>today</b>()
+					
+					</div>
+					<div class="description">
+						해당 PC의 오늘 날짜(korea)를 가져온다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.today();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 오늘날짜</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".todayTime"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>todayTime</b>()
+					
+					</div>
+					<div class="description">
+						해당 PC의 오늘 날짜+시간를 가져온다.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">Iject.Util.todayTime();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 오늘날짜 + 시간</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".trim"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">Iject.Util.</span><b>trim</b>(문자열)
+					
+					</div>
+					<div class="description">
+						공백제거
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"> Iject.Util.trim(" a ");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>문자열</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> 문자열</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jun 28 2016 13:32:58 GMT+0900 (KST)
+		</div>
+	</body>
+</html>

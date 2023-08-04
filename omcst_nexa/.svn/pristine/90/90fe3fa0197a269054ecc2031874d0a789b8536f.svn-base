@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Sample001_transaction" classname="Work" inheritanceid="" position="absolute" titletext="기본샘플(조회,엑셀)" left="0" width="800" top="0" height="600" onload="form_onload">
+    <Layouts>
+      <Layout>
+        <Grid id="grd_list" taborder="0" binddataset="ds_out" useinputpanel="false" cellsizingtype="col" nodatatext="데이타를 찾을 수 없습니다." left="0" top="89" right="0" bottom="266">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="sabun"/>
+                <Cell col="1" disptype="normal" text="name"/>
+                <Cell col="2" disptype="normal" text="dept"/>
+                <Cell col="3" disptype="normal" text="jikgup"/>
+                <Cell col="4" disptype="normal" text="ipsa_date"/>
+                <Cell col="5" disptype="normal" text="email"/>
+                <Cell col="6" disptype="normal" text="sex"/>
+                <Cell col="7" disptype="normal" text="marry"/>
+                <Cell col="8" disptype="normal" text="salary"/>
+                <Cell col="9" disptype="normal" text="smemo"/>
+                <Cell col="10" disptype="normal" text="edit_color"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:sabun"/>
+                <Cell col="1" disptype="normal" text="bind:name"/>
+                <Cell col="2" disptype="normal" text="bind:dept"/>
+                <Cell col="3" disptype="normal" text="bind:jikgup"/>
+                <Cell col="4" disptype="normal" text="bind:ipsa_date"/>
+                <Cell col="5" disptype="normal" text="bind:email"/>
+                <Cell col="6" disptype="normal" text="bind:sex"/>
+                <Cell col="7" disptype="normal" text="bind:marry"/>
+                <Cell col="8" disptype="normal" text="bind:salary"/>
+                <Cell col="9" disptype="normal" text="bind:smemo"/>
+                <Cell col="10" disptype="normal" text="bind:edit_color"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_grid_top" taborder="17" left="0" top="63" right="0" height="23" scrollbars="none">
+          <Layouts>
+            <Layout>
+              <Static id="sta_title" taborder="25" text="Records Found" cssclass="sta_WF_GridFound2" left="33" top="0" bottom="0" width="120"/>
+              <Static id="sta_total_cnt" taborder="26" text="0" cssclass="sta_WF_GridFound" left="8" top="0" bottom="0" width="20"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="btn_search1" taborder="18" text="조회(type1)" cssclass="btn_WF_Search" top="59" right="209" width="111" height="23" onclick="btn_search1_onclick"/>
+        <Static id="Static00" taborder="19" text="@ Sample001_transaction" left="8" top="11" right="8" height="17" style="font:bold 12 Dotum;"/>
+        <Button id="btn_search2" taborder="20" text="조회(type2)" cssclass="btn_WF_Search" top="59" right="97" width="111" height="23" onclick="btn_search2_onclick"/>
+        <Grid id="grd_list2" taborder="21" useinputpanel="false" cellsizingtype="col" nodatatext="데이타를 찾을 수 없습니다." left="-5" top="384" right="5" bottom="0" binddataset="ds_import">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="sabun"/>
+                <Cell col="1" disptype="normal" text="name"/>
+                <Cell col="2" disptype="normal" text="dept"/>
+                <Cell col="3" disptype="normal" text="jikgup"/>
+                <Cell col="4" disptype="normal" text="ipsa_date"/>
+                <Cell col="5" disptype="normal" text="email"/>
+                <Cell col="6" disptype="normal" text="sex"/>
+                <Cell col="7" disptype="normal" text="marry"/>
+                <Cell col="8" disptype="normal" text="salary"/>
+                <Cell col="9" disptype="normal" text="smemo"/>
+                <Cell col="10" disptype="normal" text="edit_color"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:sabun"/>
+                <Cell col="1" disptype="normal" text="bind:name"/>
+                <Cell col="2" disptype="normal" text="bind:dept"/>
+                <Cell col="3" disptype="normal" text="bind:jikgup"/>
+                <Cell col="4" disptype="normal" text="bind:ipsa_date"/>
+                <Cell col="5" disptype="normal" text="bind:email"/>
+                <Cell col="6" disptype="normal" text="bind:sex"/>
+                <Cell col="7" disptype="normal" text="bind:marry"/>
+                <Cell col="8" disptype="normal" text="bind:salary"/>
+                <Cell col="9" disptype="normal" text="bind:smemo"/>
+                <Cell col="10" disptype="normal" text="bind:edit_color"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_ExcelImport" taborder="23" text="엑셀Import" left="89.5%" top="357" right="1%" height="23" style="background:greenyellow;" onclick="btn_ExcelImport_onclick"/>
+        <Static id="sta_title" taborder="24" text="Records Found" cssclass="sta_WF_GridFound2" left="33" top="72" bottom="-72" width="120"/>
+        <Static id="sta_total_cnt2" taborder="25" text="0" left="8" top="362" width="20" height="20"/>
+        <Button id="btn_ExcelExport" taborder="26" text="엑셀Export" onclick="btn_ExcelExport_onclick" top="59" right="12" width="76" height="23" style="background:greenyellow;"/>
+        <Button id="Button00" taborder="27" text="Button00" left="37%" top="21" right="47.5%" height="40" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_in" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="in_val1" type="STRING" size="100"/>
+          <Column id="in_val2" type="STRING" size="100"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="in_val2"/>
+            <Col id="in_val1"/>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_out" firefirstcount="1000" firenextcount="1000" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="sabun" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="dept" type="STRING" size="256"/>
+          <Column id="jikgup" type="STRING" size="256"/>
+          <Column id="ipsa_date" type="STRING" size="256"/>
+          <Column id="email" type="DATE" size="256"/>
+          <Column id="sex" type="STRING" size="256"/>
+          <Column id="marry" type="STRING" size="256"/>
+          <Column id="salary" type="STRING" size="256"/>
+          <Column id="smemo" type="STRING" size="256"/>
+          <Column id="edit_color" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_import" firefirstcount="1000" firenextcount="1000" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="sabun" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="dept" type="STRING" size="256"/>
+          <Column id="jikgup" type="STRING" size="256"/>
+          <Column id="ipsa_date" type="STRING" size="256"/>
+          <Column id="email" type="DATE" size="256"/>
+          <Column id="sex" type="STRING" size="256"/>
+          <Column id="marry" type="STRING" size="256"/>
+          <Column id="salary" type="STRING" size="256"/>
+          <Column id="smemo" type="STRING" size="256"/>
+          <Column id="edit_color" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Bind/>
+    <Script type="xscript5.0"><![CDATA[/***********************************************************************************
+ * 01. 업무구분 : 샘플
+ * 02. 메뉴명   : 
+ * 03. 메뉴설명 :  (트랜잭션,엑셀익스포트&&임포트)
+ * 04. 작성일   : 
+ * 05. 작성자   : 
+ * 06. 수정이력 : 
+ ***********************************************************************************
+ *     수정일     작성자   내용
+ ***********************************************************************************
+ *     
+ ***********************************************************************************
+*/
+/***********************************************************************************
+* include 선언부  													               *
+***********************************************************************************/
+
+
+/***********************************************************************************/
+/* 폼 전역변수 선언부												               */
+/***********************************************************************************/
+
+
+/***********************************************************************************
+* Form Event
+***********************************************************************************/
+/**
+ * form onload 함수
+ * @return 
+ * @example
+ *
+ * @memberOf this
+ */
+this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	//기본 공통  함수 초기화
+	Iject.formOnload(obj);
+
+}
+
+
+
+/***********************************************************************************
+* 사용자 Function
+***********************************************************************************/
+ /**
+ * transaction type(유형1) 
+ * @return 
+ * @example
+ *
+ * @memberOf public
+ */
+this.fn_search1 = function(p_sync)
+{
+	  // 조회조건(Condition)
+  this.ds_in.setColumn(0, "in_val1", "key1111");
+  this.ds_in.setColumn(0, "in_val2", "key2222");
+   p_sync = p_sync || true;
+	
+	var oDatas =  {
+			  svcid : "search1",
+			  sController : "jsp/nexa_inquiry.jsp",			 
+			  inds :["in_ds=ds_in"],
+			  outds :[
+				 "ds_out=ds_out"
+			     ],			     
+			  args  : ["in_var1=test11111"],
+			  bAsync : true,    // 비동기여부 (true : async  false: sync)
+			  nDataType : 0,   // (0: XML타입, 1: 이진 타입, 2: SSV 타입)
+			  bCompress :p_sync,	 //			  
+			}; 
+
+    //공통 transaction 함수 호츨   //function callback 
+	Iject.transaction(this,oDatas,function(svcid,errorcode,errormsg){   
+		var oMsg = { "svcid" : svcid,
+					 "errorcode" : errorcode,
+					 "errormsg" : errormsg
+		           };
+       Iject.log({name:"callback",msg:oMsg})
+		//this.fn_add();
+		if(errorcode < 0)
+		{	
+		   return;
+		} 
+	});
+}
+
+
+/**
+ * transaction type(유형2)
+ * @return 
+ * @example
+ *
+ * @memberOf public
+ */
+this.fn_search2 = function()
+{
+  this.ds_in.setColumn(0, "in_val1", "key1111");
+  this.ds_in.setColumn(0, "in_val2", "key2222");
+	
+  var strSvcID       = "search2";
+  var strURL         = this.fv_svcUrl  + "/nexa_inquiry.jsp";
+  var strInDatasets  = "in_ds=ds_in";
+  var strOutDatasets = "ds_out=ds_out";
+  var strArgument    = "in_var1=test11111";
+  var syncFlag       = p_sync || true;
+	
+  //공통 transaction 함수 호츨   //function callback 
+   this.xfn_transaction(strSvcID,strURL,strInDatasets,strOutDatasets,strArgument,"fn_callback");
+
+}
+
+/**
+ * form callback function
+ * @parma {string} service id 
+ * @parma {integer} errorcode
+ * @parma {string} errormessage
+ * @return  n/a
+ * @example
+ *
+ * @memberOf public
+ */
+this.fn_callback = function(svcid,errorcode,errormsg)
+{
+
+      if(errorcode < 0) return;	    
+	  // trace(this.ds_out.saveXML());
+	   trace(this.fv_arg1); 
+	   this.fn_setToalCnt();    //totalcount
+}
+
+
+/**
+ * set total result count
+ * @return 
+ * @example
+ *
+ * @memberOf public
+ */
+this.fn_setToalCnt = function()
+{
+   var bindDs1 = this.grd_list.getBindDataset();
+   var bindDs2 = this.grd_list2.getBindDataset();
+   
+   this.div_grid_top.sta_total_cnt.set_text(bindDs1.rowcount);
+   this.sta_total_cnt2.set_text(bindDs2.rowcount);
+}
+
+
+/**
+ * 조회 유형 1 
+ * @return 
+ * @example
+ *
+ * @memberOf public
+ */
+this.btn_search1_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	this.fn_search1();
+}
+
+/**
+ * 조회 유형 2 
+ * @return 
+ * @example
+ *
+ * @memberOf public
+ */
+this.btn_search2_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	this.fn_search2();
+}
+
+/**
+ * Excel Export 
+ * @return 
+ * @example
+ *
+ * @memberOf public
+ */
+this.btn_ExcelExport_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	
+	if(this.ds_out.rowcount < 1) this.fn_search1(false);   //sync 통신
+	 Iject.exportExcel(this,this.grd_list);
+	
+}
+
+this.btn_ExcelImport_onclick = function(obj:Button,  e:nexacro.ClickEventInfo)
+{
+	   /*
+   * 1.heead = 시트명  뿌릴 해드값 A1 ~ G1 
+   * 2. body = 그리드 body에 뿌릴 excel sheet 번호 
+   */
+    var sSheet = "body=sheet1!A2;";  
+   
+   /*
+   * 출력할 dataset 명
+   */
+	var ds = this.ds_out;
+	Iject.importExcel(this,sSheet,ds);
+}
+]]></Script>
+  </Form>
+</FDL>

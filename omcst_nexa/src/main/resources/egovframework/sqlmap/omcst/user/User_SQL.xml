@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="User">
+
+	<select id="userDAO.selectUserList" resultClass="userVO">
+	<![CDATA[
+		SELECT
+			SEQ
+			, NAME
+			, EMAIL
+			, ADDR
+			, ADDR_DETAIL
+			, PHONE
+			, TEL
+			, REG_DATE
+			, REG_USER
+			, UPDATE_DATE
+			, UPDATE_USER
+		FROM
+			MEMBER
+		ORDER BY
+			SEQ
+	]]>
+	</select>
+
+	<insert id="userDAO.insertUser" parameterClass="userVO">
+	<![CDATA[
+		INSERT INTO MEMBER
+			(
+				SEQ
+				, NAME
+				, EMAIL
+				, PASSWORD
+				, ADDR
+				, ADDR_DETAIL
+				, PHONE
+				, TEL
+				, REG_DATE
+				, REG_USER
+				, UPDATE_DATE
+				, UPDATE_USER
+			)
+		VALUES
+			(
+				(SELECT NVL(MAX(SEQ),0) + 1 FROM MEMBER)
+				, #NAME#
+				, #EMAIL#
+				, #PASSWORD#
+				, #ADDR#
+				, #ADDR_DETAIL#
+				, #PHONE#
+				, #TEL#
+				, SYSDATE
+				, #REG_USER#
+				, SYSDATE
+				, #UPDATE_USER#
+			)
+	]]>
+	</insert>
+	
+	<update id="userDAO.updateUser" parameterClass="userVO">
+	<![CDATA[
+		UPDATE MEMBER
+			SET
+				NAME = #NAME#
+				, EMAIL = #EMAIL#
+				, PASSWORD = NVL(#PASSWORD#, PASSWORD)
+				, ADDR = #ADDR#
+				, ADDR_DETAIL = #ADDR_DETAIL#
+				, PHONE = #PHONE#
+				, TEL = #TEL#
+				, UPDATE_DATE = SYSDATE
+				, UPDATE_USER = #UPDATE_USER#
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</update>
+	
+	<delete id="userDAO.deleteUser" parameterClass="userVO">
+	<![CDATA[
+		DELETE FROM MEMBER
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</delete>
+	
+</sqlMap>

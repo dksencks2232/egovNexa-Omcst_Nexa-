@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="project_list" left="0" top="0" width="900" height="500" titletext="New Form" onload="Projectlist_onload">
+    <Layouts>
+      <Layout>
+        <Div id="project_search_div" taborder="0" left="1%" top="16" right="1.78%" height="53" style="background:azure;">
+          <Layouts>
+            <Layout>
+              <Static id="label_name" taborder="46" text="프로젝트명" left="0.46%" top="10" width="75" height="30" style="background:aquamarine;align:center middle;"/>
+              <Edit id="txt_project" taborder="47" left="10.97%" top="10" right="75.2%" height="30"/>
+              <Button id="btn_search" taborder="48" text="검색" onclick="searchAnnual" cssclass="btn_WF_CRUD" top="10" right="47" width="50" height="23" domainId="nexa.search"/>
+              <Static id="label_date" taborder="49" text="기간" left="32.46%" top="10" width="75" height="30" style="background:aquamarine;align:center middle;"/>
+              <Static id="label_date01" taborder="50" text="~" left="59.89%" top="10" width="35" height="30" style="background:aquamarine;align:center middle;"/>
+              <Calendar id="cal_startdate" taborder="51" dateformat="yyyy-MM-dd" left="44.34%" top="10" right="41.03%" height="30"/>
+              <Calendar id="cal_enddate" taborder="52" dateformat="yyyy-MM-dd" left="66.06%" top="10" right="20%" height="30"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_grid_top" taborder="1" left="0" top="87" right="0" height="23" scrollbars="none">
+          <Layouts>
+            <Layout width="900" height="23">
+              <Button id="btn_delete" taborder="33" text="삭제" onclick="btn_del_onclick" cssclass="btn_WF_CRUD" top="0" right="25" width="50" height="23" domainId="nexa.delete"/>
+              <Button id="btn_add" taborder="34" text="추가" onclick="btn_add_onclick" cssclass="btn_WF_CRUD" top="0" right="79" width="50" height="23" domainId="nexa.add"/>
+              <Button id="btn_save" taborder="35" text="저장" onclick="btn_save_onclick" top="0" right="134" width="50" height="23"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="project_grid" taborder="2" binddataset="ds_project" useinputpanel="false" autofittype="col" useselcolor="false" left="10" top="120" right="10" bottom="58" oncelldblclick="project_grid_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="30"/>
+                <Column size="130"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="시퀀스"/>
+                <Cell col="1" text="프로젝트"/>
+                <Cell col="2" colspan="2" text="기간"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:SEQ"/>
+                <Cell col="1" text="bind:PROJ_NAME"/>
+                <Cell col="2" text="bind:PROJ_START"/>
+                <Cell col="3" text="bind:PROJ_END"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_project">
+        <ColumnInfo>
+          <Column id="SEQ" type="STRING" size="5"/>
+          <Column id="PROJ_NAME" type="STRING" size="30"/>
+          <Column id="PROJ_START" type="STRING" size="11"/>
+          <Column id="PROJ_END" type="STRING" size="11"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[
+this.Projectlist_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	// 리스트 호출
+	this.getSelect();
+}
+
+// 리스트 호출
+this.getSelect = function() {
+	this.ds_project.clearData();
+	var id = "ProjectService";
+	var url = application.services["svcurl"].url + "/project/projectList.do";
+	var inDateset = "";
+	var outDateset = "ds_project=ds_project";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+
+this.getSelectCallBack = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+	}
+}
+
+
+// 셀을 더블클릭했을 때
+this.project_grid_oncelldblclick = function(obj:Grid, e:nexacro.GridClickEventInfo)
+{
+	var nRow = this.ds_project.rowposition;
+	var oData ={
+		sId  : "project_popup",             //callback id
+		sUrl : "Base::Project_popup.xfdl",   //url
+		bshowtitlebar : true,     //title bar
+		bAutoSize  : true,       //autosize
+		bResize    : false,       //resize
+		bShowtatusbar : false,     //statusbar
+		sOpenalign    : "center middle",  //align
+		oArgs :  {
+			proj_seq : this.ds_project.getColumn(nRow, "SEQ")
+			, proj_name : this.ds_project.getColumn(nRow, "PROJ_NAME")
+		}    
+	};
+		   
+	Iject.showModal(this, oData, function(svcid,variant){
+		if(variant == "session") {
+			this.closefunc();
+		} else if(variant == "ok") {
+			this.getSelect();
+		}
+	});
+}
+]]></Script>
+  </Form>
+</FDL>

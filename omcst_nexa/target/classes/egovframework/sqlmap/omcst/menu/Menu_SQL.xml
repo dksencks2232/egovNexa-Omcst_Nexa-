@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Menu">
+
+	<select id="menuDAO.selectMenuList" parameterClass="menuVO" resultClass="menuVO">
+	<![CDATA[
+		SELECT
+			MENU_ID
+			, DECODE(MENU_LEVEL, 0, '  ', '') || MENU_NAME AS MENU_NAME
+			, MENU_SEQ
+			, MENU_OPTP
+			, PAGE_URL
+			, MENU_TOP
+			, MENU_GRP
+			, MENU_LEVEL
+			, PAGE_ID
+			, PAGE_NAME
+			, MENU_ARGS
+			, MENU_STAT
+			, CREATE_DT
+			, CREATE_USER
+			, UPDATE_DT
+			, UPDATE_USER
+			, MENU_DESC
+			, MENU_AUTH
+		FROM 
+			MENU
+		START WITH MENU_TOP IS NULL
+		CONNECT BY PRIOR  MENU_ID = MENU_TOP
+		ORDER SIBLINGS BY MENU_SEQ
+	]]>
+	</select>
+
+	<update id="menuDAO.megerMenu" parameterClass="menuVO">
+	<![CDATA[
+		MERGE INTO MENU A
+			USING (
+				SELECT
+					#MENU_ID# MENU_ID
+					, #MENU_NAME# MENU_NAME
+					, #MENU_SEQ# MENU_SEQ
+					, #MENU_OPTP# MENU_OPTP
+					, #PAGE_URL# PAGE_URL
+					, #MENU_TOP# MENU_TOP
+					, #MENU_GRP# MENU_GRP
+					, #MENU_LEVEL# MENU_LEVEL
+					, #PAGE_ID# PAGE_ID
+					, #PAGE_NAME# PAGE_NAME
+					, #MENU_ARGS# MENU_ARGS
+					, #MENU_STAT# MENU_STAT
+					, #MENU_DESC# MENU_DESC
+					, #MENU_AUTH# MENU_AUTH
+				FROM DUAL
+			) B ON (A.MENU_ID = B.MENU_ID)
+		WHEN MATCHED THEN
+			UPDATE SET
+				A.MENU_NAME = TRIM(B.MENU_NAME)
+				, A.MENU_SEQ = B.MENU_SEQ
+				, A.MENU_OPTP = B.MENU_OPTP
+				, A.PAGE_URL = B.PAGE_URL
+				, A.MENU_TOP = B.MENU_TOP
+				, A.MENU_GRP = B.MENU_GRP
+				, A.MENU_LEVEL = B.MENU_LEVEL
+				, A.PAGE_ID = B.PAGE_ID
+				, A.PAGE_NAME = B.PAGE_NAME
+				, A.MENU_ARGS = B.MENU_ARGS
+				, A.MENU_STAT = B.MENU_STAT
+				, A.MENU_DESC = B.MENU_DESC
+				, A.MENU_AUTH = B.MENU_AUTH
+				, A.UPDATE_DT = TO_CHAR(SYSDATE, 'YYYYMMDDhh24missSSS')
+				, A.UPDATE_USER = #UPDATE_USER#
+		WHEN NOT MATCHED THEN
+			INSERT
+				(
+					MENU_ID
+					, MENU_NAME
+					, MENU_SEQ
+					, MENU_OPTP
+					, PAGE_URL
+					, MENU_TOP
+					, MENU_GRP
+					, MENU_LEVEL
+					, PAGE_ID
+					, PAGE_NAME
+					, MENU_ARGS
+					, MENU_STAT
+					, CREATE_DT
+					, CREATE_USER
+					, UPDATE_DT
+					, UPDATE_USER
+					, MENU_DESC
+					, MENU_AUTH
+				)
+			VALUES
+				(
+					(SELECT NVL(MAX(MENU_ID)+1, '0000') FROM MENU)
+					, #MENU_NAME#
+					, #MENU_SEQ#
+					, #MENU_OPTP#
+					, #PAGE_URL#
+					, #MENU_TOP#
+					, #MENU_GRP#
+					, #MENU_LEVEL#
+					, #PAGE_ID#
+					, #PAGE_NAME#
+					, #MENU_ARGS#
+					, #MENU_STAT#
+					, TO_CHAR(SYSDATE, 'YYYYMMDDhh24missSSS')
+					, #CREATE_USER#
+					, TO_CHAR(SYSDATE, 'YYYYMMDDhh24missSSS')
+					, #UPDATE_USER#
+					, #MENU_DESC#
+					, #MENU_AUTH#
+				)
+	]]>
+	</update>
+	
+	<delete id="menuDAO.deleteMenu" parameterClass="menuVO">
+	<![CDATA[
+		DELETE FROM MENU
+		WHERE
+			MENU_ID = #MENU_ID#
+	]]>
+	</delete>
+	
+	<select id="menuDAO.selectUserMenuList" resultClass="menuVO" parameterClass="userVO">
+	<![CDATA[
+		SELECT
+			A.MENU_ID
+			, DECODE(A.MENU_LEVEL, 0, '  ', '') || A.MENU_NAME AS MENU_NAME
+			, A.MENU_SEQ
+			, A.MENU_OPTP
+			, A.PAGE_URL
+			, A.MENU_TOP
+			, A.MENU_GRP
+			, A.MENU_LEVEL
+			, A.PAGE_ID
+			, A.PAGE_NAME
+			, A.MENU_ARGS
+			, A.MENU_STAT
+			, A.CREATE_DT
+			, A.CREATE_USER
+			, A.UPDATE_DT
+			, A.UPDATE_USER
+			, A.MENU_DESC
+			, A.MENU_AUTH
+		FROM 
+			MENU A
+		WHERE
+			EXISTS (
+				SELECT * FROM 
+					USER_AUTH B
+					INNER JOIN MENU_AUTH C ON (B.AUTH_SEQ = C.SEQ)
+					INNER JOIN AUTH D ON (B.AUTH_SEQ = D.SEQ AND D.USE_YN = 'Y')
+				WHERE
+					B.USER_SEQ = #SEQ#
+					AND A.MENU_ID = C.MENU_ID  
+			)
+		START WITH A.MENU_TOP IS NULL
+		CONNECT BY PRIOR A.MENU_ID = A.MENU_TOP
+		ORDER SIBLINGS BY A.MENU_SEQ
+	]]>
+	</select>
+</sqlMap>

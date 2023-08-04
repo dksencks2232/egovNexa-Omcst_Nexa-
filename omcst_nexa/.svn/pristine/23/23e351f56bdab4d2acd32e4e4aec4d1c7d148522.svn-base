@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ProjectAttend">
+
+	<select id="projectAttendDAO.selectProjectAttendInfoList" parameterClass="projectAttendVO" resultClass="projectAttendVO">
+	<![CDATA[
+		SELECT PJ.PROJ_START                                                      
+		        , PJ.PROJ_END
+		        , EXTRACT(YEAR FROM (TO_DATE(PJ.PROJ_START, 'YYYY-MM-DD'))) AS PROJ_START_YYYY
+		        , EXTRACT(MONTH FROM (TO_DATE(PJ.PROJ_START, 'YYYY-MM-DD'))) AS PROJ_START_MM
+		        , EXTRACT(YEAR FROM (TO_DATE(PJ.PROJ_END, 'YYYY-MM-DD'))) AS PROJ_END_YYYY
+		        , EXTRACT(MONTH FROM (TO_DATE(PJ.PROJ_END, 'YYYY-MM-DD'))) AS PROJ_END_MM
+		        , TO_CHAR(CEIL(MONTHS_BETWEEN(PJ.PROJ_END, PJ.PROJ_START))) AS M_BWN
+		        , PJ.PROJ_NAME
+		FROM PROJECT PJ
+		WHERE SEQ = #PROJ_SEQ#
+	]]>
+	</select>
+	
+	<select id="projectAttendDAO.selectProjectAttendMbetweenList" parameterClass="projectAttendVO" resultClass="projectAttendVO">
+	<![CDATA[
+		SELECT YEAR, COUNT(A.YEAR) as M_COUNT
+		FROM (
+		        SELECT YYYYMM, SUBSTR(YYYYMM, 0, 4) AS YEAR, SUBSTR(YYYYMM, 5, 2) AS MONTH
+		        FROM (
+		                SELECT TO_CHAR(ADD_MONTHS((SELECT PROJ_START FROM PROJECT WHERE SEQ = #PROJ_SEQ#), LEVEL-1), 'YYYYMM') AS YYYYMM
+		                FROM DUAL
+		                CONNECT BY LEVEL <= (SELECT CEIL(MONTHS_BETWEEN(PJ.PROJ_END, PJ.PROJ_START)) FROM PROJECT PJ WHERE PJ.SEQ = #PROJ_SEQ#)
+		        )
+		        ORDER BY YYYYMM, YEAR, MONTH   
+		) A
+		GROUP BY YEAR
+		ORDER BY YEAR ASC
+		
+	]]>
+<!-- 		<iterate prepend="" property="strList"> -->
+<!-- 			, DECODE(DATE, ${strList.date}, '1', '0') AS COL1 -->
+<!-- 	      , DECODE(DATE, '202102', '1', '0') AS COL2 -->
+<!-- 	      , DECODE(DATE, '202103', '1', '0') AS COL3 -->
+<!-- 	      , DECODE(DATE, '202104', '1', '0') AS COL4 -->
+<!-- 	      , DECODE(DATE, '202105', '1', '0') AS COL5 -->
+<!-- 	      , DECODE(DATE, '202106', '1', '0') AS COL6 -->
+<!-- 	      , DECODE(DATE, '202107', '1', '0') AS COL7 -->
+<!--        </iterate> -->
+	</select>
+	
+	<select id="projectAttendDAO.selectProjectAttendList" parameterClass="projectAttendVO" resultClass="projectAttendVO">
+	<![CDATA[
+		SELECT DPH.DEV_SEQ   AS DEV_SEQ         
+		            , DV.NAME   AS DEV_NAME
+		            , DPH.ATTEND_STR_DATE 
+		            , DPH.ATTEND_END_DATE
+		FROM DEV_PROJ_HISTORY DPH		
+		LEFT OUTER JOIN DEVELOPER DV
+		ON DPH.DEV_SEQ = DV.SEQ
+		WHERE DPH.PROJ_SEQ = #PROJ_SEQ#
+		AND DPH.ATTEND_YN = 'Y'
+		ORDER BY DPH.DEV_SEQ ASC
+	]]>
+	</select>	
+	
+	<select id="projectAttendDAO.selectProjectTotalMonthList" parameterClass="projectAttendVO" resultClass="projectAttendVO">
+		<![CDATA[
+		SELECT YYYYMM			  
+       	FROM (
+               SELECT TO_CHAR(ADD_MONTHS((SELECT PROJ_START FROM PROJECT WHERE SEQ = #PROJ_SEQ#), LEVEL-1), 'YYYYMM') AS YYYYMM
+               FROM DUAL
+               CONNECT BY LEVEL <= (SELECT CEIL(MONTHS_BETWEEN(PJ.PROJ_END, PJ.PROJ_START)) FROM PROJECT PJ WHERE PJ.SEQ = #PROJ_SEQ#)
+       	)
+       	ORDER BY YYYYMM
+		]]>
+	</select>	
+	
+	<select id="projectAttendDAO.selectProjectDevAttendlList" parameterClass= "java.util.List" resultClass="java.util.List">
+		
+		SELECT DV.SEQ AS SEQ
+				, DV.NAME AS NAME
+				, DPH.ATTEND_STR_DATE AS STR_DATE
+				, DPH.ATTEND_END_DATE AS END_DATE				
+					<iterate >
+						, (CASE WHEN TO_CHAR(DPH.ATTEND_STR_DATE, 'YYYYMM') <![CDATA[<]]>= #[].YYYYMM# AND TO_CHAR(DPH.ATTEND_END_DATE, 'YYYYMM') >= #[].YYYYMM# THEN '1' ELSE '0' END) 
+					</iterate>			
+						
+		FROM DEVELOPER DV
+		INNER JOIN DEV_PROJ_HISTORY DPH
+		ON DV.SEQ = DPH.DEV_SEQ
+		WHERE DPH.PROJ_SEQ = #PROJ_SEQ#
+		ORDER BY DV.SEQ ASC
+	</select>	
+	
+	<select id="projectAttendDAO.selectProjectAttendMemeberList" parameterClass="projectAttendVO" resultClass="projectAttendVO">
+		SELECT DPH.DEV_SEQ
+				, DV.NAME AS DEV_NAME
+				, TO_CHAR(DPH.ATTEND_STR_DATE, 'YYYYMM') AS ATTEND_STR_DATE
+				, TO_CHAR(DPH.ATTEND_END_DATE, 'YYYYMM') AS ATTEND_END_DATE
+		FROM DEV_PROJ_HISTORY DPH
+		INNER JOIN DEVELOPER DV
+		ON DPH.DEV_SEQ = DV.SEQ
+		WHERE DPH.PROJ_SEQ = #PROJ_SEQ#
+		AND DPH.ATTEND_YN = 'Y'
+	</select>
+</sqlMap>

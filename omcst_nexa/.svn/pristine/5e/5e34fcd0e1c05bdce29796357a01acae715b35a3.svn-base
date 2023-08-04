@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="TOKN">﻿</span><span class="COMM">/**
+<span class='line'>  2</span>  * @fileoverview 넥사크로 global variable
+<span class='line'>  3</span>  * @author  copyright 2015 TOBESOFT {J}
+<span class='line'>  4</span>  */</span><span class="WHIT">
+<span class='line'>  5</span> </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">!</span><span class="NAME">JsNamespace.exist</span><span class="PUNC">(</span><span class="STRN">"Iject.$"</span><span class="PUNC">)</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>  6</span> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>  7</span> 
+<span class='line'>  8</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>  9</span>      * @namespace
+<span class='line'> 10</span>      * @name global variable
+<span class='line'> 11</span>      * @private
+<span class='line'> 12</span>      * @author
+<span class='line'> 13</span>      * @memberof!  Iject.$
+<span class='line'> 14</span>      */</span><span class="WHIT">
+<span class='line'> 15</span> </span><span class="WHIT">    </span><span class="NAME">JsNamespace.declare</span><span class="PUNC">(</span><span class="STRN">"Iject.$"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 16</span> 
+<span class='line'> 17</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'> 18</span>          * 공통 Gobal variable 설정
+<span class='line'> 19</span>          *  @private
+<span class='line'> 20</span>          * @memberOf Iject.$
+<span class='line'> 21</span>          */</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">		</span><span class="NAME">hFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">  </span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">		</span><span class="NAME">leftFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="WHIT">		</span><span class="NAME">loginFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="WHIT">		</span><span class="NAME">hFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="WHIT">		</span><span class="NAME">leftFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 27</span> </span><span class="WHIT">		</span><span class="NAME">vFrameSet1</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 28</span> </span><span class="WHIT">		</span><span class="NAME">topFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 29</span> </span><span class="WHIT">		</span><span class="NAME">workFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">   </span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="WHIT">		</span><span class="NAME">mainFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">  </span><span class="WHIT">
+<span class='line'> 31</span> </span><span class="WHIT">		</span><span class="NAME">mdiFrame</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">   </span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="WHIT">		</span><span class="NAME">httpurl</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">							  	</span><span class="COMM">//trnasaction service url</span><span class="WHIT">
+<span class='line'> 33</span> </span><span class="WHIT">		</span><span class="NAME">framesize</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"0,*,42"</span><span class="PUNC">,</span><span class="WHIT">  		         							  </span><span class="COMM">//defualt seperatesize</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">		</span><span class="NAME">loginSize</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="NAME">width</span><span class="PUNC">:</span><span class="NUMB">450</span><span class="PUNC">,</span><span class="NAME">height</span><span class="PUNC">:</span><span class="NUMB">290</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="WHIT">		</span><span class="NAME">mainframeSize</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 36</span> </span><span class="WHIT">		</span><span class="NAME">ExtCommonPath</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 37</span> </span><span class="WHIT">		</span><span class="NAME">userid</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 38</span> </span><span class="WHIT">		</span><span class="NAME">usernm</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT">  </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 39</span> </span><span class="WHIT">		</span><span class="WHIT">
+<span class='line'> 40</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 41</span>          * frame variabel setting
+<span class='line'> 42</span>          * @private
+<span class='line'> 43</span>          * @memberOf Iject.$
+<span class='line'> 44</span>          */</span><span class="WHIT">
+<span class='line'> 45</span> </span><span class="WHIT">		</span><span class="NAME">urlLogin</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT">  </span><span class="STRN">"Frame::Login.xfdl"</span><span class="PUNC">,</span><span class="WHIT">       </span><span class="COMM">//login url setting</span><span class="WHIT">
+<span class='line'> 46</span> </span><span class="WHIT">		</span><span class="NAME">urlLeft</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Frame::LeftFrame.xfdl"</span><span class="PUNC">,</span><span class="WHIT">    </span><span class="COMM">//leftFrame url setting</span><span class="WHIT">
+<span class='line'> 47</span> </span><span class="WHIT">		</span><span class="NAME">urlTop</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT">  </span><span class="STRN">"Frame::TopFrame.xfdl"</span><span class="PUNC">,</span><span class="WHIT">     </span><span class="COMM">//topFrame url setting</span><span class="WHIT">
+<span class='line'> 48</span> </span><span class="WHIT">		</span><span class="NAME">urlMdi</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Frame::MDIFrame.xfdl"</span><span class="PUNC">,</span><span class="WHIT">     </span><span class="COMM">//MDIFrame url setting</span><span class="WHIT">
+<span class='line'> 49</span> </span><span class="WHIT">		</span><span class="NAME">urlMain</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Frame::MainFrame.xfdl"</span><span class="PUNC">,</span><span class="WHIT">    </span><span class="COMM">//MainFrame url setting</span><span class="WHIT">
+<span class='line'> 50</span> 
+<span class='line'> 51</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 52</span> 		 * work frame variabel setting
+<span class='line'> 53</span> 		 * @private
+<span class='line'> 54</span> 		 * @memberOf Iject.$
+<span class='line'> 55</span> 		 */</span><span class="WHIT">
+<span class='line'> 56</span> </span><span class="WHIT">		</span><span class="NAME">w_winkey</span><span class="WHIT">  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 57</span> </span><span class="WHIT">	    </span><span class="NAME">w_pageurl</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 58</span> </span><span class="WHIT">	    </span><span class="NAME">w_menunm</span><span class="WHIT">  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 59</span> </span><span class="WHIT">	    </span><span class="NAME">w_mneuid</span><span class="WHIT">  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 60</span> </span><span class="WHIT">        </span><span class="NAME">w_title</span><span class="WHIT">   </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 61</span> 
+<span class='line'> 62</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 63</span> 		 * Set Menu Column
+<span class='line'> 64</span> 		 * @private
+<span class='line'> 65</span> 		 * @memberOf Iject.$
+<span class='line'> 66</span> 		 */</span><span class="WHIT">
+<span class='line'> 67</span> </span><span class="WHIT">		</span><span class="NAME">MENU_ID</span><span class="WHIT">      </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"MENU_ID"</span><span class="PUNC">,</span><span class="WHIT">    </span><span class="COMM">//  MENU ID</span><span class="WHIT">
+<span class='line'> 68</span> </span><span class="WHIT">		</span><span class="NAME">MENU_NM</span><span class="WHIT">      </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"MENU_NAME"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 69</span> </span><span class="WHIT">		</span><span class="NAME">PAGE_URL</span><span class="WHIT">     </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"PAGE_URL"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 70</span> </span><span class="WHIT">		</span><span class="NAME">PAGE_ID</span><span class="WHIT">      </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"PAGE_ID"</span><span class="PUNC">,</span><span class="WHIT">    </span><span class="COMM">//PROGRAM_ID</span><span class="WHIT">
+<span class='line'> 71</span> </span><span class="WHIT">		</span><span class="NAME">MENU_ARGS</span><span class="WHIT">    </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"MENU_ARGS"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="COMM">//메뉴파라메터</span><span class="WHIT">
+<span class='line'> 72</span> </span><span class="WHIT">		</span><span class="NAME">WIN_ID</span><span class="WHIT">       </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"WIN_ID"</span><span class="PUNC">,</span><span class="WHIT">      </span><span class="COMM">//윈도우(프레임)아이디(열린 메뉴의 윈도우 아이디)</span><span class="WHIT">
+<span class='line'> 73</span> </span><span class="WHIT">		</span><span class="NAME">MAX</span><span class="WHIT">          </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NUMB">10</span><span class="PUNC">,</span><span class="WHIT">            </span><span class="COMM">//열린 메뉴 최대 갯수</span><span class="WHIT">
+<span class='line'> 74</span> </span><span class="WHIT">		</span><span class="NAME">TITLE</span><span class="WHIT">        </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"TITLE"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 75</span> </span><span class="WHIT">		</span><span class="NAME">Desc_Url</span><span class="WHIT">     </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Desc_Url"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 76</span> </span><span class="WHIT">		</span><span class="NAME">Desc_Url_ko</span><span class="WHIT">  </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"Desc_Url_ko"</span><span class="WHIT">
+<span class='line'> 77</span> 
+<span class='line'> 78</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 79</span> 
+<span class='line'> 80</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 81</span> </span></pre></body></html>

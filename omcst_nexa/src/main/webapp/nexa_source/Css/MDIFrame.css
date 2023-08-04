@@ -1,0 +1,669 @@
+﻿/******************************************************************************************************/
+/***** PROJECT NAME		: NEXACRO DEFAULT THEME	********/
+/***** CREATION DATES		: 2016.12.16		********/
+/***** DRAFTER 			: TOBESOFT DESIGN TEAM	********/
+/***** DISTRIBUTION DATE 	: 2016.12.20		********/
+/******************************************************************************************************/
+
+/***** MDI Frame 영역 Start *****/
+
+/***** MDI Frame *****/
+
+Form.frm_MDI, Form.frm_MDI:mouseover, Form.frm_MDI:pushed,
+Form.frm_MDI:focused, Form.frm_MDI:selected, Form.frm_MDI:disabled
+{
+	background		: URL('theme://images/img_MDI_bg.png') repeat-x left top;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+}
+
+
+/* Static */
+Static.sta_MDI_Tline, Static.sta_MDI_Tline:mouseover
+{
+	background			: #c0c0c0ff;
+}
+Static.sta_MDI_Vline, Static.sta_MDI_Vline:mouseover
+{
+	background			: #93959aff;
+}
+Static.sta_MDI_openList, Static.sta_MDI_openList:mouseover
+{
+	align				: left middle;
+	background			: #0e559f URL('theme://images/ico_MDI_openList.png') left middle;
+	border				: 0 none;
+	color				: #ffffff;
+	font				: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding				: 0 0 1 30;
+}
+
+
+/* MDI btn */
+Button.btn_MDI_Home, Button.btn_MDI_Home:focused, Button.btn_MDI_Home:selected, Button.btn_MDI_Home:disabled
+{
+	background			: transparent;
+	border				: 0 none,1 solid #dadada,0 none,1 solid #dadada;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_HomeN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_MDI_Home:mouseover
+{
+	background			: #ffffff;
+	border				: 0 none,1 solid #dadada,0 none,1 solid #dadada;
+	image				: theme://images/btn_MDI_HomeO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}
+Button.btn_MDI_Home:pushed
+{
+	background			: #ffffff;
+	border				: 0 none,1 solid #dadada,0 none,1 solid #dadada;
+	image				: theme://images/btn_MDI_HomeP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+}
+
+Button.btn_MDI_Pre, Button.btn_MDI_Pre:focused, Button.btn_MDI_Pre:selected
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_PreN1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_Pre:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_PreO1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Button.btn_MDI_Pre:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_PreP1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;	
+}
+Button.btn_MDI_Pre:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_PreN1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity 			: 40 ;
+}
+Button.btn_MDI_Nxt, Button.btn_MDI_Nxt:focused, Button.btn_MDI_Nxt:selected
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_NxtN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_Nxt:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_NxtO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 100%;		
+}
+Button.btn_MDI_Nxt:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_NxtP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 100%;		
+}
+Button.btn_MDI_Nxt:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_PreN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity 			: 40 ;
+}
+
+Button.btn_MDI_Openlist, Button.btn_MDI_Openlist:focused, Button.btn_MDI_Openlist:selected, Button.btn_MDI_Openlist:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_OpenlistN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_Openlist:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_OpenlistO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 100%;
+}
+Button.btn_MDI_Openlist:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_OpenlistP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+
+Button.btn_MDI_Full, Button.btn_MDI_Full:focused, Button.btn_MDI_Full:selected, Button.btn_MDI_Full:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_FullN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_Full:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_FullO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Button.btn_MDI_Full:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_FullP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+
+Button.btn_MDI_Case, Button.btn_MDI_Case:focused, Button.btn_MDI_Case:selected, Button.btn_MDI_Case:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_CaseN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_Case:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_CaseO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Button.btn_MDI_Case:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_CaseP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+
+Button.btn_MDI_V, Button.btn_MDI_V:focused, Button.btn_MDI_V:selected, Button.btn_MDI_V:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_VN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_V:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_VO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Button.btn_MDI_V:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_VP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+
+Button.btn_MDI_H, Button.btn_MDI_H:focused, Button.btn_MDI_H:selected, Button.btn_MDI_H:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_HN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_H:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_HO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Button.btn_MDI_H:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_HP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+
+Button.btn_MDI_Allclose, Button.btn_MDI_Allclose:focused, Button.btn_MDI_Allclose:selected, Button.btn_MDI_Allclose:disabled
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_AllcloseN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Button.btn_MDI_Allclose:mouseover
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_AllcloseO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Button.btn_MDI_Allclose:pushed
+{
+	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_AllcloseP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+
+
+
+/* tab_MDI_btn */
+Tab.tab_MDI_btn, Tab.tab_MDI_btn:disabled, Tab.tab_MDI_btn:focused
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent URL('theme://images/bottom_tab_bgN.png') stretch 4,4;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 4 4 8 10;
+	color			: #aaaaaaff;
+	cursor			: default;
+	focusborder		: 0 none;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	showextrabutton		: true;
+}
+Tab.tab_MDI_btn:mouseover
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent URL('theme://images/bottom_tab_bgO.png') stretch 4,4;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 4 4 8 10;
+	color			: #333333ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+Tab.tab_MDI_btn:selected
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent URL('theme://images/bottom_tab_bgS.png') stretch 4,4;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 4 4 8 10;
+	color			: #333333ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+Tab.tab_MDI_btn>#extrabutton
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	image			: URL('theme://images/extrabutton_N.png');
+	cursor			: hand;
+	width : ;
+}
+Tab.tab_MDI_btn>#extrabutton:mouseover
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	image			: URL('theme://images/extrabutton_O.png');
+}
+
+Tab.tab_MDI_btn>#spinupbutton
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_PreN1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Tab.tab_MDI_btn>#spinupbutton:mouseover
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_PreO1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;
+}
+Tab.tab_MDI_btn>#spinupbutton:pushed, Tab.tab_MDI_btn>#spinupbutton:focused
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_PreP1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;	
+	opacity				: 100%;	
+}
+Tab.tab_MDI_btn>#spinupbutton:disabled
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_PreN1.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity 			: 40 ;
+}
+Tab.tab_MDI_btn>#spindownbutton
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_NxtN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 50%;
+}
+Tab.tab_MDI_btn>#spindownbutton:mouseover
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_NxtO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 100%;		
+}
+Tab.tab_MDI_btn>#spindownbutton:pushed, Tab.tab_MDI_btn>#spindownbutton:focused
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	image				: theme://images/btn_MDI_NxtP.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity				: 100%;		
+}
+Tab.tab_MDI_btn>#spindownbutton:disabled
+{	background			: transparent;
+	border				: 0 none #216eb2;
+	cursor				: hand;
+	image				: theme://images/btn_MDI_NxtN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+	opacity 			: 40 ;
+}
+
+/* tab_MDI_btn */
+Tab.tab_MDI_no_btn, Tab.tab_MDI_no_btn:disabled, Tab.tab_MDI_no_btn:focused
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent URL('theme://images/bottom_tab_bgN.png') stretch 4,4;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 4 4 8 10;
+	color			: #aaaaaaff;
+	cursor			: default;
+	focusborder		: 0 none;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	showextrabutton		: true;
+}
+Tab.tab_MDI_no_btn:mouseover
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent URL('theme://images/bottom_tab_bgO.png') stretch 4,4;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 4 4 8 10;
+	color			: #333333ff;
+	cursor			: default;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+}
+Tab.tab_MDI_no_btn:selected
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	buttonbackground	: transparent URL('theme://images/bottom_tab_bgN.png') stretch 4,4;
+	buttonborder		: 0 none;
+	buttonbordertype	: normal 0 0;
+	buttonpadding		: 4 4 8 10;
+	color			: #aaaaaaff;
+	cursor			: default;
+	focusborder		: 0 none;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	showextrabutton		: true;
+}
+Tab.tab_MDI_no_btn>#extrabutton
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	image			: URL('theme://images/extrabutton_N.png');
+	cursor			: hand;
+}
+Tab.tab_MDI_no_btn>#extrabutton:mouseover
+{
+	align			: center middle;
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	image			: URL('theme://images/extrabutton_O.png');
+}
+PopupDiv.pdiv_TF_search
+{
+	background			: #ffffffff;
+	border				: 2 solid #0e559f;
+	bordertype			: normal 0 0;
+}
+
+Button.btn_pop_close, Button.btn_pop_close:focused, Button.btn_pop_close:selected, Button.btn_pop_close:disabled
+{
+	background			: ;
+	border				: 0 none #0c2d4eff;
+	bordertype			: normal 0 0;
+	cursor				: hand;
+	image				: theme://images/btn_pop_closeN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_pop_close:mouseover
+{
+	background			: ;
+	border				: 0 none #0c2d4eff;
+	bordertype			: normal 0 0;
+	image				: theme://images/btn_pop_closeO.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+Button.btn_pop_close:pushed
+{
+	background			: ;
+	border				: 0 none #0c2d4eff;
+	bordertype			: normal 0 0;
+	image				: theme://images/btn_pop_closeN.png;
+	imagealign			: center middle;
+	padding				: 0 0 0 0;
+}
+
+
+
+/***** Grid *****/
+
+Grid.grd_MDI_Openlist
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+	bordertype		: normal;
+	color			: #31465bff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+}
+Grid.grd_MDI_Openlist:mouseover
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+}
+Grid.grd_MDI_Openlist:focused
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+}
+Grid.grd_MDI_Openlist:disabled
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 0 none #216eb2ff;
+}
+Grid.grd_MDI_Openlist>#body, Grid.grd_MDI_Openlist>#body:selected, Grid.grd_MDI_Openlist>#body:disabled, Grid.grd_MDI_Openlist>#body:focused
+{
+	align			: left middle;	
+	background		: transparent;
+	border			: 0 none;
+	cellbackground		: transparent;
+	cellbackground2		: transparent;
+	cellcolor		: #555555ff;
+	cellcolor2		: #555555ff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 0 none #ebebebff;
+	cellpadding		: 2 4 2 4;
+	cursor			: hand;
+	selectbackground	: transparent;
+	selectborder		: 0 none #c8d5f1ff;
+	selectcolor		: #555555ff;
+	selectfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 0 none #c8d5f1ff;
+}
+Grid.grd_MDI_Openlist>#body:mouseover
+{
+	align			: left middle;
+	background		: transparent;
+	border			: 0 none;
+	cellbackground		: transparent;
+	cellbackground2		: transparent;
+	cellcolor		: #216eb2ff;
+	cellcolor2		: #216eb2ff;
+	cellfont		: underline 9 Dotum;
+	cellline		: 0 none #ebebebff;
+	cellpadding		: 2 4 2 4;
+	selectborder		: 0 none #c8d5f1ff;
+}
+Grid.grd_MDI_Openlist>#vscrollbar, Grid.grd_MDI_Openlist>#vscrollbar:mouseover, Grid.grd_MDI_Openlist>#vscrollbar:pushed,
+Grid.grd_MDI_Openlist>#vscrollbar:focused, Grid.grd_MDI_Openlist>#vscrollbar:selected,
+Grid.grd_MDI_Openlist>#hscrollbar, Grid.grd_MDI_Openlist>#hscrollbar:mouseover, Grid.grd_MDI_Openlist>#hscrollbar:pushed,
+Grid.grd_MDI_Openlist>#hscrollbar:focused, Grid.grd_MDI_Openlist>#hscrollbar:selected
+{
+	background		: #0000001e;
+	border			: 0 none;
+	bordertype		: round 4 4;
+	decbtnsize		: 0;
+	incbtnsize		: 0;
+	scrollbarsize		: 9;
+}
+Grid.grd_MDI_Openlist>#vscrollbar>#trackbar,Grid.grd_MDI_Openlist>#vscrollbar>#trackbar:focused,
+Grid.grd_MDI_Openlist>#hscrollbar>#trackbar,Grid.grd_MDI_Openlist>#hscrollbar>#trackbar:focused
+{
+	background		: #a0a4a9ff;
+	border			: 0 none;
+	bordertype		: round 4 4;
+	barminsize		: 30;
+	decbtnsize		: 0;
+	incbtnsize		: 0;
+	scrollbarsize		: 9;
+}
+Grid.grd_MDI_Openlist>#vscrollbar>#trackbar:mouseover,
+Grid.grd_MDI_Openlist>#hscrollbar>#trackbar:mouseover
+{
+	background		: #898d93ff;
+}
+Grid.grd_MDI_Openlist>#vscrollbar>#trackbar:pushed, Grid.grd_MDI_Openlist>#vscrollbar>#trackbar:selected,
+Grid.grd_MDI_Openlist>#hscrollbar>#trackbar:pushed, Grid.grd_MDI_Openlist>#hscrollbar>#trackbar:selected
+{
+	background		: #74797fff;
+}
+Grid.grd_MDI_Openlist>#vscrollbar>#trackbar:disabled,
+Grid.grd_MDI_Openlist>#hscrollbar>#trackbar:disabled
+{
+	background		: #c7c7c7ff;
+}
+Grid.grd_MDI_Openlist>#vscrollbar>#incbutton, Grid.grd_MDI_Openlist>#vscrollbar>#decbutton,
+Grid.grd_MDI_Openlist>#hscrollbar>#incbutton, Grid.grd_MDI_Openlist>#hscrollbar>#decbutton
+{
+	background		: transparent;
+	border			: 0 none;
+}
+Grid.grd_MDI_Openlist>#resizebutton, Grid.grd_MDI_Openlist>#resizebutton:mouseover, Grid.grd_MDI_Openlist>#resizebutton:pushed,
+Grid.grd_MDI_Openlist>#resizebutton:focused, Grid.grd_MDI_Openlist>#resizebutton:selected
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+}
+Grid.grd_MDI_Openlist>#resizebutton:disabled
+{
+	background		: transparent;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+}

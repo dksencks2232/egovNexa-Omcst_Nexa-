@@ -1,0 +1,236 @@
+﻿/******************************************************************************************************/
+/***** PROJECT NAME		: NEXACRO DEFAULT THEME	********/
+/***** CREATION DATES		: 2016.12.16		********/
+/***** DRAFTER 			: TOBESOFT DESIGN TEAM	********/
+/***** DISTRIBUTION DATE 	: 2016.12.20		********/
+/******************************************************************************************************/
+
+/***** Left Frame 영역 Start *****/
+
+/***** Left Frame *****/
+
+Form.frm_LF, Form.frm_LF:mouseover, Form.frm_LF:pushed,
+Form.frm_LF:focused, Form.frm_LF:selected, Form.frm_LF:disabled
+{
+	background		: URL('theme://images/img_LF_bg.png') repeat-y right middle;
+	border			: 0 none;
+	bordertype		: normal 0 0;
+	color			: #333333ff;
+}
+
+
+/* Static */
+Static.sta_LF_MenuTi, Static.sta_LF_MenuTi:mouseover
+{
+	background		: #5791cd;
+	border			: 0 none #fc6219;
+	bordertype		: normal;
+	color			: #ffffff;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 12;
+}
+
+Static.sta_LF_Dbg, Static.sta_LF_Dbg:mouseover
+{
+	background		: #f1f1f3;
+	border			: 1 solid #e3e3e5, 0 none #e3e3e5, 0 none #e3e3e5, 0 none #e3e3e5;
+	bordertype		: normal;
+	color			: #ffffff;
+	font			: bold antialias 10 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_LF_Team, Static.sta_LF_Team:mouseover
+{
+	background		: ;
+	border			: 0 none #e3e3e5;
+	bordertype		: normal;
+	color			: #848e9c;
+	font			: antialias 8 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+Static.sta_LF_Name, Static.sta_LF_Name:mouseover
+{
+	background		: ;
+	border			: 0 none #e3e3e5;
+	bordertype		: normal;
+	color			: #1950a8;
+	font			: bold antialias 9 malgun gothic, Tahoma, Arial;
+	padding			: 0 0 0 0;
+}
+
+
+
+
+/* Grd_menu_tree */
+Grid.grd_LF_menu, Grid.grd_LF_menu:mouseover, Grid.grd_LF_menu:focused
+{
+	align			: center middle;
+	background		: #ffffffff;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	color			: #333333ff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	treeclosebuttonimage	: URL('theme://images/tree_LF_close.png');
+	treecollapseimage	: ;
+	treeexpandimage		: ;
+	treeitemimage		: URL('theme://images/tree_LF_item.png');
+	treeopenbuttonimage	: URL('theme://images/tree_LF_open.png');
+}
+Grid.grd_LF_menu>#body, Grid.grd_LF_menu>#body:focused
+{
+	align			: center middle;	
+	background		: #ffffffff;
+	border			: 0 none #e5e5e5;
+	cellbackground		: #ffffffff;
+	cellbackground2		: #ffffffff;
+	cellcolor		: #555555ff;
+	cellcolor2		: #555555ff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 0 none #e5e5e5ff;
+	celllinetype		: exhor;
+	cellpadding		: 2 5 2 5;
+	cursor			: hand;
+	selectbackground	: #f8f8f8ff;
+	selectborder		: ;
+	selectcolor		: #216eb2ff;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 0 none #e5e5e5ff;
+}
+Grid.grd_LF_menu>#body:mouseover
+{
+	background		: #f8f8f8ff;
+	border			: 0 none #e5e5e5;
+	cellbackground		: #f8f8f8ff;
+	cellbackground2		: #f8f8f8ff;	
+	cellcolor		: #216eb2ff;
+	cellcolor2		: #216eb2ff;
+	cellfont		: bold underline antialias 9 malgun gothic, Tahoma, Arial;
+	cellpadding		: 2 5 2 5;
+	cursor			: hand;
+}
+Grid.grd_LF_menu>#body:disabled
+{
+	cellbackground		: #f8f8f8ff;
+	cellbackground2		: #f8f8f8ff;
+	cellcolor		: #999999ff;
+	cellcolor2		: #999999ff;
+}
+
+
+
+Grid.grd_LF_menu01, Grid.grd_LF_menu01:mouseover, Grid.grd_LF_menu01:focused
+{
+	align			: center middle;
+	background		: #333333ff;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	color			: #ffffffff;
+	font			: antialias 9 malgun gothic, Tahoma, Arial;
+	treeclosebuttonimage	: URL('theme://imsges/tree_LF_2depth.png') ;
+	treecollapseimage	: URL('theme://imsges/tree_LF_2depth.png') ;
+	treeexpandimage		: URL('theme://imsges/tree_LF_2depth.png') ;
+	treeitemimage		:  ;
+	treeopenbuttonimage	: URL('theme://imsges/tree_LF_2depth.png');
+}
+Grid.grd_LF_menu01>#body, Grid.grd_LF_menu01>#body:focused
+{
+	align			: center middle;	
+	background		: #333333ff;
+	border			: 0 none #e5e5e5;
+	cellbackground		: #333333ff;
+	cellbackground2		: #333333ff;
+	cellcolor		: #ffffffff;
+	cellcolor2		: #ffffffff;
+	cellfont		: antialias 9 malgun gothic, Tahoma, Arial;
+	cellline		: 0 none #e5e5e5ff;
+	celllinetype		: exhor;
+	cellpadding		: 2 5 2 5;
+	cursor			: hand;
+	selectbackground	: #222222ff;
+	selectborder		: ;
+	selectcolor		: #ffffffff;
+	selectfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	selectline		: 0 none #e5e5e5ff;
+}
+Grid.grd_LF_menu01>#body:mouseover
+{
+	background		: #333333ff;
+	border			: 0 none #e5e5e5;
+	cellbackground		: #222222ff;
+	cellbackground2		: #222222ff;	
+	cellcolor		: #ffffffff;
+	cellcolor2		: #ffffffff;
+	cellline		: 0 none #e5e5e5ff;
+	cellfont		: bold antialias 9 malgun gothic, Tahoma, Arial;
+	cellpadding		: 2 5 2 5;
+	cursor			: hand;
+	selectbackground : #222222ff ;
+}
+Grid.grd_LF_menu01>#body:disabled
+{
+	cellbackground		: #333333ff;
+	cellbackground2		: #333333ff;
+	cellcolor		: #ffffffff;
+	cellcolor2		: #ffffffff;
+}
+
+
+
+
+/***** Left Button *****/
+/* btn_LF_setup */
+Button.btn_LF_setup, Button.btn_LF_setup:selected, Button.btn_LF_setup:focused, Button.btn_LF_setup:disabled
+{
+	imagealign		: center middle;
+	image			: URL('theme://images/btn_LF_setupN.png');
+	padding			: 0 0 0 0;
+}
+Button.btn_LF_setup:mouseover
+{
+	imagealign		: center middle;
+	image			: URL('theme://images/btn_LF_setupO.png');
+	padding			: 0 0 0 0;
+}
+Button.btn_LF_setup:pushed
+{
+	imagealign		: center middle;
+	image			: URL('theme://images/btn_LF_setupP.png');
+	padding			: 0 0 0 0;
+}
+
+
+/* btn_LF_setup */
+Button.btn_LF_refresh, Button.btn_LF_refresh:selected, Button.btn_LF_refresh:focused, Button.btn_LF_refresh:disabled
+{
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	imagealign		: center middle;
+	image			: URL('theme://images/btn_refresh_N.png');
+	padding			: 0 0 0 0;
+	shadow			: ;
+}
+Button.btn_LF_refresh:mouseover
+{
+	background		: ;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	imagealign		: center middle;
+	image			: URL('theme://images/btn_refresh_O.png');
+	padding			: 0 0 0 0;
+	shadow				: ;
+}
+Button.btn_LF_refresh:pushed
+{
+	background		: #4683c1;
+	border			: 0 none #e5e5e5;
+	bordertype		: normal;
+	imagealign		: center middle;
+	image			: URL('theme://images/btn_refresh_O.png');
+	padding			: 0 0 0 0;
+	shadow				: ;
+}
+
+

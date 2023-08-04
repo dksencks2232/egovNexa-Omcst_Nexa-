@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Code">
+
+	<select id="codeDAO.selectCodeList" parameterClass="codeVO" resultClass="codeVO">
+	<![CDATA[
+		SELECT
+			SEQ
+			, CODE_ID
+			, GROUP_ID
+			, CODE_NAME
+			, ORDER_NO
+			, USE_YN
+			, REG_USER
+			, REG_DATE
+			, UPDATE_USER
+			, UPDATE_DATE
+		FROM
+			CODE
+	]]>		
+		<isNotEmpty property="GROUP_ID">
+		<![CDATA[
+		WHERE 
+			GROUP_ID = #GROUP_ID#
+		]]>	
+		</isNotEmpty>
+	<![CDATA[	
+		ORDER BY
+			GROUP_ID, ORDER_NO
+	]]>			
+	</select>
+
+	<insert id="codeDAO.insertCode" parameterClass="codeVO">
+	<![CDATA[
+		INSERT INTO CODE
+			(
+				SEQ
+				, CODE_ID
+				, GROUP_ID
+				, CODE_NAME
+				, ORDER_NO
+				, USE_YN
+				, REG_USER
+				, REG_DATE
+				, UPDATE_USER
+				, UPDATE_DATE
+			)
+		VALUES
+			(
+				(SELECT NVL(MAX(SEQ),0) + 1 FROM CODE)
+				, #CODE_ID#
+				, #GROUP_ID#
+				, #CODE_NAME#
+				, #ORDER_NO#
+				, #USE_YN#
+				, #REG_USER#
+				, SYSDATE
+				, #UPDATE_USER#
+				, SYSDATE 
+			)
+	]]>
+	</insert>
+	
+	<update id="codeDAO.updateCode" parameterClass="codeVO">
+	<![CDATA[
+		UPDATE CODE
+			SET
+				CODE_ID = #CODE_ID#
+				, GROUP_ID = #GROUP_ID#
+				, CODE_NAME = #CODE_NAME#
+				, ORDER_NO = #ORDER_NO#
+				, USE_YN = #USE_YN#
+				, UPDATE_USER = #UPDATE_USER#
+				, UPDATE_DATE = SYSDATE
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</update>
+	
+	<delete id="codeDAO.deleteCode" parameterClass="codeVO">
+	<![CDATA[
+		DELETE FROM CODE
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</delete>
+	
+</sqlMap>

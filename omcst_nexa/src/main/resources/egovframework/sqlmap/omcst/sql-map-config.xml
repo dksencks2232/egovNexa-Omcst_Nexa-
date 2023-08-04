@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	
+	<typeAlias alias="loginVO" type="egovframework.omcst.common.service.LoginVO"/>
+	<typeAlias alias="userVO" type="egovframework.omcst.user.service.UserVO"/>
+	<typeAlias alias="menuVO" type="egovframework.omcst.menu.service.MenuVO"/>
+	<typeAlias alias="codeVO" type="egovframework.omcst.code.service.CodeVO"/>
+	<typeAlias alias="authVO" type="egovframework.omcst.auth.service.AuthVO"/>
+	<typeAlias alias="annualVO" type="egovframework.omcst.annual.service.AnnualVO"/>
+	<typeAlias alias="annualStatVO" type="egovframework.omcst.annual_stat.service.AnnualStatVO"/>
+	<typeAlias alias="menuAuthVO" type="egovframework.omcst.menu_auth.service.MenuAuthVO"/>
+	<typeAlias alias="userAuthVO" type="egovframework.omcst.user_auth.service.UserAuthVO"/>
+	<typeAlias alias="developerVO" type="egovframework.omcst.developer.service.DeveloperVO"/>
+	<typeAlias alias="projectVO" type="egovframework.omcst.project.service.ProjectVO"/>
+	<typeAlias alias="projectAttendVO" type="egovframework.omcst.project_attend.service.ProjectAttendVO"/>		
+	
+	<sqlMap resource="egovframework/sqlmap/omcst/common/Login_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/menu/Menu_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/code/Code_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/user/User_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/auth/Auth_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/menu_auth/MenuAuth_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/user_auth/UserAuth_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/developer/Developer_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/annual/Annual_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/annual_stat/AnnualStat_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/project/Project_SQL.xml"/>
+	<sqlMap resource="egovframework/sqlmap/omcst/project_attend/ProjectAttend_SQL.xml"/>
+</sqlMapConfig>
+

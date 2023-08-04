@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Project">
+
+	<select id="projectDAO.selectProjectList" resultClass="projectVO">
+	<![CDATA[
+		SELECT
+			A.SEQ
+			, A.PROJ_NAME
+			, A.AREA
+			, A.PROJ_START
+			, A.PROJ_END
+			, A.ATTEND_NUM
+			, A.ATTEND_TOTAL_NUM
+			, A.BIZ_NAME
+			, A.BIZ_PHONE
+			, A.DEV_COST
+			, A.PROJ_TYPE
+			, A.CONTRACT_YN
+			, A.REG_DATE
+			, A.REG_USER
+			, A.UPDATE_DATE
+			, A.UPDATE_USER
+			, A.PM_NAME
+			, A.PM_PHONE
+			, A.PM_EMAIL
+			, A.BIZ_EMAIL
+			, A.PROJ_COLOR
+		FROM
+			PROJECT A
+		ORDER BY
+			A.SEQ ASC
+	]]>
+	</select>	
+	
+	<select id="projectDAO.selectDeveloperList" parameterClass="developerVO" resultClass="developerVO">
+	<![CDATA[
+		SELECT
+			B.SEQ AS SEQ
+			, A.SEQ AS DEV_SEQ
+			, B.PROJ_SEQ AS PROJ_SEQ
+			, C.PROJ_NAME AS PROJ_NAME
+			, A.NAME
+			, A.AREA
+			, A.GRADE
+			, A.PRICE
+			, A.PROFILE
+			, A.EMAIL
+			, A.PHONE
+			, A.ATTEND_YN
+			, A.MAN_MONTH
+			, A.ATTEND_MONTH
+			, B.ATTEND_STR_DATE AS ATTEND_START
+			, B.ATTEND_END_DATE AS ATTEND_END
+			, A.REG_DATE
+			, A.REG_USER
+			, A.UPDATE_DATE
+			, A.UPDATE_USER
+			, A.ADDR
+			, A.ADDR_DETAIL
+			, A.DEPOSIT_DAY
+			, A.EMP_TYPE
+			, A.TEL
+			, A.PM
+			, A.INFO_DATE
+		FROM
+			DEVELOPER A	
+		LEFT OUTER JOIN DEV_PROJ_HISTORY B
+            ON A.SEQ = B.DEV_SEQ
+        LEFT OUTER JOIN PROJECT C
+            ON B.PROJ_SEQ = C.SEQ	
+        WHERE B.PROJ_SEQ = #PROJ_SEQ#	
+        AND B.ATTEND_YN = 'Y'	
+		ORDER BY
+			A.SEQ ASC
+	]]>
+	</select>	
+	
+	
+	<select id="projectDAO.selectAttendProjectList" parameterClass="projectVO" resultClass="projectVO">
+	<![CDATA[
+		SELECT DISTINCT
+			B.SEQ AS PROJ_SEQ
+			, B.PROJ_NAME AS PROJ_NAME
+		FROM
+			DEV_PROJ_HISTORY A	
+        LEFT OUTER JOIN PROJECT B
+            ON A.PROJ_SEQ = B.SEQ	
+        WHERE A.DEV_SEQ = #SEQ#		
+        ORDER BY PROJ_SEQ ASC		
+	]]>
+	</select>
+	
+	<insert id="projectDAO.insertDeveloper" parameterClass="developerVO">
+	<![CDATA[
+		INSERT INTO DEV_PROJ_HISTORY 
+			( 
+				SEQ
+				, DEV_SEQ 
+				, PROJ_SEQ
+ 				, ATTEND_STR_DATE 
+				, ATTEND_END_DATE
+				, REG_USER
+				, REG_DATE
+				, UPDATE_USER
+				, UPDATE_DATE				
+				, ATTEND_YN
+			) 
+		VALUES 
+			( 
+				(SELECT NVL(MAX(SEQ),0) + 1 FROM DEV_PROJ_HISTORY) 
+				, #DEV_SEQ# 
+				, #PROJ_SEQ# 
+				, TO_DATE(#ATTEND_START#, 'YYYY-MM-DD') 
+				, TO_DATE(#ATTEND_END#, 'YYYY-MM-DD') 
+				, #UPDATE_USER#				
+				, SYSDATE				
+				, #UPDATE_USER#				
+				, SYSDATE
+				, 'Y'  
+			) 
+	]]> 
+	</insert>	
+	
+	<update id="projectDAO.updateDeveloper" parameterClass="developerVO">
+ 	<![CDATA[ 
+ 		UPDATE DEV_PROJ_HISTORY 
+ 			SET 
+ 				DEV_SEQ = #DEV_SEQ# 
+				, PROJ_SEQ = #PROJ_SEQ#
+				, ATTEND_STR_DATE = TO_DATE(#ATTEND_START#, 'YYYY-MM-DD')
+ 				, ATTEND_END_DATE = TO_DATE(#ATTEND_END#, 'YYYY-MM-DD') 
+ 				, UPDATE_USER = #UPDATE_USER# 
+ 				, UPDATE_DATE = SYSDATE 				
+		WHERE 
+ 			SEQ = #SEQ# 
+ 	]]> 
+	</update>	
+
+	<update id="projectDAO.deleteDeveloper" parameterClass="developerVO">
+	<![CDATA[
+ 		UPDATE DEV_PROJ_HISTORY
+ 			SET
+ 				ATTEND_YN = 'N' 
+ 				, UPDATE_USER = #UPDATE_USER# 
+ 				, UPDATE_DATE = SYSDATE 
+ 		WHERE 
+ 			SEQ = #SEQ# 
+ 	]]> 
+	</update>	
+	
+</sqlMap>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Code" left="0" top="0" width="800" height="600" titletext="New Form" onload="Code_onload">
+    <Layouts>
+      <Layout>
+        <Grid id="code_grid" taborder="0" useinputpanel="false" left="10" top="72" right="10" binddataset="ds_code" autofittype="col" bottom="10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="74"/>
+                <Column size="117"/>
+                <Column size="120"/>
+                <Column size="53"/>
+                <Column size="50"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="코드ID"/>
+                <Cell col="1" text="그룹ID"/>
+                <Cell col="2" text="코드명"/>
+                <Cell col="3" text="순번"/>
+                <Cell col="4" text="사용여부"/>
+              </Band>
+              <Band id="body">
+                <Cell edittype="text" style="align:left;padding:0 0 0 5;" text="bind:CODE_ID"/>
+                <Cell col="1" edittype="text" style="padding:0 0 0 5;" text="bind:GROUP_ID"/>
+                <Cell col="2" edittype="text" style="padding:0 0 0 5;" text="bind:CODE_NAME"/>
+                <Cell col="3" edittype="masknumber" style="align:center;" text="bind:ORDER_NO"/>
+                <Cell col="4" edittype="combo" style="align:center;" text="bind:USE_YN" combodataset="ds_useyn" combodatacol="use_yn"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_save" taborder="1" text="저장" top="24" height="23" width="50" onclick="btn_save_onclick" right="120"/>
+        <Button id="btn_add" taborder="2" text="추가" top="24" height="23" onclick="btn_add_onclick" width="50" right="63"/>
+        <Button id="btn_del" taborder="3" text="삭제" top="24" height="23" width="50" onclick="btn_del_onclick" right="6"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_code">
+        <ColumnInfo>
+          <Column id="SEQ" type="INT" size="11"/>
+          <Column id="CODE_ID" type="STRING" size="32"/>
+          <Column id="GROUP_ID" type="STRING" size="32"/>
+          <Column id="CODE_NAME" type="STRING" size="32"/>
+          <Column id="LEVEL" type="INT" size="4"/>
+          <Column id="ORDER_NO" type="STRING" size="32"/>
+          <Column id="USE_YN" type="STRING" size="1"/>
+          <Column id="REG_USER" type="STRING" size="32"/>
+          <Column id="REG_DATE" type="STRING" size="32"/>
+          <Column id="UPDATE_USER" type="STRING" size="32"/>
+          <Column id="UPDATE_DATE" type="STRING" size="32"/>
+          <Column id="STATUS" type="STRING" size="1"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="SEQ">1</Col>
+            <Col id="CODE_ID">1</Col>
+            <Col id="GROUP_ID">TEST</Col>
+            <Col id="CODE_NAME">코드명</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ORDER_NO">1</Col>
+            <Col id="USE_YN">Y</Col>
+            <Col id="REG_USER">TEST</Col>
+            <Col id="REG_DATE">2018-06-12 00:00:00.0</Col>
+            <Col id="UPDATE_USER">TEST</Col>
+            <Col id="UPDATE_DATE">2018-06-12 00:00:00.0</Col>
+          </Row>
+          <Row>
+            <Col id="SEQ">2</Col>
+            <Col id="CODE_ID">2</Col>
+            <Col id="GROUP_ID">TEST</Col>
+            <Col id="CODE_NAME">코드명2</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ORDER_NO">2</Col>
+            <Col id="USE_YN">Y</Col>
+            <Col id="REG_USER">TEST</Col>
+            <Col id="REG_DATE">2018-06-12 00:00:00.0</Col>
+            <Col id="UPDATE_USER">TEST</Col>
+            <Col id="UPDATE_DATE"/>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_useyn">
+        <ColumnInfo>
+          <Column id="use_yn" type="STRING" size="1"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="use_yn">Y</Col>
+          </Row>
+          <Row>
+            <Col id="use_yn">N</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[this.isChange = false;
+
+this.Code_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	this.ds_code.clearData();
+	this.getSelect();
+}
+
+this.btn_add_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.ds_code.addRow();
+}
+
+this.btn_del_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_code.rowposition;
+	this.ds_code.deleteRow(nRow);
+	this.isChange = true;
+}
+
+this.btn_save_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	for(var i = 0; i < this.ds_code.getRowCount(); i++) {
+		var rowType = this.ds_code.getRowType(i);
+		if(rowType == 2) {
+			this.isChange = true;
+			this.ds_code.setColumn(i, "STATUS", "I");
+			if(this.validation(i)) {
+				return;
+			}
+		} else if(rowType == 4) {
+			this.isChange = true;
+			this.ds_code.setColumn(i, "STATUS", "U");
+			if(this.validation(i)) {
+				return;
+			}
+		}
+	}
+	
+	if(!this.isChange) {
+		this.alert("변경된 내용이 없습니다.");
+		return;
+	}
+	
+	if(!confirm("저장 하시겠습니까?")) {
+		return;
+	}
+
+	var id = "CodeService";
+	var url = application.services["svcurl"].url + "/code/codeSave.do";
+	var inDateset = "ds_code=ds_code:U";
+	var outDateset = "";
+	var arg = "";
+	var callback = "code_callback";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+	
+}
+
+this.validation = function(idx) {
+	var code_id = this.ds_code.getColumn(idx, "CODE_ID");
+	var group_id = this.ds_code.getColumn(idx, "GROUP_ID");
+	var code_name = this.ds_code.getColumn(idx, "CODE_NAME");
+	var order_no = this.ds_code.getColumn(idx, "ORDER_NO");
+	var use_yn = this.ds_code.getColumn(idx, "USE_YN");
+	
+	if(!code_id) {
+		this.code_grid.setFocus(true);
+		this.code_grid.selectCell(idx, 0, true);
+		this.code_grid.showEditor(true);
+		this.alert("코드ID를 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!group_id) {
+		this.code_grid.setFocus(true);
+		this.code_grid.selectCell(idx, 1, true);
+		this.code_grid.showEditor(true);
+		this.alert("그룹ID를 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!code_name) {
+		this.code_grid.setFocus(true);
+		this.code_grid.selectCell(idx, 2, true);
+		this.code_grid.showEditor(true);
+		this.alert("코드명을 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!order_no) {
+		this.code_grid.setFocus(true);
+		this.code_grid.selectCell(idx, 3, true);
+		this.code_grid.showEditor(true);
+		this.alert("순번을 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	if(!use_yn) {
+		this.code_grid.setFocus(true);
+		this.code_grid.selectCell(idx, 4, true);
+		this.code_grid.showEditor(true);
+		this.alert("사용여부를 입력해 주시기 바랍니다.");
+		return true;
+	}
+	
+	return false;
+}
+
+this.code_callback = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.alert("저장되었습니다.");
+			this.getSelect();
+			break;
+	}
+}
+
+this.getSelect = function() {
+	this.ds_code.clearData();
+	var id = "CodeService";
+	var url = application.services["svcurl"].url + "/code/codeList.do";
+	var inDateset = "";
+	var outDateset = "ds_code=ds_code";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.getSelectCallBack = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.isChange = false;
+			break;
+	}
+}
+
+this.closefunc = function() {
+	if(nexacro.Browser == "Runtime") {
+		application.exit();
+	} else {
+		Iject.$.vFrameSet.set_separatesize("*,0,0");
+	}
+}]]></Script>
+  </Form>
+</FDL>

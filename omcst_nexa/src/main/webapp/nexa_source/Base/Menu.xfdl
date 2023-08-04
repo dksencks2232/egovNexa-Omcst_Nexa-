@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Menu" classname="Work" inheritanceid="" position="absolute" titletext="SingleDetail" left="0" width="900" top="0" height="500" onload="form_onload">
+    <Layouts>
+      <Layout>
+        <Div id="div_grid_top" taborder="17" left="0" top="31" right="0" height="23" scrollbars="none">
+          <Layouts>
+            <Layout>
+              <Button id="btn_delete" taborder="28" text="삭제" cssclass="btn_WF_CRUD" top="0" right="14" width="50" height="23" domainId="nexa.delete" onclick="fn_delete"/>
+              <Button id="btn_add" taborder="31" text="추가" onclick="fn_add" cssclass="btn_WF_CRUD" top="0" right="68" width="50" height="23" domainId="nexa.add"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="menu_grid" taborder="18" binddataset="ds_menu" useinputpanel="false" autofittype="col" oncelldblclick="menu_grid_oncelldblclick" left="10" top="66" right="10" bottom="10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="63"/>
+                <Column size="225"/>
+                <Column size="66"/>
+                <Column size="380"/>
+                <Column size="100"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="ID"/>
+                <Cell col="1" text="메뉴명"/>
+                <Cell col="2" text="순번"/>
+                <Cell col="3" text="URL"/>
+                <Cell col="4" text="PAGE_ID"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MENU_ID"/>
+                <Cell col="1" text="bind:MENU_NAME"/>
+                <Cell col="2" text="bind:MENU_SEQ"/>
+                <Cell col="3" text="bind:PAGE_URL"/>
+                <Cell col="4" text="bind:PAGE_ID"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_menu">
+        <ColumnInfo>
+          <Column id="MENU_NAME" type="string" size="32" prop=""/>
+          <Column id="MENU_SEQ" type="int" size="4" prop=""/>
+          <Column id="MENU_OPTP" type="string" size="32" prop=""/>
+          <Column id="PAGE_URL" type="string" size="32" prop=""/>
+          <Column id="MENU_TOP" type="string" size="32" prop=""/>
+          <Column id="MENU_ID" type="string" size="32" prop=""/>
+          <Column id="MENU_GRP" type="string" size="32" prop=""/>
+          <Column id="CREATE_DT" type="string" size="32" prop=""/>
+          <Column id="MENU_LEVEL" type="int" size="4" prop=""/>
+          <Column id="PAGE_ID" type="string" size="32" prop=""/>
+          <Column id="PAGE_NAME" type="string" size="32" prop=""/>
+          <Column id="MENU_ARGS" type="string" size="32" prop=""/>
+          <Column id="MENU_STAT" type="string" size="32" prop=""/>
+          <Column id="CREATE_USER" type="string" size="32" prop=""/>
+          <Column id="UPDATE_DT" type="string" size="32" prop=""/>
+          <Column id="UPDATE_USER" type="string" size="32" prop=""/>
+          <Column id="MENU_DESC" type="string" size="32" prop=""/>
+          <Column id="MENU_AUTH" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_menuInfo">
+        <ColumnInfo>
+          <Column id="MENU_ID" type="STRING" size="32"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Bind/>
+    <Script type="xscript5.0"><![CDATA[this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	trace(Iject.$.MENU_ID);
+	this.getSelect();
+}
+
+this.getSelect = function() {
+	this.ds_menu.clearData();
+	var id = "menuService";
+	var url = application.services["svcurl"].url + "/menu/menuList.do";
+	var inDateset = "";
+	var outDateset = "ds_menu=ds_menu";
+	var arg = "";
+	var callback = "getSelectCallBack";
+	
+	this.transaction(id, url, inDateset, outDateset, arg, callback);
+}
+
+this.fn_add = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+
+	 var oData ={
+		sId  : "popup_sample",             //callback id
+		sUrl : "Base::MenuPopup.xfdl",   //url
+		bshowtitlebar : true,     //title bar
+		bAutoSize  : true,       //autosize
+		bResize    : false,       //resize
+		bShowtatusbar : false,     //statusbar
+		sOpenalign    : "center middle",  //align
+		oArgs :  {}    
+	};
+		   
+	Iject.showModal(this, oData, function(svcid,variant){
+		if(variant == "session") {
+			this.closefunc();
+		} else if(variant == "ok") {
+			this.getSelect();
+		}
+	});
+	 
+}
+
+this.menu_grid_oncelldblclick = function(obj:Grid, e:nexacro.GridClickEventInfo)
+{
+	var oData ={
+		sId  : "popup_sample",             //callback id
+		sUrl : "Base::MenuPopup.xfdl",   //url
+		bshowtitlebar : true,     //title bar
+		bAutoSize  : true,       //autosize
+		bResize    : false,       //resize
+		bShowtatusbar : false,     //statusbar
+		sOpenalign    : "center middle",  //align
+		oArgs :  {
+			menu_index : obj.selectendrow
+		}    
+	};
+		   
+	Iject.showModal(this, oData, function(svcid,variant){
+		if(variant == "session") {
+			this.closefunc();
+		} else if(variant == "ok") {
+			this.getSelect();
+		}
+	});
+}
+
+this.fn_delete = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var idx = this.menu_grid.selectendrow;
+	if(idx < 0) {
+		this.alert("선택된 행이 없습니다.");
+		return;
+	}
+
+	var menu_id = this.ds_menu.getColumn(idx, "MENU_ID");
+	var menu_level = this.ds_menu.getColumn(idx, "MENU_LEVEL");
+	if(menu_level == 0) {
+		var row = this.ds_menu.findRow("MENU_TOP", menu_id);
+		if(row > -1) {
+			this.alert("하위 메뉴가 존재하여 삭제 할 수 없습니다.");
+			return;
+		} else {
+			
+		}
+	} 
+	
+	if(this.confirm("선택한 항목을 삭제 하시겠습니까?")) {
+		this.ds_menuInfo.clearData();
+		this.ds_menuInfo.addRow();
+		this.ds_menuInfo.setColumn(0, "MENU_ID", menu_id);
+		
+		var id = "MenuService";
+		var url = application.services["svcurl"].url + "/menu/menuDelete.do";
+		
+		var inDateset = "ds_menuInfo=ds_menuInfo";
+		var outDateset = "ds_menu=ds_menu";
+		var arg = "";
+		var callback = "Menu_callback";
+		
+		this.transaction(id, url, inDateset, outDateset, arg, callback);
+	}
+}
+
+this.Menu_callback = function(id, code, message) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+		default :
+			this.alert("삭제되었습니다.");
+			break;
+	}
+}
+
+this.closefunc = function() {
+	if(nexacro.Browser == "Runtime") {
+		application.exit();
+	} else {
+		Iject.$.vFrameSet.set_separatesize("*,0,0");
+	}
+}
+
+this.getSelectCallBack = function(id, code, msg) {
+	switch(code) {
+		case -1 : 
+			this.alert("오류입니다.");
+			break;
+		case -3 : 
+			this.alert("세션 만료입니다.");
+			this.closefunc();
+			break;
+	}
+}]]></Script>
+  </Form>
+</FDL>

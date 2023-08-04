@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="PROJ" left="0" top="0" width="1024" height="768" titletext="New Form" onload="form_onload">
+    <Layouts>
+      <Layout/>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.0"><![CDATA[this.form_onload = function(obj:Form, e:nexacro.LoadEventInfo)
+{
+	 this.form_create();
+}
+
+this.form_create = function() 
+{
+	alert("form_create");
+	 // Create Object  
+	var objWebBrowser = new WebBrowser();  
+	// var objWebBrowser = new WebBrowser("WebBrowser", "absolute", 30, 120, 196, 46, null, null);
+	var objWebBrowser = new WebBrowser("WebBrowser", "absolute", null, null, "100%", "100%", null, null);
+	objWebBrowser.set_url("http://localhost:8089/project/projectList.do");
+	
+	// Add Object to Parent Form  
+	this.addChild("WebBrowser", objWebBrowser); 
+	
+	// Insert Object to Parent Form  
+	this.insertChild(1, "WebBrowser", objWebBrowser); 
+	 
+	// Show Object  
+	objWebBrowser.show(); 
+	
+	/* 
+	// Remove Object form Parent Form  
+	this.removeChild("WebBrowser"); 
+	 
+	// Destroy Object  
+	objWebBrowser.destroy(); 
+	objWebBrowser = null;
+	*/
+}
+
+this.Button01_onclick = function(obj:nexacro.Button,  e:nexacro.ClickEventInfo)
+{
+ // 넥사14 와 넥사17 모두 해당 코딩으로 처리 하세요.
+ alert("???");
+ var vHtml = this.Web.getProperty("document").getProperty("body");  
+ vHtml.setProperty( "innerHTML", "Added content using innerHTML type" );
+};
+
+	]]></Script>
+  </Form>
+</FDL>

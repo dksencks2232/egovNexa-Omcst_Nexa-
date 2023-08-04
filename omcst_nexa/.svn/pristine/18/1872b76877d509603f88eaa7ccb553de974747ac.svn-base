@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Developer">
+
+	<select id="developerDAO.selectDeveloperList" resultClass="developerVO">
+	<![CDATA[
+    SELECT
+		ROW_NUMBER() OVER(ORDER BY A.NAME ASC) rowNumber
+		, A.SEQ				    AS SEQ
+		, A.PROJ_SEQ            AS PROJ_SEQ
+		, A.NAME                AS NAME
+		, A.AREA                AS AREA
+		, ( SELECT CODE_NAME FROM CODE WHERE GROUP_ID = 'PRICE' AND CODE_ID = A.GRADE )	AS GRADE
+		, A.PRICE               AS PRICE
+		, A.PROFILE             AS PROFILE
+		, A.EMAIL               AS EMAIL
+		, A.PHONE               AS PHONE
+		, A.ATTEND_YN           AS ATTEND_YN
+		, A.MAN_MONTH           AS MAN_MONTH
+		, A.ATTEND_MONTH        AS ATTEND_MONTH
+		, A.ATTEND_START        AS ATTEND_START
+		, A.ATTEND_END          AS ATTEND_END
+		, TO_CHAR(A.ATTEND_START, 'YYYY-MM-DD')        AS ATTEND_START_2
+		, TO_CHAR(A.ATTEND_END, ' YYYY-MM-DD')          AS ATTEND_END_2
+		, A.REG_DATE            AS REG_DATE
+		, A.REG_USER            AS REG_USER
+		, A.UPDATE_DATE         AS UPDATE_DATE
+		, A.UPDATE_USER         AS UPDATE_USER
+		, A.ZIP_CODE            AS ZIP_CODE
+		, A.ADDR                AS ADDR
+		, A.ADDR_DETAIL         AS ADDR_DETAIL
+		, A.DEPOSIT_DAY        	AS DEPOSIT_DAY
+		, ( SELECT CODE_NAME FROM CODE WHERE GROUP_ID = 'EMP_TYPE' AND CODE_ID = A.EMP_TYPE )            AS EMP_TYPE
+		, B.SEQ					AS PROJ_SEQ
+		, B.PROJ_NAME           AS PROJ_PROJ_NAME       
+		, B.AREA                AS PROJ_AREA            
+		, B.PROJ_START          AS PROJ_PROJ_START      
+		, B.PROJ_END            AS PROJ_PROJ_END        
+		, B.ATTEND_NUM          AS PROJ_ATTEND_NUM      
+		, B.ATTEND_TOTAL_NUM    AS PROJ_ATTEND_TOTAL_NUM
+		, B.BIZ_NAME            AS PROJ_BIZ_NAME        
+		, B.BIZ_PHONE           AS PROJ_BIZ_PHONE       
+		, B.DEV_COST            AS PROJ_DEV_COST        
+		, B.PROJ_TYPE           AS PROJ_TYPE            
+		, B.CONTRACT_YN         AS PROJ_CONTRACT_YN     
+		, B.REG_DATE            AS PROJ_REG_DATE        
+		, B.REG_USER            AS PROJ_REG_USER        
+		, B.UPDATE_DATE         AS PROJ_UPDATE_DATE     
+		, B.UPDATE_USER		    AS PROJ_UPDATE_USER
+		, C.SEQ                 AS STANDARD_FILESEQ
+		, C.FILE_ORGNAME        AS STANDARD_FILE_ORGNAME	
+		, D.SEQ                 AS VATTZ_FILESEQ
+		, D.FILE_ORGNAME        AS VATTZ_FILE_ORGNAME	
+		, E.SEQ                 AS INFO_FILESEQ
+		, E.FILE_ORGNAME        AS INFO_FILE_ORGNAME
+		, CASE WHEN SYSDATE > A.ATTEND_END THEN 'over' END PROJ_STAT
+	  FROM DEVELOPER A
+	  LEFT OUTER JOIN (
+	   SELECT *
+	     FROM PROJECT 
+	  ) B
+	    ON A.PROJ_SEQ = B.SEQ
+	  LEFT OUTER JOIN (
+	   SELECT *
+	     FROM UPLOAD_FILE 
+	  ) C
+	    ON A.SEQ = C.DEV_SEQ
+	   AND C.GUBN = 'E'
+	  LEFT OUTER JOIN (
+	   SELECT *
+	     FROM UPLOAD_FILE 
+	  ) D
+	    ON A.SEQ = D.DEV_SEQ
+	   AND D.GUBN = 'V'
+	  LEFT OUTER JOIN (
+	  	SELECT *
+	  	FROM UPLOAD_FILE
+	  ) E
+	  	ON A.SEQ = E.DEV_SEQ
+	  	AND E.GUBN = 'I'
+	 WHERE 1=1
+	]]>
+	</select>
+
+	<insert id="developerDAO.insertDeveloper" parameterClass="developerVO">
+	<![CDATA[
+		INSERT INTO DEVELOPER
+			(
+				SEQ
+				, PROJ_SEQ
+				, NAME
+				, AREA
+				, GRADE
+				, PRICE
+				, EMAIL
+				, PHONE
+				, ATTEND_YN
+				, MAN_MONTH
+				, ATTEND_MONTH
+				, ATTEND_START
+				, ATTEND_END
+				, REG_DATE
+				, REG_USER
+				, UPDATE_DATE
+				, UPDATE_USER
+				, ZIP_CODE
+				, ADDR
+				, ADDR_DETAIL
+				, DEPOSIT_DAY
+				, EMP_TYPE
+			)
+		VALUES
+			(
+				(SELECT NVL(MAX(SEQ),0) + 1 FROM MEMBER)
+				, #PROJ_SEQ#
+				, #NAME#
+				, #AREA#
+				, #GRADE#
+				, #PRICE#
+				, #EMAIL#
+				, #PHONE#
+				, #ATTEND_YN#
+				, #MAN_MONTH#
+				, #ATTEND_MONTH#
+				, #ATTEND_START#
+				, #ATTEND_END#
+				, SYSDATE
+				, #REG_USER#
+				, SYSDATE
+				, #UPDATE_USER#
+				, #ZIP_CODE#
+				, #ADDR#
+				, #ADDR_DETAIL#
+				, #DEPOSIT_DAY#
+				, #EMP_TYPE#
+			)
+	]]>
+	</insert>
+	
+	<update id="developerDAO.updateDeveloper" parameterClass="developerVO">
+	<![CDATA[
+		UPDATE DEVELOPER
+			SET
+				NAME = #NAME#
+				, EMAIL = #EMAIL#
+				, ADDR = #ADDR#
+				, ADDR_DETAIL = #ADDR_DETAIL#
+				, PHONE = #PHONE#
+				, TEL = #TEL#
+				, UPDATE_DATE = SYSDATE
+				, UPDATE_USER = #UPDATE_USER#
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</update>
+	
+	<delete id="developerDAO.deleteDeveloper" parameterClass="developerVO">
+	<![CDATA[
+		DELETE FROM DEVELOPER
+		WHERE
+			SEQ = #SEQ#
+	]]>
+	</delete>
+	
+</sqlMap>
